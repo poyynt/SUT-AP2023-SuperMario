@@ -7,9 +7,9 @@ import java.awt.*;
 public class MainView {
 
     private static final MainView mainView = new MainView();
-    private final JFrame frame = new JFrame("Air Hockey +");
-    private final int width = 600;
-    private final int height = 800;
+    private final JFrame frame = new JFrame("Super Mario");
+    private final int width = 1024;
+    private final int height = 768;
 
     private View contentView;
 
