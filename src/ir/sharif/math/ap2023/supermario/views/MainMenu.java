@@ -2,17 +2,32 @@ package ir.sharif.math.ap2023.supermario.views;
 
 import ir.sharif.math.ap2023.supermario.Main;
 import ir.sharif.math.ap2023.supermario.logic.AuthenticationHandler;
+import ir.sharif.math.ap2023.supermario.models.State;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class MainMenu implements View {
 
     private static final MainMenu mainMenu = new MainMenu();
     private final JPanel panel = new JPanel();
 
+    private JLabel welcomeLabel = new JLabel();
+    private JLabel coinsLabel = new JLabel();
+
     private MainMenu() {
 //        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+
+        welcomeLabel.setFont(new Font(
+                welcomeLabel.getFont().getName(),
+                Font.BOLD,
+                24
+        ));
+        panel.add(welcomeLabel);
+
+        panel.add(coinsLabel);
+
         JButton newGameButton = new JButton("New Game");
         newGameButton.addActionListener(e -> {
             MainMenu.getInstance().remove();
@@ -30,16 +45,24 @@ public class MainMenu implements View {
         JButton storeButton = new JButton("Store");
         storeButton.addActionListener(e -> {
             MainMenu.getInstance().remove();
-//            RegisterMenu.getInstance().show();
+            StoreMenu.getInstance().show();
         });
         panel.add(storeButton);
 
         JButton profileButton = new JButton("Profile");
         profileButton.addActionListener(e -> {
             MainMenu.getInstance().remove();
-//            RegisterMenu.getInstance().show();
+            ProfileMenu.getInstance().update();
+            ProfileMenu.getInstance().show();
         });
         panel.add(profileButton);
+
+        JButton leaderboardButton = new JButton("Leaderboard");
+        leaderboardButton.addActionListener(e -> {
+            MainMenu.getInstance().remove();
+            LeaderboardMenu.getInstance().show();
+        });
+        panel.add(leaderboardButton);
 
         JButton logoutButton = new JButton("Log out");
         logoutButton.addActionListener(e -> {
@@ -59,6 +82,8 @@ public class MainMenu implements View {
     public void show() {
 //        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
+        welcomeLabel.setText("Welcome, " + State.getCurrentUser().getUsername() + "!");
+        coinsLabel.setText(("Coins: " + State.getCurrentUser().getCoins()));
     }
 
     @Override
