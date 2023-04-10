@@ -63,6 +63,7 @@ public class LoginMenu implements View {
             }
             else if (result == LoginResult.SUCCESS) {
                 LoginMenu.getInstance().remove();
+                MainMenu.getInstance().show();
             }
         });
 
