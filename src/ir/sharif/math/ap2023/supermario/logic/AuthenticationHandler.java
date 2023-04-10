@@ -29,4 +29,8 @@ public class AuthenticationHandler {
 
         return LoginResult.SUCCESS;
     }
+
+    public static void logout() {
+        State.setCurrentUser(null);
+    }
 }
