@@ -1,0 +1,8 @@
+{
+  "name": "Luigi",
+  "jumpSpeed": 5,
+  "moveSpeed": 10,
+  "shotSpeed": 3,
+  "coinRadiusMultiplier": 1,
+  "price": 500
+}

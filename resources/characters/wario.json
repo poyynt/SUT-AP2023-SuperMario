@@ -1,0 +1,8 @@
+{
+  "name": "Wario",
+  "jumpSpeed": 5,
+  "moveSpeed": 5,
+  "shotSpeed": 5,
+  "coinRadiusMultiplier": 1,
+  "price": 1000
+}

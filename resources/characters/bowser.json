@@ -1,0 +1,8 @@
+{
+  "name": "Bowser",
+  "jumpSpeed": 5,
+  "moveSpeed": 5,
+  "shotSpeed": 3,
+  "coinRadiusMultiplier": 3,
+  "price": 1200
+}
