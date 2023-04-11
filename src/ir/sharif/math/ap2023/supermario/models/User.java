@@ -21,6 +21,8 @@ public class User {
 
     private GameCharacter currentCharacter = CharacterLoader.getDefaultCharacter();
 
+    private GameState[] slots = new GameState[3];
+
     public User(String username, String password) {
         this.username = username;
         this.hashedPassword = new HashedPassword(password);
@@ -66,5 +68,9 @@ public class User {
 
     public void setCurrentCharacter(GameCharacter currentCharacter) {
         this.currentCharacter = currentCharacter;
+    }
+
+    public GameState[] getSlots() {
+        return slots;
     }
 }
