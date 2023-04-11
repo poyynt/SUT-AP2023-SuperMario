@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="game slots work">
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Brick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/DoorButt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/DoorHead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/PipeBody.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/PipeHead.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Question.png" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="add blocks">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -276,7 +271,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681214089750</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="add blocks">
+      <created>1681216082627</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1681216082627</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -304,6 +306,7 @@
     <MESSAGE value="sprite loader agnostic to format" />
     <MESSAGE value="add GameState model" />
     <MESSAGE value="game slots work" />
-    <option name="LAST_COMMIT_MESSAGE" value="game slots work" />
+    <MESSAGE value="add blocks" />
+    <option name="LAST_COMMIT_MESSAGE" value="add blocks" />
   </component>
 </project>

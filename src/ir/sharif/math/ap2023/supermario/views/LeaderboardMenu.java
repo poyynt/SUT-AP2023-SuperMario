@@ -66,18 +66,39 @@ public class LeaderboardMenu implements View {
         System.out.println(State.getAllUsers().size());
 
         Dimension scorePanelDimension = new Dimension(list.getPreferredSize());
-        scorePanelDimension.height = 240;
+        scorePanelDimension.height = 80;
+        int scoreRank = 1;
         for (User user: scores) {
             JPanel scorePanel = new JPanel();
             scorePanel.setLayout(new BoxLayout(scorePanel, BoxLayout.X_AXIS));
             scorePanel.setPreferredSize(scorePanelDimension);
+            scorePanel.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
 
             String username = user.getUsername();
             long score = user.getHighScore();
-            scorePanel.add(new JLabel(username));
+            scorePanel.add(new JLabel("#" + scoreRank));
+            scorePanel.add(Box.createRigidArea(
+                    new Dimension(
+                            scorePanelDimension.width / 32,
+                            scorePanelDimension.height)
+            ));
+            JLabel usernameLabel = new JLabel();
+            usernameLabel.setText(username);
+            if (user.equals(State.getCurrentUser())) {
+                usernameLabel.setText("You");
+                usernameLabel.setForeground(Color.GREEN);
+            }
+            scorePanel.add(usernameLabel);
+
+            scorePanel.add(Box.createRigidArea(
+                    new Dimension(
+                            scorePanelDimension.width / 2,
+                            scorePanelDimension.height)
+            ));
             scorePanel.add(new JLabel("Score: " + score));
 
             list.add(scorePanel);
+            scoreRank++;
         }
     }
 
