@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="CharacterLoader caching">
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/BuyCharacterResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/ShoppingHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ProfileMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="user model updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/bowser.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Bowser.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/characters/Wario.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Peach.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/characters/list.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/list.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/luigi.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Luigi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/mario.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Mario.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/toad.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Toad.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/wario.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Wario.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/PersistenceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/PersistenceController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +136,77 @@
       <option name="project" value="LOCAL" />
       <updated>1681121806738</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="rename character filenames to reflect name">
+      <created>1681139610677</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139610678</updated>
+    </task>
+    <task id="LOCAL-00009" summary="add shopping handler class">
+      <created>1681139631460</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139631460</updated>
+    </task>
+    <task id="LOCAL-00010" summary="store final">
+      <created>1681139650878</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139650879</updated>
+    </task>
+    <task id="LOCAL-00011" summary="profile final">
+      <created>1681139665350</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139665350</updated>
+    </task>
+    <task id="LOCAL-00012" summary="leaderboard final">
+      <created>1681139674511</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139674511</updated>
+    </task>
+    <task id="LOCAL-00013" summary="login proceeds to main menu">
+      <created>1681139692221</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139692221</updated>
+    </task>
+    <task id="LOCAL-00014" summary="main menu done except new game and continue game">
+      <created>1681139749368</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139749368</updated>
+    </task>
+    <task id="LOCAL-00015" summary="custom serializer / deserializer for characters to only reflect names">
+      <created>1681139787021</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139787022</updated>
+    </task>
+    <task id="LOCAL-00016" summary="equals and hashCode for GameCharacter">
+      <created>1681139826371</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139826371</updated>
+    </task>
+    <task id="LOCAL-00017" summary="user model updates">
+      <created>1681139845089</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1681139845089</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -160,6 +215,16 @@
     <MESSAGE value="add character files, models, and loader class" />
     <MESSAGE value="add logout" />
     <MESSAGE value="CharacterLoader caching" />
-    <option name="LAST_COMMIT_MESSAGE" value="CharacterLoader caching" />
+    <MESSAGE value="rename character filenames to reflect name" />
+    <MESSAGE value="add shopping handler class" />
+    <MESSAGE value="store final" />
+    <MESSAGE value="profile final" />
+    <MESSAGE value="leaderboard final" />
+    <MESSAGE value="login proceeds to main menu" />
+    <MESSAGE value="main menu done except new game and continue game" />
+    <MESSAGE value="custom serializer / deserializer for characters to only reflect names" />
+    <MESSAGE value="equals and hashCode for GameCharacter" />
+    <MESSAGE value="user model updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="user model updates" />
   </component>
 </project>
