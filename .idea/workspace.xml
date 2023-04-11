@@ -4,10 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="user model updates">
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="change wario to peach">
+      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Bowser.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Luigi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Mario.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Peach.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Toad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Wario.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Peach.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/list.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/list.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,7 +45,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/characters",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/characters",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -47,6 +53,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/sprites/characters" />
       <recent name="$PROJECT_DIR$/resources/characters" />
       <recent name="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers" />
     </key>
@@ -206,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681139845089</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="change wario to peach">
+      <created>1681204873498</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1681204873498</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -225,6 +239,7 @@
     <MESSAGE value="custom serializer / deserializer for characters to only reflect names" />
     <MESSAGE value="equals and hashCode for GameCharacter" />
     <MESSAGE value="user model updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="user model updates" />
+    <MESSAGE value="change wario to peach" />
+    <option name="LAST_COMMIT_MESSAGE" value="change wario to peach" />
   </component>
 </project>
