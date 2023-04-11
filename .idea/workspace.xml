@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="change wario to peach">
-      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Bowser.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Luigi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Mario.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Peach.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/characters/Toad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="sprite files">
+      <change afterPath="$PROJECT_DIR$/resources/sprites/item/Coin.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/item/Plant.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Bowser.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Bowser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Luigi.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Luigi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Mario.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Mario.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Peach.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Peach.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Toad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Toad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/characters",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/items",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -53,6 +55,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/sprites/items" />
       <recent name="$PROJECT_DIR$/resources/sprites/characters" />
       <recent name="$PROJECT_DIR$/resources/characters" />
       <recent name="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers" />
@@ -220,7 +223,28 @@
       <option name="project" value="LOCAL" />
       <updated>1681204873498</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="SpriteLoader added">
+      <created>1681207389339</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1681207389339</updated>
+    </task>
+    <task id="LOCAL-00020" summary="store shows sprites">
+      <created>1681207401736</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1681207401736</updated>
+    </task>
+    <task id="LOCAL-00021" summary="sprite files">
+      <created>1681207407995</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1681207407995</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -240,6 +264,9 @@
     <MESSAGE value="equals and hashCode for GameCharacter" />
     <MESSAGE value="user model updates" />
     <MESSAGE value="change wario to peach" />
-    <option name="LAST_COMMIT_MESSAGE" value="change wario to peach" />
+    <MESSAGE value="SpriteLoader added" />
+    <MESSAGE value="store shows sprites" />
+    <MESSAGE value="sprite files" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprite files" />
   </component>
 </project>
