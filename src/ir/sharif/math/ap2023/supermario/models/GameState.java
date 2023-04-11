@@ -9,6 +9,13 @@ public class GameState {
     private int killedBosses = 0;
     private int powerups = 0; // bitmask?
     private int framesElapsed = 0;
+    private String difficulty = "";
+
+    public static String[] allDifficulties = {
+            "Easy",
+            "Medium",
+            "Hard"
+    };
 
     private boolean started = false;
 
@@ -82,5 +89,13 @@ public class GameState {
 
     public void setStarted() {
         this.started = true;
+    }
+
+    public String getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(String difficulty) {
+        this.difficulty = difficulty;
     }
 }
