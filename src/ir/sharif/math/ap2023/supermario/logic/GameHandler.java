@@ -8,6 +8,7 @@ public class GameHandler {
     public static void makeNewGameInSlot(int slot) {
         GameState gameState = new GameState();
         State.getCurrentUser().getSlots()[slot] = gameState;
+        State.setCurrentGame(gameState);
     }
 
     public static boolean slotIsContinuable(int slot) {
@@ -21,5 +22,9 @@ public class GameHandler {
             for (int i = 0; i < 3; i++)
                 if (u.getSlots()[i] != null && !u.getSlots()[i].isStarted())
                     u.getSlots()[i] = null;
+    }
+
+    public static void startNewGame() {
+        State.getCurrentGame().setStarted();
     }
 }
