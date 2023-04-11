@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="add GameState model">
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="game slots work">
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Brick.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/DoorButt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/DoorHead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/PipeBody.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/PipeHead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Question.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/items",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2"
@@ -50,6 +51,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/sprites/block" />
       <recent name="$PROJECT_DIR$/resources/sprites/items" />
       <recent name="$PROJECT_DIR$/resources/sprites/characters" />
       <recent name="$PROJECT_DIR$/resources/characters" />
@@ -267,7 +269,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681211742754</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="game slots work">
+      <created>1681214089750</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1681214089750</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -294,6 +303,7 @@
     <MESSAGE value="item sprites" />
     <MESSAGE value="sprite loader agnostic to format" />
     <MESSAGE value="add GameState model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add GameState model" />
+    <MESSAGE value="game slots work" />
+    <option name="LAST_COMMIT_MESSAGE" value="game slots work" />
   </component>
 </project>
