@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="leaderboard tweaks">
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Soil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="current game for State">
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/Sky.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +284,42 @@
       <option name="project" value="LOCAL" />
       <updated>1681223961785</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="soil and grass blocks">
+      <created>1681226290979</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226290979</updated>
+    </task>
+    <task id="LOCAL-00030" summary="GameHandler sets current game, sets started">
+      <created>1681226326330</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226326330</updated>
+    </task>
+    <task id="LOCAL-00031" summary="add difficulty to GameState">
+      <created>1681226346596</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226346596</updated>
+    </task>
+    <task id="LOCAL-00032" summary="NewGameMenu proceeds to NewGameOptionsMenu">
+      <created>1681226436537</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226436537</updated>
+    </task>
+    <task id="LOCAL-00033" summary="current game for State">
+      <created>1681226451970</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1681226451970</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -307,11 +334,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="auth works" />
-    <MESSAGE value="add character files, models, and loader class" />
-    <MESSAGE value="add logout" />
-    <MESSAGE value="CharacterLoader caching" />
-    <MESSAGE value="rename character filenames to reflect name" />
     <MESSAGE value="add shopping handler class" />
     <MESSAGE value="store final" />
     <MESSAGE value="profile final" />
@@ -332,6 +354,11 @@
     <MESSAGE value="game slots work" />
     <MESSAGE value="add blocks" />
     <MESSAGE value="leaderboard tweaks" />
-    <option name="LAST_COMMIT_MESSAGE" value="leaderboard tweaks" />
+    <MESSAGE value="soil and grass blocks" />
+    <MESSAGE value="GameHandler sets current game, sets started" />
+    <MESSAGE value="add difficulty to GameState" />
+    <MESSAGE value="NewGameMenu proceeds to NewGameOptionsMenu" />
+    <MESSAGE value="current game for State" />
+    <option name="LAST_COMMIT_MESSAGE" value="current game for State" />
   </component>
 </project>
