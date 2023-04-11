@@ -21,7 +21,7 @@ public class NewGameMenu implements View {
             slotButton.addActionListener(e -> {
                 GameHandler.makeNewGameInSlot(finalI);
                 NewGameMenu.getInstance().remove();
-//                NewGameOptionsMenu.getInstance().show();
+                NewGameOptionsMenu.getInstance().show();
             });
             panel.add(slotButton);
         }
