@@ -2,6 +2,7 @@ package ir.sharif.math.ap2023.supermario.views;
 
 import ir.sharif.math.ap2023.supermario.logic.BuyCharacterResult;
 import ir.sharif.math.ap2023.supermario.logic.ShoppingHandler;
+import ir.sharif.math.ap2023.supermario.logic.SpriteLoader;
 import ir.sharif.math.ap2023.supermario.models.GameCharacter;
 
 import javax.swing.*;
@@ -12,12 +13,14 @@ public class StoreMenuCharacterPanel extends JPanel {
     private JLabel errorLabel = new JLabel();
     private JButton buyButton = new JButton();
     private GameCharacter forCharacter;
+    private JPanel leftPanel = new JPanel(), rightPanel = new JPanel();
     public StoreMenuCharacterPanel(GameCharacter c) {
         super();
         forCharacter = c;
         setPreferredSize(new Dimension(320, 240));
-        setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+        rightPanel.setLayout(new BoxLayout(rightPanel, BoxLayout.Y_AXIS));
         setBorder(BorderFactory.createLineBorder(Color.BLACK, 4));
+        setLayout(new BoxLayout(this, BoxLayout.X_AXIS));
 
         JLabel nameLabel = new JLabel(c.getName());
         nameLabel.setFont(new Font(
@@ -58,16 +61,23 @@ public class StoreMenuCharacterPanel extends JPanel {
             buyButton.setEnabled(false);
         }
 
+        JLabel spriteLabel = new JLabel(new ImageIcon(SpriteLoader.loadSpriteForCharacter(c)));
 
-        this.add(nameLabel);
-        this.add(moveSpeedLabel);
-        this.add(jumpSpeedLabel);
-        this.add(shotSpeedLabel);
-        this.add(coinMagnetLabel);
-        this.add(errorLabel);
-        this.add(Box.createRigidArea(new Dimension(getWidth(), 20)));
-        this.add(priceLabel);
-        this.add(buyButton);
+        leftPanel.add(spriteLabel);
+
+
+        rightPanel.add(nameLabel);
+        rightPanel.add(moveSpeedLabel);
+        rightPanel.add(jumpSpeedLabel);
+        rightPanel.add(shotSpeedLabel);
+        rightPanel.add(coinMagnetLabel);
+        rightPanel.add(errorLabel);
+        rightPanel.add(Box.createRigidArea(new Dimension(getWidth(), 20)));
+        rightPanel.add(priceLabel);
+        rightPanel.add(buyButton);
+
+        this.add(leftPanel);
+        this.add(rightPanel);
     }
 
     public void reset() {

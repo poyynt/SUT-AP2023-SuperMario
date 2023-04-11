@@ -48,13 +48,13 @@ public class StoreMenu implements View {
     public void show() {
 //        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
+        for (StoreMenuCharacterPanel characterPanel: characterPanelList)
+            characterPanel.reset();
     }
 
     @Override
     public void remove() {
 //        MainView.getInstance().getFrame().getContentPane().remove(panel);
-        for (StoreMenuCharacterPanel characterPanel: characterPanelList)
-            characterPanel.reset();
     }
 
     @Override
