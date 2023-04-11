@@ -10,6 +10,8 @@ public class GameState {
     private int powerups = 0; // bitmask?
     private int framesElapsed = 0;
 
+    private boolean started = false;
+
     public int getLives() {
         return lives;
     }
@@ -72,5 +74,13 @@ public class GameState {
 
     public void incrementFramesElapsed() {
         this.framesElapsed++;
+    }
+
+    public boolean isStarted() {
+        return started;
+    }
+
+    public void setStarted() {
+        this.started = true;
     }
 }

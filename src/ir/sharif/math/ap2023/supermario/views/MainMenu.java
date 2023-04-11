@@ -31,14 +31,14 @@ public class MainMenu implements View {
         JButton newGameButton = new JButton("New Game");
         newGameButton.addActionListener(e -> {
             MainMenu.getInstance().remove();
-//            LoginMenu.getInstance().show();
+            NewGameMenu.getInstance().show();
         });
         panel.add(newGameButton);
 
         JButton continueGameButton = new JButton("Continue Game");
         continueGameButton.addActionListener(e -> {
             MainMenu.getInstance().remove();
-//            RegisterMenu.getInstance().show();
+            ContinueGameMenu.getInstance().show();
         });
         panel.add(continueGameButton);
 

@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="sprite files">
-      <change afterPath="$PROJECT_DIR$/resources/sprites/item/Coin.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/sprites/item/Plant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="add GameState model">
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Bowser.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Bowser.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Luigi.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Luigi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Mario.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Mario.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Peach.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Peach.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/sprites/characters/Toad.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sprites/character/Toad.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +239,35 @@
       <option name="project" value="LOCAL" />
       <updated>1681207407995</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="refactor resource folder names">
+      <created>1681211707481</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681211707481</updated>
+    </task>
+    <task id="LOCAL-00023" summary="item sprites">
+      <created>1681211716812</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1681211716812</updated>
+    </task>
+    <task id="LOCAL-00024" summary="sprite loader agnostic to format">
+      <created>1681211731004</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1681211731004</updated>
+    </task>
+    <task id="LOCAL-00025" summary="add GameState model">
+      <created>1681211742754</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1681211742754</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -267,6 +290,10 @@
     <MESSAGE value="SpriteLoader added" />
     <MESSAGE value="store shows sprites" />
     <MESSAGE value="sprite files" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprite files" />
+    <MESSAGE value="refactor resource folder names" />
+    <MESSAGE value="item sprites" />
+    <MESSAGE value="sprite loader agnostic to format" />
+    <MESSAGE value="add GameState model" />
+    <option name="LAST_COMMIT_MESSAGE" value="add GameState model" />
   </component>
 </project>
