@@ -12,7 +12,7 @@ public class User {
     private int coins = 0;
     private long highScore = 0;
 
-    private static List<GameCharacter> defaultOwnedCharacters = new ArrayList<>();
+    private static final List<GameCharacter> defaultOwnedCharacters = new ArrayList<>();
     static {
         defaultOwnedCharacters.add(CharacterLoader.getDefaultCharacter());
     }
@@ -70,7 +70,11 @@ public class User {
         this.currentCharacter = currentCharacter;
     }
 
-    public GameState[] getSlots() {
-        return slots;
+    public GameState getSlot(int i) {
+        return slots[i];
+    }
+
+    public void setSlot(int i, GameState gameState) {
+        slots[i] = gameState;
     }
 }
