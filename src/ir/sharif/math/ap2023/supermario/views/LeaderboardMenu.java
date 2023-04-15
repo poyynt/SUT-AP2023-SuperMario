@@ -18,7 +18,7 @@ public class LeaderboardMenu implements View {
         panel.setPreferredSize(MainView.getInstance().getFrame().getPreferredSize());
 
         Dimension listDimension = new Dimension(MainView.getInstance().getFrame().getPreferredSize());
-        listDimension.height = State.getAllUsers().size() * 240;
+        listDimension.height = State.getAllUsers().size() * 80;
 
         list.setPreferredSize(listDimension);
         list.setLayout(new BoxLayout(list, BoxLayout.Y_AXIS));

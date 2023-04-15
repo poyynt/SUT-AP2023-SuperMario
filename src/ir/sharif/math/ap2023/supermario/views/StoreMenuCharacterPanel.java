@@ -75,7 +75,7 @@ public class StoreMenuCharacterPanel extends JPanel {
         rightPanel.add(shotSpeedLabel);
         rightPanel.add(coinMagnetLabel);
         rightPanel.add(errorLabel);
-        rightPanel.add(Box.createRigidArea(new Dimension(getWidth(), 20)));
+        rightPanel.add(Box.createRigidArea(new Dimension(getWidth(), 8)));
         rightPanel.add(priceLabel);
         rightPanel.add(buyButton);
 
