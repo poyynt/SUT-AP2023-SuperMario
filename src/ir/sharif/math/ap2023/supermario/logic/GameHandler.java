@@ -3,10 +3,12 @@ package ir.sharif.math.ap2023.supermario.logic;
 import ir.sharif.math.ap2023.supermario.models.GameState;
 import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
+import ir.sharif.math.ap2023.supermario.views.GameOverMenu;
 import ir.sharif.math.ap2023.supermario.views.GameView;
+import ir.sharif.math.ap2023.supermario.views.GameWonMenu;
 import ir.sharif.math.ap2023.supermario.views.MainMenu;
 
-public class  GameHandler {
+public class GameHandler {
     public static void makeNewGameInSlot(int slot) {
         GameState gameState = new GameState();
         State.getCurrentUser().setSlot(slot, gameState);
@@ -24,7 +26,7 @@ public class  GameHandler {
     }
 
     public static void clearNotStartedSlots() {
-        for (User u: State.getAllUsers())
+        for (User u : State.getAllUsers())
             for (int i = 0; i < 3; i++)
                 if (u.getSlot(i) != null && !u.getSlot(i).isStarted())
                     u.setSlot(i, null);
@@ -39,11 +41,13 @@ public class  GameHandler {
         GameState currentGame = State.getCurrentGame();
         currentGame.handleSectionEnd();
         if (level == -1 && section == -1) {
-            State.getCurrentUser().setHighScore(currentGame.calculateScore());
+            State.getCurrentUser().setHighScore(
+                    Math.max(
+                            State.getCurrentUser().getHighScore(),
+                            currentGame.calculateScore()));
             currentGame.setNotStarted();
             GameView.getInstance().remove();
-//            GameWonView.getInstance().show(); // TODO
-            MainMenu.getInstance().show();
+            GameWonMenu.getInstance().show();
         }
         currentGame.setLevel(level);
         currentGame.setSection(section);
@@ -56,13 +60,14 @@ public class  GameHandler {
         GameState currentGame = State.getCurrentGame();
         currentGame.decreaseLives();
         if (currentGame.getLives() == 0) {
-            State.getCurrentUser().setHighScore(currentGame.calculateScore());
+            State.getCurrentUser().setHighScore(
+                    Math.max(
+                            State.getCurrentUser().getHighScore(),
+                            currentGame.calculateScore()));
             currentGame.setNotStarted();
             GameView.getInstance().remove();
-//            GameOverView.getInstance().show(); // TODO
-            MainMenu.getInstance().show();
-        }
-        else {
+            GameOverMenu.getInstance().show();
+        } else {
             currentGame.setSection(1);
             currentGame.setPlayerX(0);
             currentGame.setPlayerY(0);
