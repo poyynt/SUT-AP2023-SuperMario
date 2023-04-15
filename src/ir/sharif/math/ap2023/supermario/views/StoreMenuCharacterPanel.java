@@ -10,10 +10,13 @@ import java.awt.*;
 
 public class StoreMenuCharacterPanel extends JPanel {
 
-    private JLabel errorLabel = new JLabel();
-    private JButton buyButton = new JButton();
-    private GameCharacter forCharacter;
-    private JPanel leftPanel = new JPanel(), rightPanel = new JPanel();
+    private final JLabel errorLabel = new JLabel();
+    private final JButton buyButton = new JButton();
+    private final GameCharacter forCharacter;
+    @SuppressWarnings("FieldCanBeLocal")
+    private final JPanel leftPanel = new JPanel();
+    @SuppressWarnings("FieldCanBeLocal")
+    private final JPanel rightPanel = new JPanel();
     public StoreMenuCharacterPanel(GameCharacter c) {
         super();
         forCharacter = c;
@@ -29,17 +32,17 @@ public class StoreMenuCharacterPanel extends JPanel {
                 20
         ));
 
-        JLabel moveSpeedLabel = new JLabel("Speed: " + String.valueOf(c.getMoveSpeed()));
+        JLabel moveSpeedLabel = new JLabel("Speed: " + c.getMoveSpeed());
 
-        JLabel jumpSpeedLabel = new JLabel("Jump Strength: " + String.valueOf(c.getJumpSpeed()));
+        JLabel jumpSpeedLabel = new JLabel("Jump Strength: " + c.getJumpSpeed());
 
-        JLabel shotSpeedLabel = new JLabel("Shooting Power: " + String.valueOf(c.getShotSpeed()));
+        JLabel shotSpeedLabel = new JLabel("Shooting Power: " + c.getShotSpeed());
 
         JLabel coinMagnetLabel = new JLabel(c.getCoinRadiusMultiplier() == 1 ? "" : "Has coin magnet.");
 
         errorLabel.setForeground(Color.RED);
 
-        JLabel priceLabel = new JLabel("Price: " + String.valueOf(c.getPrice()));
+        JLabel priceLabel = new JLabel("Price: " + c.getPrice());
 
         buyButton.addActionListener(e -> {
             BuyCharacterResult result = ShoppingHandler.buyCharacter(c);

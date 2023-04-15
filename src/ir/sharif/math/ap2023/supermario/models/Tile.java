@@ -6,7 +6,7 @@ import java.util.Map;
 public class Tile {
     public final int x, y;
     public final String name;
-    public Map<String, String> properties = new HashMap<>();
+    public final Map<String, String> properties = new HashMap<>();
 
     public Tile(int x, int y, String name) {
         this.x = x;

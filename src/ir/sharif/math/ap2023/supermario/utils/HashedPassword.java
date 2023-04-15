@@ -6,9 +6,10 @@ import java.security.SecureRandom;
 import java.security.NoSuchAlgorithmException;
 
 public class HashedPassword {
+    @SuppressWarnings("FieldCanBeLocal")
     private final int saltLength = 8; // salt length in bytes
-    private byte[] salt;
-    private byte[] saltedPasswordHash;
+    private final byte[] salt;
+    private final byte[] saltedPasswordHash;
 
     public HashedPassword(String cleartextPassword) {
         this.salt = new byte[this.saltLength];
@@ -43,8 +44,7 @@ public class HashedPassword {
 
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] passwordHash = digest.digest(toHash);
-            return passwordHash;
+            return digest.digest(toHash);
         } catch (NoSuchAlgorithmException x) {
             return message;
         }

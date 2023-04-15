@@ -25,6 +25,7 @@ public abstract class Loop implements Runnable {
             long millisToSleep = (long) (timeToSleep / (1000 * 1000));
             int nanosToSleep = (int) (timeToSleep % (1000 * 1000));
             try {
+                //noinspection BusyWait
                 Thread.sleep(millisToSleep, nanosToSleep);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);

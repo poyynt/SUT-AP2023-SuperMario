@@ -25,7 +25,6 @@ public class NewGameOptionsMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
 
         panel.removeAll();

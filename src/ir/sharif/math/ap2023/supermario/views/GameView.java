@@ -17,6 +17,7 @@ public class GameView implements View {
     private final JPanel panel = new JPanel();
 
     private final TilesView tilesView = new TilesView();
+    @SuppressWarnings("FieldCanBeLocal")
     private final PlayerView playerView = new PlayerView();
 
     private GameView() {

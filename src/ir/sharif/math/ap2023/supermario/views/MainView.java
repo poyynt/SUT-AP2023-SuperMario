@@ -29,6 +29,7 @@ public class MainView {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
         frame.setVisible(true);
+        //noinspection ResultOfMethodCallIgnored
         frame.getX();
     }
 

@@ -11,7 +11,6 @@ public class ContinueGameMenu implements View {
     private final JPanel panel = new JPanel();
 
     private ContinueGameMenu() {
-//        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
     }
 
@@ -22,7 +21,6 @@ public class ContinueGameMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
         panel.removeAll();
 
@@ -49,7 +47,6 @@ public class ContinueGameMenu implements View {
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
     }
 
     @Override

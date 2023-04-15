@@ -24,6 +24,7 @@ public class MapHandler {
         loadedLevel = level;
         loadedSection = section;
         try {
+            //noinspection DataFlowIssue
             tileMap = gson.fromJson(gson.newJsonReader(
                     new FileReader(new File(
                             MapHandler.class.getResource("/map/" + level + "/" + section + ".json").toURI())

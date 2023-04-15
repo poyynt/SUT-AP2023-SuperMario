@@ -23,7 +23,6 @@ public class GameLoop extends Loop {
         MainView mainView = MainView.getInstance();
         mainView.getFrame().setFocusable(true);
         mainView.getFrame().addKeyListener(keyboardHandler);
-//        mainView.setupFrame();
         super.start();
     }
 }

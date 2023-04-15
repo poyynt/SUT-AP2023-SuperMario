@@ -11,7 +11,6 @@ public class NewGameMenu implements View {
     private final JPanel panel = new JPanel();
 
     private NewGameMenu() {
-//        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         for (int i = 0; i < 3; i++) {
@@ -41,13 +40,11 @@ public class NewGameMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
     }
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
     }
 
     @Override

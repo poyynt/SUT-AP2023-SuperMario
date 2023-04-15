@@ -17,7 +17,7 @@ public class GameState { // section
     private String difficulty = "";
     private GameCharacter character;
 
-    public static String[] allDifficulties = {
+    public static final String[] allDifficulties = {
             "Easy",
             "Medium",
             "Hard"

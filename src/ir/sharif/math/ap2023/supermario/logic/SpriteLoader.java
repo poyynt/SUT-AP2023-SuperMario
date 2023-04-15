@@ -19,10 +19,13 @@ public class SpriteLoader {
     public static Image loadSpriteWithName(String category, String spriteName) {
         try {
             if (cache.get(category + "/" + spriteName) == null) {
+                //noinspection DataFlowIssue
                 File directory = new File(SpriteLoader.class.getResource("/sprites/" + category + "/").toURI());
+                //noinspection DataFlowIssue
                 String filenameWithExtension = directory.list(
                         (dir, name) -> name.startsWith(spriteName + ".")
                 )[0];
+                //noinspection DataFlowIssue
                 cache.put(
                         category + "/" + spriteName,
                         ImageIO.read(

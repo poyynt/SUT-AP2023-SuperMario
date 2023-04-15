@@ -10,43 +10,31 @@ import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
 
 import java.io.*;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 public class PersistenceController {
-    private static Gson gson;
+    private static final Gson gson;
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
 
-        gsonBuilder.registerTypeAdapter(GameCharacter.class, new JsonSerializer<GameCharacter>() {
-            @Override
-            public JsonElement serialize(GameCharacter gameCharacter, Type type, JsonSerializationContext jsonSerializationContext) {
-                return new JsonPrimitive(gameCharacter.getName());
-            }
-        });
+        gsonBuilder.registerTypeAdapter(GameCharacter.class, (JsonSerializer<GameCharacter>) (gameCharacter, type, jsonSerializationContext) -> new JsonPrimitive(gameCharacter.getName()));
 
-        gsonBuilder.registerTypeAdapter(GameCharacter.class, new JsonDeserializer<GameCharacter>() {
-
-            @Override
-            public GameCharacter deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
-                return CharacterLoader.getCharacter(jsonElement.getAsString());
-            }
-        });
+        gsonBuilder.registerTypeAdapter(GameCharacter.class, (JsonDeserializer<GameCharacter>) (jsonElement, type, jsonDeserializationContext) -> CharacterLoader.getCharacter(jsonElement.getAsString()));
 
         gson = gsonBuilder.create();
     }
 
-    private static String usersFilename = "data/users.json";
+    private static final String usersFilename = "data/users.json";
 
     public static void save() {
         File directoryToCreate = new File(usersFilename).getParentFile();
         if (directoryToCreate != null)
+            //noinspection ResultOfMethodCallIgnored
             directoryToCreate.mkdirs();
 
         List<User> allUsersCollection = State.getAllUsers();
-        JsonWriter jsonWriter = null;
+        JsonWriter jsonWriter;
         try {
             FileWriter fileWriter = new FileWriter(usersFilename, false);
             jsonWriter = gson.newJsonWriter(fileWriter);
@@ -58,14 +46,13 @@ public class PersistenceController {
     }
 
     public static void load() {
-        List<User> allUsersCollection = null;
+        List<User> allUsersCollection;
         try {
             JsonReader jsonReader = gson.newJsonReader(new FileReader(usersFilename));
-            TypeToken<List<User>> typeToken = new TypeToken<List<User>>(){};
+            TypeToken<List<User>> typeToken = new TypeToken<>() {
+            };
             allUsersCollection = gson.fromJson(jsonReader, typeToken);
-        } catch (FileNotFoundException e) {
-            allUsersCollection = new ArrayList<>();
-        } catch (JsonSyntaxException e) {
+        } catch (FileNotFoundException | JsonSyntaxException e) {
             allUsersCollection = new ArrayList<>();
         }
 

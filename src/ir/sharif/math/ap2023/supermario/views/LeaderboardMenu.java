@@ -15,7 +15,6 @@ public class LeaderboardMenu implements View {
     private final JPanel list = new JPanel();
 
     private LeaderboardMenu() {
-//        update();
         panel.setPreferredSize(MainView.getInstance().getFrame().getPreferredSize());
 
         Dimension listDimension = new Dimension(MainView.getInstance().getFrame().getPreferredSize());
@@ -43,7 +42,6 @@ public class LeaderboardMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
 
         list.removeAll();
@@ -95,7 +93,6 @@ public class LeaderboardMenu implements View {
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
     }
 
     @Override

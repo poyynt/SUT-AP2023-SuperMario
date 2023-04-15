@@ -11,18 +11,20 @@ import java.util.HashMap;
 import java.util.List;
 
 public class CharacterLoader {
-    private static Gson gson = new Gson();
+    private static final Gson gson = new Gson();
     private static List<String> cachedListOfCharacters = null;
-    private static HashMap<String, GameCharacter> cachedCharacters = new HashMap<>();
+    private static final HashMap<String, GameCharacter> cachedCharacters = new HashMap<>();
     public static List<String> getListOfCharacters() {
         if (cachedListOfCharacters != null) {
             return cachedListOfCharacters;
         }
         try {
+            //noinspection DataFlowIssue
             URI resourceURI = CharacterLoader.class.getResource("/characters/list.json").toURI();
             File resourceFile = new File(resourceURI);
             FileReader resourceFileReader = new FileReader(resourceFile);
-            TypeToken<List<String>> typeToken = new TypeToken<List<String>>(){};
+            TypeToken<List<String>> typeToken = new TypeToken<>() {
+            };
             cachedListOfCharacters = gson.fromJson(resourceFileReader, typeToken);
             return cachedListOfCharacters;
         } catch (URISyntaxException | FileNotFoundException | NullPointerException e) {
@@ -35,10 +37,12 @@ public class CharacterLoader {
             return cachedCharacters.get(name);
         }
         try {
+            //noinspection DataFlowIssue
             URI resourceURI = CharacterLoader.class.getResource("/characters/" + name + ".json").toURI();
             File resourceFile = new File(resourceURI);
             FileReader resourceFileReader = new FileReader(resourceFile);
-            TypeToken<GameCharacter> typeToken = new TypeToken<GameCharacter>(){};
+            TypeToken<GameCharacter> typeToken = new TypeToken<>() {
+            };
             cachedCharacters.put(name, gson.fromJson(resourceFileReader, typeToken));
             return cachedCharacters.get(name);
         } catch (URISyntaxException | FileNotFoundException e) {

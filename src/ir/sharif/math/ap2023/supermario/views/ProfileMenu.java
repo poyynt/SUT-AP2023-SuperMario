@@ -1,7 +1,5 @@
 package ir.sharif.math.ap2023.supermario.views;
 
-import ir.sharif.math.ap2023.supermario.logic.AuthenticationHandler;
-import ir.sharif.math.ap2023.supermario.logic.LoginResult;
 import ir.sharif.math.ap2023.supermario.models.GameCharacter;
 import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
@@ -15,9 +13,9 @@ public class ProfileMenu implements View {
 
     private final JPanel panel = new JPanel();
 
-    private JLabel usernameLabel = new JLabel();
-    private JLabel highScoreLabel = new JLabel();
-    private JPanel radioButtonPanel = new JPanel();
+    private final JLabel usernameLabel = new JLabel();
+    private final JLabel highScoreLabel = new JLabel();
+    private final JPanel radioButtonPanel = new JPanel();
 
     private ProfileMenu() {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -47,7 +45,6 @@ public class ProfileMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
 
         User currentUser = State.getCurrentUser();

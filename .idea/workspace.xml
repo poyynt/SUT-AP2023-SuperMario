@@ -4,35 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="Sky block">
-      <change afterPath="$PROJECT_DIR$/resources/map/1/1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/map/1/2.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GravityHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MapHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MovementHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/TileCollisionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/Tile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/TileMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/Base.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/PlayerView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/TilesView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Bowser.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Bowser.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Luigi.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Luigi.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Mario.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Mario.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Peach.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Peach.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/characters/Toad.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/characters/Toad.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="GameHandler works">
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/GameLoop.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ProfileMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ProfileMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/RegisterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/RegisterMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StartMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,20 +40,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "true",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "true",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/sprites/block" />
@@ -117,55 +101,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680631575478</updated>
-    </task>
-    <task id="LOCAL-00001" summary="initial">
-      <created>1680785865095</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1680785865097</updated>
-    </task>
-    <task id="LOCAL-00002" summary="initial">
-      <created>1680785902654</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1680785902654</updated>
-    </task>
-    <task id="LOCAL-00003" summary="initial">
-      <created>1680785944146</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680785944146</updated>
-    </task>
-    <task id="LOCAL-00004" summary="auth works">
-      <created>1681070360161</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1681070360164</updated>
-    </task>
-    <task id="LOCAL-00005" summary="add character files, models, and loader class">
-      <created>1681119910146</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681119910147</updated>
-    </task>
-    <task id="LOCAL-00006" summary="add logout">
-      <created>1681119942650</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681119942651</updated>
-    </task>
-    <task id="LOCAL-00007" summary="CharacterLoader caching">
-      <created>1681121806737</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1681121806738</updated>
     </task>
     <task id="LOCAL-00008" summary="rename character filenames to reflect name">
       <created>1681139610677</created>
@@ -363,7 +298,154 @@
       <option name="project" value="LOCAL" />
       <updated>1681226792510</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="level 1.1, 1.2 maps">
+      <created>1681563971508</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1681563971508</updated>
+    </task>
+    <task id="LOCAL-00037" summary="tweak jump speed and price for characters">
+      <created>1681563997202</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1681563997202</updated>
+    </task>
+    <task id="LOCAL-00038" summary="ide">
+      <created>1681564006281</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564006281</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Tile, TileMap model">
+      <created>1681564063099</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564063099</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add level, section + handling, coins, character, score calculation to GameState">
+      <created>1681564163939</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564163939</updated>
+    </task>
+    <task id="LOCAL-00041" summary="getSlot, setSlot for User">
+      <created>1681564288477</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564288477</updated>
+    </task>
+    <task id="LOCAL-00042" summary="MapHandler class for loading and working with the map">
+      <created>1681564391750</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564391751</updated>
+    </task>
+    <task id="LOCAL-00043" summary="MovementHandler class for handling non-gravitational controls + collisions">
+      <created>1681564435780</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564435780</updated>
+    </task>
+    <task id="LOCAL-00044" summary="TileCollisionHandler">
+      <created>1681564456364</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564456364</updated>
+    </task>
+    <task id="LOCAL-00045" summary="view for painting tiles">
+      <created>1681564476153</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564476153</updated>
+    </task>
+    <task id="LOCAL-00046" summary="view for painting the player">
+      <created>1681564496414</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564496414</updated>
+    </task>
+    <task id="LOCAL-00047" summary="base class for GameView opaque components">
+      <created>1681564522310</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564522310</updated>
+    </task>
+    <task id="LOCAL-00048" summary="GameView">
+      <created>1681564544674</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564544674</updated>
+    </task>
+    <task id="LOCAL-00049" summary="GravityHandler for gravitational controls and collisions">
+      <created>1681564590957</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564590957</updated>
+    </task>
+    <task id="LOCAL-00050" summary="remove debug print">
+      <created>1681564704122</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564704124</updated>
+    </task>
+    <task id="LOCAL-00051" summary="clear stale slots properly">
+      <created>1681564778059</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564778060</updated>
+    </task>
+    <task id="LOCAL-00052" summary="new window size">
+      <created>1681564836053</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1681564836053</updated>
+    </task>
+    <task id="LOCAL-00053" summary="make SpriteLoader able to load tiles + cache properly">
+      <created>1681565002782</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1681565002782</updated>
+    </task>
+    <task id="LOCAL-00054" summary="new game proceeds to GameView">
+      <created>1681565044361</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1681565044362</updated>
+    </task>
+    <task id="LOCAL-00055" summary="continue function woks">
+      <created>1681565059470</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1681565059470</updated>
+    </task>
+    <task id="LOCAL-00056" summary="GameHandler works">
+      <created>1681565122434</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1681565122434</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -378,31 +460,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="store final" />
-    <MESSAGE value="profile final" />
-    <MESSAGE value="leaderboard final" />
-    <MESSAGE value="login proceeds to main menu" />
-    <MESSAGE value="main menu done except new game and continue game" />
-    <MESSAGE value="custom serializer / deserializer for characters to only reflect names" />
-    <MESSAGE value="equals and hashCode for GameCharacter" />
-    <MESSAGE value="user model updates" />
-    <MESSAGE value="change wario to peach" />
-    <MESSAGE value="SpriteLoader added" />
-    <MESSAGE value="store shows sprites" />
-    <MESSAGE value="sprite files" />
-    <MESSAGE value="refactor resource folder names" />
-    <MESSAGE value="item sprites" />
-    <MESSAGE value="sprite loader agnostic to format" />
-    <MESSAGE value="add GameState model" />
-    <MESSAGE value="game slots work" />
-    <MESSAGE value="add blocks" />
-    <MESSAGE value="leaderboard tweaks" />
-    <MESSAGE value="soil and grass blocks" />
-    <MESSAGE value="GameHandler sets current game, sets started" />
     <MESSAGE value="add difficulty to GameState" />
     <MESSAGE value="NewGameMenu proceeds to NewGameOptionsMenu" />
     <MESSAGE value="current game for State" />
     <MESSAGE value="Sky block" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sky block" />
+    <MESSAGE value="level 1.1, 1.2 maps" />
+    <MESSAGE value="tweak jump speed and price for characters" />
+    <MESSAGE value="ide" />
+    <MESSAGE value="Tile, TileMap model" />
+    <MESSAGE value="add level, section + handling, coins, character, score calculation to GameState" />
+    <MESSAGE value="getSlot, setSlot for User" />
+    <MESSAGE value="MapHandler class for loading and working with the map" />
+    <MESSAGE value="MovementHandler class for handling non-gravitational controls + collisions" />
+    <MESSAGE value="TileCollisionHandler" />
+    <MESSAGE value="view for painting tiles" />
+    <MESSAGE value="view for painting the player" />
+    <MESSAGE value="base class for GameView opaque components" />
+    <MESSAGE value="GameView" />
+    <MESSAGE value="GravityHandler for gravitational controls and collisions" />
+    <MESSAGE value="remove debug print" />
+    <MESSAGE value="clear stale slots properly" />
+    <MESSAGE value="new window size" />
+    <MESSAGE value="make SpriteLoader able to load tiles + cache properly" />
+    <MESSAGE value="new game proceeds to GameView" />
+    <MESSAGE value="continue function woks" />
+    <MESSAGE value="GameHandler works" />
+    <option name="LAST_COMMIT_MESSAGE" value="GameHandler works" />
   </component>
 </project>

@@ -2,8 +2,6 @@ package ir.sharif.math.ap2023.supermario.views;
 
 import ir.sharif.math.ap2023.supermario.logic.AuthenticationHandler;
 import ir.sharif.math.ap2023.supermario.logic.LoginResult;
-import ir.sharif.math.ap2023.supermario.models.State;
-import ir.sharif.math.ap2023.supermario.models.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,9 +11,9 @@ public class LoginMenu implements View {
 
     private final JPanel panel = new JPanel();
 
-    private JLabel errorLabel;
-    private JTextField usernameField;
-    private JPasswordField passwordField;
+    private final JLabel errorLabel;
+    private final JTextField usernameField;
+    private final JPasswordField passwordField;
 
     private LoginMenu() {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -54,12 +52,10 @@ public class LoginMenu implements View {
             if (result == LoginResult.ERROR_INCORRECT_CREDENTIALS) {
                 errorLabel.setText("Username or password is incorrect.");
                 passwordField.setText(null);
-                return;
             }
             else if (result == LoginResult.ERROR_UNKNOWN) {
                 errorLabel.setText("An error occurred.");
                 passwordField.setText(null);
-                return;
             }
             else if (result == LoginResult.SUCCESS) {
                 LoginMenu.getInstance().remove();
@@ -81,7 +77,6 @@ public class LoginMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
     }
 

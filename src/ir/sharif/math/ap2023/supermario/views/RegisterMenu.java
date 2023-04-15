@@ -2,8 +2,6 @@ package ir.sharif.math.ap2023.supermario.views;
 
 import ir.sharif.math.ap2023.supermario.logic.AuthenticationHandler;
 import ir.sharif.math.ap2023.supermario.logic.RegistrationResult;
-import ir.sharif.math.ap2023.supermario.models.State;
-import ir.sharif.math.ap2023.supermario.models.User;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,11 +11,11 @@ public class RegisterMenu implements View {
 
     private final JPanel panel = new JPanel();
 
-    private JLabel errorLabel;
-    private JLabel successLabel;
-    private JTextField usernameField;
-    private JPasswordField passwordField;
-    private JButton registerButton;
+    private final JLabel errorLabel;
+    private final JLabel successLabel;
+    private final JTextField usernameField;
+    private final JPasswordField passwordField;
+    private final JButton registerButton;
 
     private RegisterMenu() {
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
@@ -77,14 +75,12 @@ public class RegisterMenu implements View {
                 successLabel.setText("");
                 usernameField.setText(null);
                 passwordField.setText(null);
-                return;
             }
             else if (result == RegistrationResult.ERROR_UNKNOWN) {
                 errorLabel.setText("An error occurred.");
                 successLabel.setText("");
                 usernameField.setText(null);
                 passwordField.setText(null);
-                return;
             }
             else if (result == RegistrationResult.SUCCESS) {
                 errorLabel.setText("");
@@ -94,7 +90,6 @@ public class RegisterMenu implements View {
                 registerButton.setEnabled(false);
             }
 
-//            RegisterMenu.getInstance().remove();
         });
 
         panel.add(errorLabel);
@@ -112,7 +107,6 @@ public class RegisterMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
     }
 

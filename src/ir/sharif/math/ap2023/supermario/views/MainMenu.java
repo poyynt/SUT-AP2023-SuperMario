@@ -16,7 +16,6 @@ public class MainMenu implements View {
     private final JLabel coinsLabel = new JLabel();
 
     private MainMenu() {
-//        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         welcomeLabel.setFont(new Font(
@@ -80,7 +79,6 @@ public class MainMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
         welcomeLabel.setText("Welcome, " + State.getCurrentUser().getUsername() + "!");
         coinsLabel.setText(("Coins: " + State.getCurrentUser().getCoins()));
@@ -88,7 +86,6 @@ public class MainMenu implements View {
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
         GameHandler.clearNotStartedSlots();
     }
 

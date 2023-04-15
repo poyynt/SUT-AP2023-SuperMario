@@ -10,7 +10,6 @@ public class StartMenu implements View {
     private final JPanel panel = new JPanel();
 
     private StartMenu() {
-//        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JButton loginButton = new JButton("Log In");
         loginButton.addActionListener(e -> {
@@ -36,13 +35,11 @@ public class StartMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
     }
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
     }
 
     @Override

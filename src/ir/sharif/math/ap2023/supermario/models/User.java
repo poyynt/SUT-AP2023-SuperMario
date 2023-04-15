@@ -17,17 +17,15 @@ public class User {
         defaultOwnedCharacters.add(CharacterLoader.getDefaultCharacter());
     }
 
-    private List<GameCharacter> ownedCharacters = new ArrayList<>(defaultOwnedCharacters);
+    private final List<GameCharacter> ownedCharacters = new ArrayList<>(defaultOwnedCharacters);
 
     private GameCharacter currentCharacter = CharacterLoader.getDefaultCharacter();
 
-    private GameState[] slots = new GameState[3];
+    private final GameState[] slots = new GameState[3];
 
     public User(String username, String password) {
         this.username = username;
         this.hashedPassword = new HashedPassword(password);
-//        ownedCharacters = new ArrayList<>();
-//        ownedCharacters.add(CharacterLoader.getDefaultCharacter());
     }
 
     public String getUsername() {

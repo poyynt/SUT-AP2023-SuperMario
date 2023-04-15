@@ -12,10 +12,9 @@ public class StoreMenu implements View {
     private static final StoreMenu storeMenu = new StoreMenu();
     private final JPanel panel = new JPanel();
 
-    private List<StoreMenuCharacterPanel> characterPanelList = new ArrayList<>();
+    private final List<StoreMenuCharacterPanel> characterPanelList = new ArrayList<>();
 
     private StoreMenu() {
-//        update();
         panel.setPreferredSize(MainView.getInstance().getFrame().getPreferredSize());
 
         JPanel grid = new JPanel();
@@ -46,7 +45,6 @@ public class StoreMenu implements View {
 
     @Override
     public void show() {
-//        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
         for (StoreMenuCharacterPanel characterPanel: characterPanelList)
             characterPanel.reset();
@@ -54,7 +52,6 @@ public class StoreMenu implements View {
 
     @Override
     public void remove() {
-//        MainView.getInstance().getFrame().getContentPane().remove(panel);
     }
 
     @Override

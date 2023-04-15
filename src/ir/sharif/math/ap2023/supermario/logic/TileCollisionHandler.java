@@ -26,12 +26,12 @@ public class TileCollisionHandler {
                 ));
         t.properties.put(direction + "_collision_powerups_add", "0");
 
-        if (t.properties.containsKey(direction + "_collision_setpowerups")) {
+        if (t.properties.containsKey(direction + "_collision_set_powerups")) {
             gameState.setPowerups(
                     Integer.parseInt(
-                            t.properties.get(direction + "_collision_setpowerups")
+                            t.properties.get(direction + "_collision_set_powerups")
                     ));
-            t.properties.remove(direction + "_collision_setpowerups");
+            t.properties.remove(direction + "_collision_set_powerups");
         }
     }
 }
