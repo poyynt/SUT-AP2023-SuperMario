@@ -3,28 +3,78 @@ package ir.sharif.math.ap2023.supermario.logic;
 import ir.sharif.math.ap2023.supermario.models.GameState;
 import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
+import ir.sharif.math.ap2023.supermario.views.GameView;
+import ir.sharif.math.ap2023.supermario.views.MainMenu;
 
-public class GameHandler {
+public class  GameHandler {
     public static void makeNewGameInSlot(int slot) {
         GameState gameState = new GameState();
-        State.getCurrentUser().getSlots()[slot] = gameState;
+        State.getCurrentUser().setSlot(slot, gameState);
         State.setCurrentGame(gameState);
     }
 
+    public static void continueGameInSlot(int slot) {
+        State.setCurrentGame(State.getCurrentUser().getSlot(slot));
+    }
+
     public static boolean slotIsContinuable(int slot) {
-        if (State.getCurrentUser().getSlots()[slot] == null)
+        if (State.getCurrentUser().getSlot(slot) == null)
             return false;
-        return State.getCurrentUser().getSlots()[slot].isStarted();
+        return State.getCurrentUser().getSlot(slot).isStarted();
     }
 
     public static void clearNotStartedSlots() {
         for (User u: State.getAllUsers())
             for (int i = 0; i < 3; i++)
-                if (u.getSlots()[i] != null && !u.getSlots()[i].isStarted())
-                    u.getSlots()[i] = null;
+                if (u.getSlot(i) != null && !u.getSlot(i).isStarted())
+                    u.setSlot(i, null);
     }
 
     public static void startNewGame() {
         State.getCurrentGame().setStarted();
+        State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
+    }
+
+    public static void loadSection(int level, int section) {
+        GameState currentGame = State.getCurrentGame();
+        currentGame.handleSectionEnd();
+        if (level == -1 && section == -1) {
+            State.getCurrentUser().setHighScore(currentGame.calculateScore());
+            currentGame.setNotStarted();
+            GameView.getInstance().remove();
+//            GameWonView.getInstance().show(); // TODO
+            MainMenu.getInstance().show();
+        }
+        currentGame.setLevel(level);
+        currentGame.setSection(section);
+        currentGame.setPlayerX(0);
+        currentGame.setPlayerY(0);
+        currentGame.setScreenX(0);
+    }
+
+    public static void die() {
+        GameState currentGame = State.getCurrentGame();
+        currentGame.decreaseLives();
+        if (currentGame.getLives() == 0) {
+            State.getCurrentUser().setHighScore(currentGame.calculateScore());
+            currentGame.setNotStarted();
+            GameView.getInstance().remove();
+//            GameOverView.getInstance().show(); // TODO
+            MainMenu.getInstance().show();
+        }
+        else {
+            currentGame.setSection(1);
+            currentGame.setPlayerX(0);
+            currentGame.setPlayerY(0);
+            currentGame.setScreenX(0);
+            currentGame.setCoins(0);
+            currentGame.setPowerups(0);
+            MapHandler.forceReload();
+        }
+    }
+
+    public static void pause() {
+        GameView.getInstance().remove();
+        MainMenu.getInstance().show();
     }
 }
