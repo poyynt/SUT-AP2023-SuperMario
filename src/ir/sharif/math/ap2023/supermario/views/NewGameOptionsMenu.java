@@ -7,7 +7,6 @@ import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ItemEvent;
 
 public class NewGameOptionsMenu implements View {
@@ -35,9 +34,7 @@ public class NewGameOptionsMenu implements View {
         for (String s: GameState.allDifficulties) {
             JRadioButton radioButton = new JRadioButton();
             radioButton.setText(s);
-            radioButton.addItemListener(e -> {
-                State.getCurrentGame().setDifficulty(s);
-            });
+            radioButton.addItemListener(e -> State.getCurrentGame().setDifficulty(s));
             panel.add(radioButton);
             difficultyButtonGroup.add(radioButton);
         }
@@ -66,7 +63,7 @@ public class NewGameOptionsMenu implements View {
         startButton.addActionListener(e -> {
             GameHandler.startNewGame();
             NewGameOptionsMenu.getInstance().remove();
-//            StoreMenu.getInstance().show(); // TODO
+            GameView.getInstance().show();
         });
         panel.add(startButton);
     }
