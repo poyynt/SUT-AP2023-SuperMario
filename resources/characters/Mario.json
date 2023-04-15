@@ -1,6 +1,6 @@
 {
   "name": "Mario",
-  "jumpSpeed": 5,
+  "jumpSpeed": 4,
   "moveSpeed": 5,
   "shotSpeed": 3,
   "coinRadiusMultiplier": 1,

@@ -1,8 +1,8 @@
 {
   "name": "Peach",
-  "jumpSpeed": 5,
+  "jumpSpeed": 4,
   "moveSpeed": 5,
   "shotSpeed": 5,
   "coinRadiusMultiplier": 1,
-  "price": 1000
+  "price": 100
 }
