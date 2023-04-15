@@ -13,26 +13,6 @@ public class ContinueGameMenu implements View {
     private ContinueGameMenu() {
 //        update();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-        for (int i = 0; i < 3; i++) {
-            JButton slotButton = new JButton("Slot " + (i + 1));
-            int finalI = i;
-            slotButton.setEnabled(GameHandler.slotIsContinuable(i));
-            slotButton.addActionListener(e -> {
-//                GameHandler.continueGameInSlot(finalI);
-                ContinueGameMenu.getInstance().remove();
-//                NewGameOptionsMenu.getInstance().show(); // TODO
-            });
-            panel.add(slotButton);
-        }
-
-        JButton backButton = new JButton("Back");
-        backButton.addActionListener(e -> {
-            ContinueGameMenu.getInstance().remove();
-            MainMenu.getInstance().show();
-        });
-        panel.add(Box.createRigidArea(new Dimension(getPanel().getWidth(), 40)));
-        panel.add(backButton);
     }
 
     public static ContinueGameMenu getInstance() {
@@ -44,6 +24,27 @@ public class ContinueGameMenu implements View {
     public void show() {
 //        MainView.getInstance().getFrame().setContentPane(panel);
         MainView.getInstance().setContentView(this);
+        panel.removeAll();
+
+        for (int i = 0; i < 3; i++) {
+            JButton slotButton = new JButton("Slot " + (i + 1));
+            int finalI = i;
+            slotButton.setEnabled(GameHandler.slotIsContinuable(i));
+            slotButton.addActionListener(e -> {
+                GameHandler.continueGameInSlot(finalI);
+                ContinueGameMenu.getInstance().remove();
+                GameView.getInstance().show();
+            });
+            panel.add(slotButton);
+        }
+
+        JButton backButton = new JButton("Back");
+        backButton.addActionListener(e -> {
+            ContinueGameMenu.getInstance().remove();
+            MainMenu.getInstance().show();
+        });
+        panel.add(Box.createRigidArea(new Dimension(getPanel().getWidth(), 40)));
+        panel.add(backButton);
     }
 
     @Override
