@@ -1,7 +1,7 @@
 package ir.sharif.math.ap2023.supermario.views;
 
-import ir.sharif.math.ap2023.supermario.Main;
 import ir.sharif.math.ap2023.supermario.logic.AuthenticationHandler;
+import ir.sharif.math.ap2023.supermario.logic.GameHandler;
 import ir.sharif.math.ap2023.supermario.models.State;
 
 import javax.swing.*;
@@ -12,8 +12,8 @@ public class MainMenu implements View {
     private static final MainMenu mainMenu = new MainMenu();
     private final JPanel panel = new JPanel();
 
-    private JLabel welcomeLabel = new JLabel();
-    private JLabel coinsLabel = new JLabel();
+    private final JLabel welcomeLabel = new JLabel();
+    private final JLabel coinsLabel = new JLabel();
 
     private MainMenu() {
 //        update();
@@ -89,6 +89,7 @@ public class MainMenu implements View {
     @Override
     public void remove() {
 //        MainView.getInstance().getFrame().getContentPane().remove(panel);
+        GameHandler.clearNotStartedSlots();
     }
 
     @Override

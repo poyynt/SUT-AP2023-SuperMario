@@ -1,6 +1,5 @@
 package ir.sharif.math.ap2023.supermario.views;
 
-import ir.sharif.math.ap2023.supermario.Main;
 import ir.sharif.math.ap2023.supermario.logic.GameHandler;
 
 import javax.swing.*;
@@ -49,7 +48,6 @@ public class NewGameMenu implements View {
     @Override
     public void remove() {
 //        MainView.getInstance().getFrame().getContentPane().remove(panel);
-        GameHandler.clearNotStartedSlots();
     }
 
     @Override
