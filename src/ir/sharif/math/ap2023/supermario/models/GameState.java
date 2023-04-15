@@ -1,15 +1,21 @@
 package ir.sharif.math.ap2023.supermario.models;
 
-public class GameState {
+public class GameState { // section
+    private int level = 1;
+    private int section = 1;
+    private int lastLevel = 1;
+    private int lastSection = 1;
     private int lives = 3;
     private int playerX = 0;
     private int playerY = 0;
     private int screenX = 0;
     private int coins = 0;
+    private int totalCoins = 0;
     private int killedBosses = 0;
     private int powerups = 0; // bitmask?
     private int framesElapsed = 0;
     private String difficulty = "";
+    private GameCharacter character;
 
     public static String[] allDifficulties = {
             "Easy",
@@ -55,8 +61,13 @@ public class GameState {
         return coins;
     }
 
+    public void setCoins(int coins) {
+        this.coins = coins;
+    }
+
     public void addCoins(int amount) {
-        this.coins += amount;
+        if (isNewSection())
+            this.coins += amount;
     }
 
     public int getKilledBosses() {
@@ -91,11 +102,61 @@ public class GameState {
         this.started = true;
     }
 
+    public void setNotStarted() {
+        this.started = false;
+    }
+
     public String getDifficulty() {
         return difficulty;
     }
 
     public void setDifficulty(String difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public GameCharacter getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(GameCharacter character) {
+        this.character = character;
+    }
+
+    public int getLevel() {
+        return level;
+    }
+
+    public void setLevel(int level) {
+        this.level = level;
+        this.lastLevel = Math.max(lastLevel, level);
+    }
+
+    public int getSection() {
+        return section;
+    }
+
+    public void setSection(int section) {
+        this.section = section;
+        this.lastSection = Math.max(lastSection, section);
+    }
+
+    public void handleSectionEnd() {
+        totalCoins += coins;
+        State.getCurrentUser().addCoins(coins);
+        coins = 0;
+        powerups = 0;
+    }
+
+    public boolean isNewSection() {
+        return level == lastLevel && section == lastSection;
+    }
+
+    public int calculateScore() {
+        int sum = 0;
+        sum += totalCoins * 10;
+        sum += lives * 20;
+        sum += killedBosses * 15;
+        sum *= Integer.bitCount(powerups) + 1;
+        return sum;
     }
 }
