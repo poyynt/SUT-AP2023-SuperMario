@@ -20,7 +20,7 @@ public class StoreMenu implements View {
 
         JPanel grid = new JPanel();
         Dimension gridDimension = new Dimension(MainView.getInstance().getFrame().getPreferredSize());
-        gridDimension.height -= 240;
+        gridDimension.height -= 40;
         grid.setPreferredSize(gridDimension);
         grid.setLayout(new GridLayout(3, 4));
         for (String characterName: CharacterLoader.getListOfCharacters())
