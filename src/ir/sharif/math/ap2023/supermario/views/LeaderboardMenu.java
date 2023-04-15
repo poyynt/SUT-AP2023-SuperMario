@@ -1,22 +1,18 @@
 package ir.sharif.math.ap2023.supermario.views;
 
-import ir.sharif.math.ap2023.supermario.logic.CharacterLoader;
 import ir.sharif.math.ap2023.supermario.models.State;
 import ir.sharif.math.ap2023.supermario.models.User;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.*;
-import java.util.List;
 
 public class LeaderboardMenu implements View {
 
     private static final LeaderboardMenu leaderboardMenu = new LeaderboardMenu();
     private final JPanel panel = new JPanel();
 
-    private List<StoreMenuCharacterPanel> characterPanelList = new ArrayList<>();
-
-    private JPanel list = new JPanel();
+    private final JPanel list = new JPanel();
 
     private LeaderboardMenu() {
 //        update();
@@ -52,18 +48,13 @@ public class LeaderboardMenu implements View {
 
         list.removeAll();
 
-        SortedSet<User> scores = new TreeSet<>(new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                if (o1.getHighScore() == o2.getHighScore())
-                    return -1;
-                return -Long.compare(o1.getHighScore(), o2.getHighScore());
-            }
+        SortedSet<User> scores = new TreeSet<>((o1, o2) -> {
+            if (o1.getHighScore() == o2.getHighScore())
+                return -1;
+            return -Long.compare(o1.getHighScore(), o2.getHighScore());
         });
 
         scores.addAll(State.getAllUsers());
-
-        System.out.println(State.getAllUsers().size());
 
         Dimension scorePanelDimension = new Dimension(list.getPreferredSize());
         scorePanelDimension.height = 80;
