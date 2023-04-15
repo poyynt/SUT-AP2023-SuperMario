@@ -1,22 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="GameHandler works">
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/GameLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers/GameLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ContinueGameMenu.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="remove extra comments and statements, refactor">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/PurpleSky.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/sprites/block/RedGround.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameOverMenu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameWonMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/map/1/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/map/1/2.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/2.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LoginMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ProfileMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/ProfileMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/RegisterMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/RegisterMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StartMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/StoreMenuCharacterPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +36,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectId" id="2NyLpXIhMURa8CA6JAMtvSkNYBV" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -48,10 +53,12 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
@@ -67,9 +74,9 @@
       <recent name="ir.sharif.math.ap2023.supermario.models.State" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ir.sharif.math.ap2023.supermario.views" />
       <recent name="ir.sharif.math.ap2023.supermario.views.gameviews" />
       <recent name="ir.sharif.math.ap2023.supermario.logic" />
-      <recent name="ir.sharif.math.ap2023.supermario.views" />
       <recent name="ir.sharif.math.ap2023.supermario.models" />
     </key>
   </component>
@@ -101,13 +108,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680631575478</updated>
-    </task>
-    <task id="LOCAL-00008" summary="rename character filenames to reflect name">
-      <created>1681139610677</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139610678</updated>
     </task>
     <task id="LOCAL-00009" summary="add shopping handler class">
       <created>1681139631460</created>
@@ -445,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681565122434</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="remove extra comments and statements, refactor">
+      <created>1681566875104</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1681566875104</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -460,9 +467,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add difficulty to GameState" />
-    <MESSAGE value="NewGameMenu proceeds to NewGameOptionsMenu" />
-    <MESSAGE value="current game for State" />
     <MESSAGE value="Sky block" />
     <MESSAGE value="level 1.1, 1.2 maps" />
     <MESSAGE value="tweak jump speed and price for characters" />
@@ -485,6 +489,9 @@
     <MESSAGE value="new game proceeds to GameView" />
     <MESSAGE value="continue function woks" />
     <MESSAGE value="GameHandler works" />
-    <option name="LAST_COMMIT_MESSAGE" value="GameHandler works" />
+    <MESSAGE value="remove extra comments" />
+    <MESSAGE value="remove extra comments and statements" />
+    <MESSAGE value="remove extra comments and statements, refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove extra comments and statements, refactor" />
   </component>
 </project>
