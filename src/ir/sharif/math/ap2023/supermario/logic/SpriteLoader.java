@@ -1,35 +1,30 @@
 package ir.sharif.math.ap2023.supermario.logic;
 
 import ir.sharif.math.ap2023.supermario.models.GameCharacter;
+import ir.sharif.math.ap2023.supermario.models.Tile;
 
 import javax.imageio.ImageIO;
-import javax.imageio.ImageReader;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.awt.image.ImageObserver;
-import java.awt.image.ImageProducer;
 import java.io.File;
-import java.io.FilenameFilter;
 import java.io.IOException;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SpriteLoader {
 
-    private static Map<String, BufferedImage> cache = new HashMap<>();
+    private static final Map<String, BufferedImage> cache = new HashMap<>();
 
     public static Image loadSpriteWithName(String category, String spriteName) {
         try {
-            if (cache.get(spriteName) == null) {
-                File dir = new File(SpriteLoader.class.getResource("/sprites/character/").toURI());
-                String filenameWithExtension = dir.list(
-                        (dir1, name) -> name.startsWith(spriteName + ".")
+            if (cache.get(category + "/" + spriteName) == null) {
+                File directory = new File(SpriteLoader.class.getResource("/sprites/" + category + "/").toURI());
+                String filenameWithExtension = directory.list(
+                        (dir, name) -> name.startsWith(spriteName + ".")
                 )[0];
                 cache.put(
-                        spriteName,
+                        category + "/" + spriteName,
                         ImageIO.read(
                                 SpriteLoader.class.getResource(
                                         "/sprites/" + category + "/" + filenameWithExtension)
@@ -37,7 +32,7 @@ public class SpriteLoader {
                 );
             }
 
-            return cache.get(spriteName);
+            return cache.get(category + "/" + spriteName);
         }
         catch (IOException | URISyntaxException e) {
             throw new RuntimeException(e);
@@ -46,5 +41,9 @@ public class SpriteLoader {
 
     public static Image loadSpriteForCharacter(GameCharacter c) {
         return loadSpriteWithName("character", c.getName());
+    }
+
+    public static Image loadSpriteForTile(Tile t) {
+        return loadSpriteWithName("block", t.name);
     }
 }
