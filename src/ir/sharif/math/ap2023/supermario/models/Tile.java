@@ -1,0 +1,16 @@
+package ir.sharif.math.ap2023.supermario.models;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Tile {
+    public final int x, y;
+    public final String name;
+    public Map<String, String> properties = new HashMap<>();
+
+    public Tile(int x, int y, String name) {
+        this.x = x;
+        this.y = y;
+        this.name = name;
+    }
+}
