@@ -7,21 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="add Item model">
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/ItemCollisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/1/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/1.json" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="Items work">
       <change beforePath="$PROJECT_DIR$/resources/map/1/2.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/2.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GravityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MapHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/SpriteLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/TileCollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/TileCollisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/SectionMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/SectionMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/MainView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,13 +103,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680631575478</updated>
-    </task>
-    <task id="LOCAL-00023" summary="item sprites">
-      <created>1681211716812</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1681211716812</updated>
     </task>
     <task id="LOCAL-00024" summary="sprite loader agnostic to format">
       <created>1681211731004</created>
@@ -460,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681721934541</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Items work">
+      <created>1681744610543</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1681744610543</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -475,7 +462,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="base class for GameView opaque components" />
     <MESSAGE value="GameView" />
     <MESSAGE value="GravityHandler for gravitational controls and collisions" />
     <MESSAGE value="remove debug print" />
@@ -500,6 +486,7 @@
     <MESSAGE value="refactor TileMap to SectionMap" />
     <MESSAGE value="reset gravity on start" />
     <MESSAGE value="add Item model" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Item model" />
+    <MESSAGE value="Items work" />
+    <option name="LAST_COMMIT_MESSAGE" value="Items work" />
   </component>
 </project>
