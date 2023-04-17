@@ -64,17 +64,21 @@ public class MovementHandler {
         Tile[] toCheck = new Tile[3];
         toCheck[1] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
-        if (toCheck[2] != null)
-            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
-                toCheck[2] = null;
-        if ((playerY + 128) % 64 < 4)
+//        if (toCheck[2] != null)
+//            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
+//                toCheck[2] = null;
+        if ((playerY + 128) % 64 <= 4)
             toCheck[2] = null;
+        if ((playerY + 128) % 64 >= 60)
+            toCheck[1] = null;
         boolean result = true;
         for (Tile t: toCheck) {
             if (t == null)
                 continue;
-            if (t.properties.getOrDefault("not_solid", "false").equals("false"))
+            if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
                 result = false;
+                TileCollisionHandler.handleCollisionWith(t, "left");
+            }
         }
         return result;
     }
@@ -96,17 +100,21 @@ public class MovementHandler {
             xAdditive = -1;
         toCheck[1] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY + 1);
-        if (toCheck[2] != null)
-            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
-                toCheck[2] = null;
-        if ((playerY + 128) % 64 < 4)
+//        if (toCheck[2] != null)
+//            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
+//                toCheck[2] = null;
+        if ((playerY + 128) % 64 <= 4)
+            toCheck[2] = null;
+        if ((playerY + 128) % 64 >= 60)
             toCheck[2] = null;
         boolean result = true;
         for (Tile t: toCheck) {
             if (t == null)
                 continue;
-            if (t.properties.getOrDefault("not_solid", "false").equals("false"))
+            if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
                 result = false;
+                TileCollisionHandler.handleCollisionWith(t, "right");
+            }
         }
         return result;
     }
