@@ -10,7 +10,7 @@ import java.io.FileReader;
 import java.net.URISyntaxException;
 
 public class MapHandler {
-    public static TileMap tileMap;
+    public static SectionMap sectionMap;
     private static int loadedLevel = -1;
     private static int loadedSection = -1;
 
@@ -25,21 +25,21 @@ public class MapHandler {
         loadedSection = section;
         try {
             //noinspection DataFlowIssue
-            tileMap = gson.fromJson(gson.newJsonReader(
+            sectionMap = gson.fromJson(gson.newJsonReader(
                     new FileReader(new File(
                             MapHandler.class.getResource("/map/" + level + "/" + section + ".json").toURI())
-                    )), TileMap.class);
+                    )), SectionMap.class);
         } catch (FileNotFoundException | URISyntaxException e) {
             throw new RuntimeException(e);
         }
     }
 
     public static Tile getTileAt(int gridX, int gridY) {
-        if (tileMap == null)
+        if (sectionMap == null)
             return null;
-        if (tileMap.tiles == null)
+        if (sectionMap.tiles == null)
             return null;
-        for (Tile t: tileMap.tiles)
+        for (Tile t: sectionMap.tiles)
             if (t.x == gridX && t.y == gridY)
                 return t;
         return null;
@@ -57,7 +57,7 @@ public class MapHandler {
 
         GameState state = State.getCurrentGame();
 
-        for (Tile t: tileMap.tiles) {
+        for (Tile t: sectionMap.tiles) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForTile(t),
                     t.x * 64 - state.getScreenX(),
@@ -74,6 +74,6 @@ public class MapHandler {
     }
 
     public static int getTime() {
-        return tileMap.time;
+        return sectionMap.time;
     }
 }

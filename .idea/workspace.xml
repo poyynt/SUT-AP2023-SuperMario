@@ -7,22 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="fix sizes">
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/TimeHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/InfoOverlayView.java" afterDir="false" />
+    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="game info overlay">
+      <change afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/Item.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/1/1.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/map/1/2.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/map/1/2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/GravityHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MapHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MovementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/logic/MovementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/TileMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/Base.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/PlayerView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/TilesView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/TilesView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/TileMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/models/SectionMap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,10 +75,10 @@
       <recent name="ir.sharif.math.ap2023.supermario.models.State" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ir.sharif.math.ap2023.supermario.models" />
       <recent name="ir.sharif.math.ap2023.supermario.views" />
       <recent name="ir.sharif.math.ap2023.supermario.views.gameviews" />
       <recent name="ir.sharif.math.ap2023.supermario.logic" />
-      <recent name="ir.sharif.math.ap2023.supermario.models" />
     </key>
   </component>
   <component name="RunManager">
@@ -117,55 +109,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1680631575478</updated>
-    </task>
-    <task id="LOCAL-00013" summary="login proceeds to main menu">
-      <created>1681139692221</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139692221</updated>
-    </task>
-    <task id="LOCAL-00014" summary="main menu done except new game and continue game">
-      <created>1681139749368</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139749368</updated>
-    </task>
-    <task id="LOCAL-00015" summary="custom serializer / deserializer for characters to only reflect names">
-      <created>1681139787021</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139787022</updated>
-    </task>
-    <task id="LOCAL-00016" summary="equals and hashCode for GameCharacter">
-      <created>1681139826371</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139826371</updated>
-    </task>
-    <task id="LOCAL-00017" summary="user model updates">
-      <created>1681139845089</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1681139845089</updated>
-    </task>
-    <task id="LOCAL-00018" summary="change wario to peach">
-      <created>1681204873498</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1681204873498</updated>
-    </task>
-    <task id="LOCAL-00019" summary="SpriteLoader added">
-      <created>1681207389339</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1681207389339</updated>
     </task>
     <task id="LOCAL-00020" summary="store shows sprites">
       <created>1681207401736</created>
@@ -461,7 +404,56 @@
       <option name="project" value="LOCAL" />
       <updated>1681570483447</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="refactor">
+      <created>1681713470078</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713470079</updated>
+    </task>
+    <task id="LOCAL-00063" summary="refactor">
+      <created>1681713499290</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713499290</updated>
+    </task>
+    <task id="LOCAL-00064" summary="GravityHandler tweaks">
+      <created>1681713518947</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713518947</updated>
+    </task>
+    <task id="LOCAL-00065" summary="MovementHandler tweaks">
+      <created>1681713531633</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713531633</updated>
+    </task>
+    <task id="LOCAL-00066" summary="ide">
+      <created>1681713538069</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713538069</updated>
+    </task>
+    <task id="LOCAL-00067" summary="time for sections">
+      <created>1681713597610</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713597610</updated>
+    </task>
+    <task id="LOCAL-00068" summary="game info overlay">
+      <created>1681713683768</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1681713683768</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,11 +468,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Tile, TileMap model" />
-    <MESSAGE value="add level, section + handling, coins, character, score calculation to GameState" />
-    <MESSAGE value="getSlot, setSlot for User" />
-    <MESSAGE value="MapHandler class for loading and working with the map" />
-    <MESSAGE value="MovementHandler class for handling non-gravitational controls + collisions" />
     <MESSAGE value="TileCollisionHandler" />
     <MESSAGE value="view for painting tiles" />
     <MESSAGE value="view for painting the player" />
@@ -498,9 +485,14 @@
     <MESSAGE value="remove extra comments and statements" />
     <MESSAGE value="remove extra comments and statements, refactor" />
     <MESSAGE value="improve boss fight area" />
-    <MESSAGE value="ide" />
     <MESSAGE value="add game over, game won views" />
     <MESSAGE value="fix sizes" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sizes" />
+    <MESSAGE value="refactor" />
+    <MESSAGE value="GravityHandler tweaks" />
+    <MESSAGE value="MovementHandler tweaks" />
+    <MESSAGE value="ide" />
+    <MESSAGE value="time for sections" />
+    <MESSAGE value="game info overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="game info overlay" />
   </component>
 </project>
