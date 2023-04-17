@@ -5,4 +5,5 @@ import java.util.List;
 public class TileMap {
     public List<Tile> tiles;
     public int width;
+    public int time = 0;
 }

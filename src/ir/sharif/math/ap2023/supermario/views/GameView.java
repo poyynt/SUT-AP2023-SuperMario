@@ -1,10 +1,9 @@
 package ir.sharif.math.ap2023.supermario.views;
 
-import ir.sharif.math.ap2023.supermario.logic.GameHandler;
-import ir.sharif.math.ap2023.supermario.logic.GravityHandler;
-import ir.sharif.math.ap2023.supermario.logic.MovementHandler;
+import ir.sharif.math.ap2023.supermario.logic.*;
 import ir.sharif.math.ap2023.supermario.models.KeyboardState;
 import ir.sharif.math.ap2023.supermario.models.State;
+import ir.sharif.math.ap2023.supermario.views.gameviews.InfoOverlayView;
 import ir.sharif.math.ap2023.supermario.views.gameviews.PlayerView;
 import ir.sharif.math.ap2023.supermario.views.gameviews.TilesView;
 
@@ -16,14 +15,18 @@ public class GameView implements View {
 
     private final JPanel panel = new JPanel();
 
+    @SuppressWarnings("FieldCanBeLocal")
     private final TilesView tilesView = new TilesView();
     @SuppressWarnings("FieldCanBeLocal")
     private final PlayerView playerView = new PlayerView();
+    @SuppressWarnings("FieldCanBeLocal")
+    private final InfoOverlayView infoOverlayView = new InfoOverlayView();
 
     private GameView() {
         panel.setPreferredSize(MainView.getInstance().getFrame().getPreferredSize());
         panel.setLayout(new OverlayLayout(panel));
 
+        panel.add(infoOverlayView);
         panel.add(playerView);
         panel.add(tilesView);
     }
@@ -45,11 +48,10 @@ public class GameView implements View {
     @Override
     public void update() {
         State.getCurrentGame().incrementFramesElapsed();
+        MapHandler.loadSection();
         MovementHandler.tick();
         GravityHandler.tick();
-
-
-        tilesView.tick();
+        TimeHandler.tick();
 
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SHIFT, false)
                 && KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_P, false)) {

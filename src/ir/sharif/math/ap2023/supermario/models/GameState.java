@@ -1,5 +1,7 @@
 package ir.sharif.math.ap2023.supermario.models;
 
+import ir.sharif.math.ap2023.supermario.logic.TimeHandler;
+
 public class GameState { // section
     private int level = 1;
     private int section = 1;
@@ -10,6 +12,7 @@ public class GameState { // section
     private int playerY = 0;
     private int screenX = 0;
     private int coins = 0;
+    private int secondsForScore = 0;
     private int totalCoins = 0;
     private int killedBosses = 0;
     private int powerups = 0; // bitmask?
@@ -90,6 +93,10 @@ public class GameState { // section
         return framesElapsed;
     }
 
+    public void setFramesElapsed(int framesElapsed) {
+        this.framesElapsed = framesElapsed;
+    }
+
     public void incrementFramesElapsed() {
         this.framesElapsed++;
     }
@@ -140,11 +147,16 @@ public class GameState { // section
         this.lastSection = Math.max(lastSection, section);
     }
 
+    public void setSecondsForScore(int secondsForScore) {
+        this.secondsForScore = secondsForScore;
+    }
+
     public void handleSectionEnd() {
         totalCoins += coins;
         State.getCurrentUser().addCoins(coins);
         coins = 0;
         powerups = 0;
+        secondsForScore += TimeHandler.calculateTimeRemaining();
     }
 
     public boolean isNewSection() {
@@ -156,6 +168,8 @@ public class GameState { // section
         sum += totalCoins * 10;
         sum += lives * 20;
         sum += killedBosses * 15;
+        sum += secondsForScore;
+        System.out.println("D" + secondsForScore);
         sum *= Integer.bitCount(powerups) + 1;
         return sum;
     }

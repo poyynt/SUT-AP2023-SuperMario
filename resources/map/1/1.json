@@ -1,5 +1,6 @@
 {
   "width": 43,
+  "time": 20,
   "tiles": [
   {"x": 0, "y": 7, "name": "Grass", "properties": {}},
   {"x": 1, "y": 7, "name": "Grass", "properties": {}},

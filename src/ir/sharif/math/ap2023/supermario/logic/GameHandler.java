@@ -54,6 +54,7 @@ public class GameHandler {
         currentGame.setPlayerX(0);
         currentGame.setPlayerY(0);
         currentGame.setScreenX(0);
+        currentGame.setFramesElapsed(0);
     }
 
     public static void die() {
@@ -73,6 +74,8 @@ public class GameHandler {
             currentGame.setPlayerY(0);
             currentGame.setScreenX(0);
             currentGame.setCoins(0);
+            currentGame.setSecondsForScore(0);
+            currentGame.setFramesElapsed(0);
             currentGame.setPowerups(0);
             MapHandler.forceReload();
         }

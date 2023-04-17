@@ -72,4 +72,8 @@ public class MapHandler {
         loadedSection = -1;
         loadSection();
     }
+
+    public static int getTime() {
+        return tileMap.time;
+    }
 }
