@@ -53,15 +53,15 @@ public class GravityHandler {
             playerGridX = -1;
         Tile[] toCheck = new Tile[3];
 
-        if ((playerY + 128) % 64 > 8)
-            return true;
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + 1);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
-        if (toCheck[2] != null)
-            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
-                toCheck[2] = null;
-        if ((playerX + 128) % 64 < 4)
+//        if (toCheck[2] != null)
+//            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
+//                toCheck[2] = null;
+        if ((playerX + 128) % 64 <= 8)
             toCheck[2] = null;
+        if ((playerX + 128) % 64 >= 56)
+            toCheck[1] = null;
         boolean fall = true;
         for (Tile t: toCheck) {
             if (t == null)
@@ -92,11 +92,13 @@ public class GravityHandler {
             yAdditive = -1;
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + yAdditive);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + yAdditive);
-        if (toCheck[2] != null)
-            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
-                toCheck[2] = null;
-        if ((playerX + 128) % 64 < 4)
+//        if (toCheck[2] != null)
+//            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
+//                toCheck[2] = null;
+        if ((playerX + 128) % 64 <= 8)
             toCheck[2] = null;
+        if ((playerX + 128) % 64 >= 56)
+            toCheck[1] = null;
         boolean result = true;
         for (Tile t: toCheck) {
             if (t == null)
