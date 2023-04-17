@@ -74,7 +74,7 @@ public class LeaderboardMenu implements View {
             JLabel usernameLabel = new JLabel();
             usernameLabel.setText(username);
             if (user.equals(State.getCurrentUser())) {
-                usernameLabel.setText("You");
+                usernameLabel.setText(username + " (You)");
                 usernameLabel.setForeground(Color.GREEN);
             }
             scorePanel.add(usernameLabel);

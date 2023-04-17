@@ -30,8 +30,13 @@ public class NewGameOptionsMenu implements View {
         panel.removeAll();
 
         ButtonGroup difficultyButtonGroup = new ButtonGroup();
+        boolean flag = false;
         for (String s: GameState.allDifficulties) {
             JRadioButton radioButton = new JRadioButton();
+            if (!flag) {
+                radioButton.setSelected(true);
+                flag = true;
+            }
             radioButton.setText(s);
             radioButton.addItemListener(e -> State.getCurrentGame().setDifficulty(s));
             panel.add(radioButton);
