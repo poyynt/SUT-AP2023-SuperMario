@@ -55,6 +55,7 @@ public class GameHandler {
         currentGame.setPlayerY(0);
         currentGame.setScreenX(0);
         currentGame.setFramesElapsed(0);
+        GravityHandler.reset();
     }
 
     public static void die() {
@@ -77,6 +78,7 @@ public class GameHandler {
             currentGame.setSecondsForScore(0);
             currentGame.setFramesElapsed(0);
             currentGame.setPowerups(0);
+            GravityHandler.reset();
             MapHandler.forceReload();
         }
     }

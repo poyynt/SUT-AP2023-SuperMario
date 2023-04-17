@@ -110,4 +110,9 @@ public class GravityHandler {
         }
         return result;
     }
+
+    public static void reset() {
+        playerIsJumping = false;
+        playerJumpFrame = Integer.MAX_VALUE;
+    }
 }
