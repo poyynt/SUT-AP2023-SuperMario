@@ -10,5 +10,4 @@ public abstract class Base extends JPanel {
         setOpaque(false);
     }
 
-    public abstract void tick();
 }
