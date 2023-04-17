@@ -35,6 +35,7 @@ public class GameHandler {
     public static void startNewGame() {
         State.getCurrentGame().setStarted();
         State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
+        GravityHandler.reset();
     }
 
     public static void loadSection(int level, int section) {

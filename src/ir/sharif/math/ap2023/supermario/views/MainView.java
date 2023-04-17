@@ -3,6 +3,7 @@ package ir.sharif.math.ap2023.supermario.views;
 
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
 
 public class MainView {
 
@@ -28,7 +29,13 @@ public class MainView {
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
-        frame.setVisible(true);
+
+        try {
+            SwingUtilities.invokeAndWait(() -> frame.setVisible(true));
+        } catch (InterruptedException | InvocationTargetException e) {
+            throw new RuntimeException(e);
+        }
+
         //noinspection ResultOfMethodCallIgnored
         frame.getX();
     }

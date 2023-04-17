@@ -17,8 +17,11 @@ public class TileCollisionHandler {
 
         int livesToKill = Integer.parseInt(
                 t.properties.getOrDefault(direction + "_collision_kills", "0"));
-        for (int i = 0; i < livesToKill; i++)
-            gameState.decreaseLives();
+        if (livesToKill > 0) {
+            for (int i = 0; i < livesToKill - 1; i++)
+                gameState.decreaseLives();
+            GameHandler.die();
+        }
 
         gameState.setPowerups(gameState.getPowerups() |
                 Integer.parseInt(

@@ -1,6 +1,6 @@
 {
   "width": 43,
-  "time": 30,
+  "time": 40,
   "tiles": [
     {"x": 0, "y": 7, "name": "Grass", "properties": {}},
     {"x": 1, "y": 7, "name": "Grass", "properties": {}},
@@ -126,4 +126,12 @@
 
     {"x": 42, "y": 5, "name": "DoorHead", "properties": {"not_solid": "true"}},
     {"x": 42, "y": 6, "name": "DoorButt", "properties": {"not_solid": "true", "is_door": "true", "to_level": "-1", "to_section": "-1"}}
-  ]}
+  ],
+  "items": [
+    {"x": 8, "y": 3, "name": "Coin", "properties": {"collision_coins": "1"}},
+    {"x": 27, "y": 4, "name": "Coin", "properties": {"collision_coins": "1"}},
+    {"x": 41, "y": 6, "name": "Coin", "properties": {"collision_coins": "1"}},
+
+    {"x": 20, "y": 4, "name": "Plant", "properties": {"show_hide_interval":  "4.3", "collision_kills": "1"}}
+  ]
+}

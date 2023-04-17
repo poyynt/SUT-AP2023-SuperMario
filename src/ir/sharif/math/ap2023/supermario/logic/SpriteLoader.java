@@ -1,6 +1,7 @@
 package ir.sharif.math.ap2023.supermario.logic;
 
 import ir.sharif.math.ap2023.supermario.models.GameCharacter;
+import ir.sharif.math.ap2023.supermario.models.Item;
 import ir.sharif.math.ap2023.supermario.models.Tile;
 
 import javax.imageio.ImageIO;
@@ -48,5 +49,9 @@ public class SpriteLoader {
 
     public static Image loadSpriteForTile(Tile t) {
         return loadSpriteWithName("block", t.name);
+    }
+
+    public static Image loadSpriteForItem(Item i) {
+        return loadSpriteWithName("item", i.name);
     }
 }

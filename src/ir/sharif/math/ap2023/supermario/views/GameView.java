@@ -51,7 +51,9 @@ public class GameView implements View {
         MapHandler.loadSection();
         MovementHandler.tick();
         GravityHandler.tick();
+        ItemCollisionHandler.handleItemCollisions();
         TimeHandler.tick();
+        MapHandler.itemsTick();
 
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SHIFT, false)
                 && KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_P, false)) {

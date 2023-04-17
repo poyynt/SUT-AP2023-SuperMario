@@ -169,7 +169,6 @@ public class GameState { // section
         sum += lives * 20;
         sum += killedBosses * 15;
         sum += secondsForScore;
-        System.out.println("D" + secondsForScore);
         sum *= Integer.bitCount(powerups) + 1;
         return sum;
     }
