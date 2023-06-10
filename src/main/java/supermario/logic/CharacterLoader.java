@@ -19,15 +19,15 @@ public class CharacterLoader {
             return cachedListOfCharacters;
         }
         try {
-            //noinspection DataFlowIssue
-            URI resourceURI = CharacterLoader.class.getResource("/characters/list.json").toURI();
-            File resourceFile = new File(resourceURI);
-            FileReader resourceFileReader = new FileReader(resourceFile);
+            InputStream resourceIS = CharacterLoader.class.getResourceAsStream("/characters/list.json");
+            assert resourceIS != null;
+            InputStreamReader resourceISReader = new InputStreamReader(resourceIS);
+
             TypeToken<List<String>> typeToken = new TypeToken<>() {
             };
-            cachedListOfCharacters = gson.fromJson(resourceFileReader, typeToken);
+            cachedListOfCharacters = gson.fromJson(resourceISReader, typeToken);
             return cachedListOfCharacters;
-        } catch (URISyntaxException | FileNotFoundException | NullPointerException e) {
+        } catch (NullPointerException e) {
             throw new RuntimeException(e);
         }
     }
@@ -36,18 +36,13 @@ public class CharacterLoader {
         if (cachedCharacters.get(name) != null) {
             return cachedCharacters.get(name);
         }
-        try {
-            //noinspection DataFlowIssue
-            URI resourceURI = CharacterLoader.class.getResource("/characters/" + name + ".json").toURI();
-            File resourceFile = new File(resourceURI);
-            FileReader resourceFileReader = new FileReader(resourceFile);
-            TypeToken<GameCharacter> typeToken = new TypeToken<>() {
-            };
-            cachedCharacters.put(name, gson.fromJson(resourceFileReader, typeToken));
-            return cachedCharacters.get(name);
-        } catch (URISyntaxException | FileNotFoundException e) {
-            throw new RuntimeException(e);
-        }
+        InputStream resourceIS = CharacterLoader.class.getResourceAsStream("/characters/" + name + ".json");
+        assert resourceIS != null;
+        InputStreamReader resourceISReader = new InputStreamReader(resourceIS);
+        TypeToken<GameCharacter> typeToken = new TypeToken<>() {
+        };
+        cachedCharacters.put(name, gson.fromJson(resourceISReader, typeToken));
+        return cachedCharacters.get(name);
     }
 
     public static GameCharacter getDefaultCharacter() {

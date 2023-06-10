@@ -7,6 +7,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 
 public class MapHandler {
@@ -23,15 +24,11 @@ public class MapHandler {
             return;
         loadedLevel = level;
         loadedSection = section;
-        try {
-            //noinspection DataFlowIssue
-            sectionMap = gson.fromJson(gson.newJsonReader(
-                    new FileReader(new File(
-                            MapHandler.class.getResource("/map/" + level + "/" + section + ".json").toURI())
-                    )), SectionMap.class);
-        } catch (FileNotFoundException | URISyntaxException e) {
-            throw new RuntimeException(e);
-        }
+        //noinspection DataFlowIssue
+        sectionMap = gson.fromJson(
+                new InputStreamReader(
+                        MapHandler.class.getResourceAsStream("/map/" + level + "/" + section + ".json")
+                ), SectionMap.class);
     }
 
     public static Tile getTileAt(int gridX, int gridY) {

@@ -7,40 +7,37 @@ import supermario.models.Tile;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.net.URISyntaxException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SpriteLoader {
+    private static final String[] extensions = {".png", ".gif"};
 
     private static final Map<String, BufferedImage> cache = new HashMap<>();
 
     public static Image loadSpriteWithName(String category, String spriteName) {
         try {
             if (cache.get(category + "/" + spriteName) == null) {
-                //noinspection DataFlowIssue
-                File directory = new File(SpriteLoader.class.getResource("/sprites/" + category + "/").toURI());
-                //noinspection DataFlowIssue
-                String filenameWithExtension = directory.list(
-                        (dir, name) -> name.startsWith(spriteName + ".")
-                )[0];
-                //noinspection DataFlowIssue
-                cache.put(
-                        category + "/" + spriteName,
-                        ImageIO.read(
-                                SpriteLoader.class.getResource(
-                                        "/sprites/" + category + "/" + filenameWithExtension)
-                        )
-                );
+                for (String extension: extensions) {
+                    InputStream fileIS = SpriteLoader.class.getResourceAsStream("/sprites/" + category + "/" + spriteName + extension);
+                    if (fileIS != null) {
+                        cache.put(
+                                category + "/" + spriteName,
+                                ImageIO.read(fileIS)
+                        );
+                        return cache.get(category + "/" + spriteName);
+                    }
+                }
             }
-
-            return cache.get(category + "/" + spriteName);
+            else
+                return cache.get(category + "/" + spriteName);
         }
-        catch (IOException | URISyntaxException e) {
+        catch (IOException e) {
             throw new RuntimeException(e);
         }
+        throw new RuntimeException("No sprite with name " + spriteName + " found.");
     }
 
     public static Image loadSpriteForCharacter(GameCharacter c) {
