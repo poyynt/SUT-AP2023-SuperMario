@@ -5,26 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="move source files to reflect gradle folder structure">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/google_code_gson.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/CourseClear.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Dead.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Ending.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/GameOver.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Title.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/World3.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SuperMario.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/CharacterLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/CharacterLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/SpriteLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/SpriteLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/GameCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/GameCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/Tile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/Tile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/utils/HashedPassword.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/utils/HashedPassword.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gson-2.10.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,6 +89,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,6 +113,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2R0dxjQNkhmouZ55VyRpr4CPl5M" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -127,6 +122,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sounds",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
@@ -134,6 +130,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/sounds" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
@@ -147,10 +146,13 @@
       <command value="gradle tasks" />
       <command value="gradle app:run" />
       <command value="gradle run" />
+      <command value="gradle jlink" />
+      <command value="gradle clean" />
+      <command value="gradle jlinkZip" />
     </option>
   </component>
   <component name="RunManager" selected="Gradle.SuperMario [run]">
-    <configuration name="SuperMario [app:run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SuperMario [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -161,49 +163,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="app:run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SuperMario [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="buildDependents" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="SuperMario [dependentComponents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="dependentComponents" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -225,6 +185,48 @@
         <option name="taskNames">
           <list>
             <option value="init" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SuperMario [jlinkZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jlinkZip" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SuperMario [jlink]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jlink" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,18 +258,18 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.SuperMario [app:run]" />
-      <item itemvalue="Gradle.SuperMario [buildDependents]" />
-      <item itemvalue="Gradle.SuperMario [dependentComponents]" />
+      <item itemvalue="Gradle.SuperMario [clean]" />
+      <item itemvalue="Gradle.SuperMario [jlinkZip]" />
+      <item itemvalue="Gradle.SuperMario [jlink]" />
       <item itemvalue="Gradle.SuperMario [run]" />
       <item itemvalue="Gradle.SuperMario [init]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.SuperMario [run]" />
-        <item itemvalue="Gradle.SuperMario [dependentComponents]" />
-        <item itemvalue="Gradle.SuperMario [buildDependents]" />
-        <item itemvalue="Gradle.SuperMario [app:run]" />
+        <item itemvalue="Gradle.SuperMario [jlinkZip]" />
+        <item itemvalue="Gradle.SuperMario [clean]" />
+        <item itemvalue="Gradle.SuperMario [jlink]" />
         <item itemvalue="Gradle.SuperMario [init]" />
       </list>
     </recent_temporary>
@@ -298,6 +300,17 @@
     <option name="localTasksCounter" value="3" />
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="move resource files to reflect gradle folder structure" />
     <MESSAGE value="move source files to reflect gradle folder structure" />
@@ -314,6 +327,11 @@
           <properties class="java.lang.RuntimeException" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
