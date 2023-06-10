@@ -11,6 +11,10 @@ public class HashedPassword {
     private final byte[] salt;
     private final byte[] saltedPasswordHash;
 
+    public HashedPassword() {
+        this.salt = null;
+        this.saltedPasswordHash = null;
+    }
     public HashedPassword(String cleartextPassword) {
         this.salt = new byte[this.saltLength];
 

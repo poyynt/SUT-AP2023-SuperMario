@@ -8,6 +8,14 @@ public class GameCharacter {
     private final int shotSpeed;
     private final int price;
 
+    public GameCharacter() {
+        this.name = null;
+        this.jumpSpeed = 0;
+        this.moveSpeed = 0;
+        this.coinRadiusMultiplier = 0;
+        this.shotSpeed = 0;
+        this.price = 0;
+    }
     public GameCharacter(String name, int jumpSpeed, int moveSpeed, int coinRadiusMultiplier, int shotSpeed, int price) {
         this.name = name;
         this.jumpSpeed = jumpSpeed;

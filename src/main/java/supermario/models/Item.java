@@ -13,6 +13,11 @@ public class Item {
     public final Map<String, String> properties = new HashMap<>();
     private transient Image image;
 
+    public Item() {
+        this.x = 0;
+        this.y = 0;
+        this.name = null;
+    }
     public Item(int x, int y, String name) {
         this.x = x;
         this.y = y;
