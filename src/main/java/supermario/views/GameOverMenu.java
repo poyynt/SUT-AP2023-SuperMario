@@ -1,5 +1,6 @@
 package supermario.views;
 
+import supermario.controllers.AudioController;
 import supermario.models.State;
 
 import javax.swing.*;
@@ -24,6 +25,7 @@ public class GameOverMenu implements View {
 
     @Override
     public void show() {
+        AudioController.playWavAudioOnChannel("foreground", "GameOver", 0);
         MainView.getInstance().setContentView(this);
 
         panel.removeAll();
