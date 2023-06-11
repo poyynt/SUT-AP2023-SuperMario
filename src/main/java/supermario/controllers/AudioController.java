@@ -30,8 +30,10 @@ public class AudioController {
         try {
             Clip clip = AudioSystem.getClip();
             clip.open(loadWavAudioWithName(audioName));
+            clip.setFramePosition(0);
             clip.start();
             clip.loop(loopCount);
+            playingClips.put(channelName, clip);
         } catch (LineUnavailableException | IOException e) {
             throw new RuntimeException(e);
         }
