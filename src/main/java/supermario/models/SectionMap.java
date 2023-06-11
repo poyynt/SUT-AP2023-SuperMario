@@ -5,6 +5,6 @@ import java.util.List;
 public class SectionMap {
     public List<Tile> tiles;
     public List<Item> items;
-    public int width;
+    public int length;
     public int time = 0;
 }

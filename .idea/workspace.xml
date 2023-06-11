@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="change pause button to esc">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="add exit button to user/pause menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/GameState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,9 +82,15 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="phase2-dev-audio" />
+        <entry key="$PROJECT_DIR$" value="phase2-dev" />
       </map>
     </option>
   </component>
@@ -378,7 +382,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686489304099</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="add score to overlay">
+      <created>1686489911486</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489911486</updated>
+    </task>
+    <task id="LOCAL-00017" summary="add exit button to user/pause menu">
+      <created>1686489973301</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489973301</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -423,6 +441,8 @@
     <MESSAGE value="ide files" />
     <MESSAGE value="add mute function" />
     <MESSAGE value="change pause button to esc" />
-    <option name="LAST_COMMIT_MESSAGE" value="change pause button to esc" />
+    <MESSAGE value="add score to overlay" />
+    <MESSAGE value="add exit button to user/pause menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="add exit button to user/pause menu" />
   </component>
 </project>

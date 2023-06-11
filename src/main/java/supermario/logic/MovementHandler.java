@@ -20,7 +20,7 @@ public class MovementHandler {
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_RIGHT, false) && canMoveRight()) {
             playerX += gameState.getCharacter().getMoveSpeed();
             if (playerX - screenX >= MainView.getInstance().getWidth() / 2)
-                if (MapHandler.sectionMap.width * 64 - playerX >= MainView.getInstance().getWidth() / 2)
+                if (MapHandler.sectionMap.length * 64 - playerX >= MainView.getInstance().getWidth() / 2)
                     screenX += gameState.getCharacter().getMoveSpeed();
             playerFacingRight = true;
 
@@ -59,7 +59,7 @@ public class MovementHandler {
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
-        if (playerGridX + 1 >= MapHandler.sectionMap.width)
+        if (playerGridX + 1 >= MapHandler.sectionMap.length)
             return false;
         Tile[] toCheck = new Tile[3];
         toCheck[1] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
