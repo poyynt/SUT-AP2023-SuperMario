@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="start Title audio on game start">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="ide files">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/GameOverMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/GameOverMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/StartMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,7 +317,56 @@
       <option name="project" value="LOCAL" />
       <updated>1686417746457</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="remove cache from AudioController because doing it properly is hard :)">
+      <created>1686487651021</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487651021</updated>
+    </task>
+    <task id="LOCAL-00008" summary="fix AudioController channels">
+      <created>1686487666973</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487666973</updated>
+    </task>
+    <task id="LOCAL-00009" summary="play audio on death">
+      <created>1686487692386</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487692386</updated>
+    </task>
+    <task id="LOCAL-00010" summary="play audio on game over">
+      <created>1686487721638</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487721638</updated>
+    </task>
+    <task id="LOCAL-00011" summary="in-game background audio">
+      <created>1686487746523</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487746523</updated>
+    </task>
+    <task id="LOCAL-00012" summary="move title audio to views">
+      <created>1686487759864</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487759864</updated>
+    </task>
+    <task id="LOCAL-00013" summary="ide files">
+      <created>1686487767625</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686487767625</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -356,25 +402,13 @@
     <MESSAGE value="audio resources" />
     <MESSAGE value="add AudioController class for handling audio ops" />
     <MESSAGE value="start Title audio on game start" />
-    <option name="LAST_COMMIT_MESSAGE" value="start Title audio on game start" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.RuntimeException" package="java.lang" />
-          <option name="timeStamp" value="2" />
-        </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="remove cache from AudioController because doing it properly is hard :)" />
+    <MESSAGE value="fix AudioController channels" />
+    <MESSAGE value="play audio on death" />
+    <MESSAGE value="play audio on game over" />
+    <MESSAGE value="in-game background audio" />
+    <MESSAGE value="move title audio to views" />
+    <MESSAGE value="ide files" />
+    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
   </component>
 </project>

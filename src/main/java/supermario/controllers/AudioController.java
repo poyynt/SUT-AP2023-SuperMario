@@ -8,6 +8,7 @@ import java.util.*;
 
 public class AudioController {
     private static final Map<String, Clip> playingClips = new HashMap<>();
+    private static boolean muted = false;
 
     public static AudioInputStream loadWavAudioWithName(String audioName) {
             InputStream inputStream = AudioController.class.getResourceAsStream("/audio/" + audioName + ".wav");
@@ -30,8 +31,7 @@ public class AudioController {
         try {
             Clip clip = AudioSystem.getClip();
             clip.open(loadWavAudioWithName(audioName));
-            clip.setFramePosition(0);
-            clip.start();
+            ((BooleanControl) clip.getControl(BooleanControl.Type.MUTE)).setValue(muted);
             clip.loop(loopCount);
             playingClips.put(channelName, clip);
         } catch (LineUnavailableException | IOException e) {
@@ -44,6 +44,22 @@ public class AudioController {
             Clip clip = playingClips.remove(channelName);
             clip.stop();
             clip.close();
+        }
+    }
+
+    public static void mute() {
+        muted = true;
+        for (Clip c: playingClips.values()) {
+            BooleanControl muteControl = (BooleanControl) c.getControl(BooleanControl.Type.MUTE);
+            muteControl.setValue(true);
+        }
+    }
+
+    public static void unMute() {
+        muted = false;
+        for (Clip c: playingClips.values()) {
+            BooleanControl muteControl = (BooleanControl) c.getControl(BooleanControl.Type.MUTE);
+            muteControl.setValue(false);
         }
     }
 }

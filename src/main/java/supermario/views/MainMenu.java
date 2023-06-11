@@ -65,6 +65,17 @@ public class MainMenu implements View {
         });
         panel.add(leaderboardButton);
 
+        JButton muteButton = new JButton("Mute");
+        muteButton.addActionListener(e -> {
+            AudioController.mute();
+        });
+        JButton unMuteButton = new JButton("Unmute");
+        unMuteButton.addActionListener(e -> {
+            AudioController.unMute();
+        });
+        panel.add(muteButton);
+        panel.add(unMuteButton);
+
         JButton logoutButton = new JButton("Log out");
         logoutButton.addActionListener(e -> {
             AuthenticationHandler.logout();
