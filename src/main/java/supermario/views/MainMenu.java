@@ -1,9 +1,11 @@
 package supermario.views;
 
+import supermario.controllers.AudioController;
 import supermario.logic.AuthenticationHandler;
 import supermario.logic.GameHandler;
 import supermario.models.State;
 
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.*;
 
@@ -79,6 +81,7 @@ public class MainMenu implements View {
 
     @Override
     public void show() {
+        AudioController.playWavAudioOnChannel("background", "Title", Clip.LOOP_CONTINUOUSLY);
         MainView.getInstance().setContentView(this);
         welcomeLabel.setText("Welcome, " + State.getCurrentUser().getUsername() + "!");
         coinsLabel.setText(("Coins: " + State.getCurrentUser().getCoins()));

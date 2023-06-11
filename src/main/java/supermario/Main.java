@@ -9,8 +9,6 @@ import javax.sound.sampled.Clip;
 
 public class Main {
     public static void main(String[] args) {
-        AudioController.playWavAudioOnChannel("background", "Title", Clip.LOOP_CONTINUOUSLY);
-
         PersistenceController.load();
 
         StartMenu startMenu = StartMenu.getInstance();

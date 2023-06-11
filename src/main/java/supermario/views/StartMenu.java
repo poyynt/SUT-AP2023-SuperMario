@@ -1,7 +1,9 @@
 package supermario.views;
 
 import supermario.Main;
+import supermario.controllers.AudioController;
 
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 
 public class StartMenu implements View {
@@ -35,6 +37,7 @@ public class StartMenu implements View {
 
     @Override
     public void show() {
+        AudioController.playWavAudioOnChannel("background", "Title", Clip.LOOP_CONTINUOUSLY);
         MainView.getInstance().setContentView(this);
     }
 
