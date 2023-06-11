@@ -1,5 +1,6 @@
 package supermario.views;
 
+import supermario.Main;
 import supermario.controllers.AudioController;
 import supermario.logic.AuthenticationHandler;
 import supermario.logic.GameHandler;
@@ -83,6 +84,10 @@ public class MainMenu implements View {
             StartMenu.getInstance().show();
         });
         panel.add(logoutButton);
+
+        JButton exitButton = new JButton("Exit");
+        exitButton.addActionListener(e -> Main.exit(0));
+        panel.add(exitButton);
     }
 
     public static MainMenu getInstance() {
