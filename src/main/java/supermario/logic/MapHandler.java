@@ -54,8 +54,8 @@ public class MapHandler {
     }
 
     public static void paint(Graphics2D graphics2D) {
-        for (int i = 0; i < 12; i++)
-            for (int j = 0; j < 8; j++)
+        for (int i = 0; i < 32; i++)
+            for (int j = 0; j < 24; j++)
                 graphics2D.drawImage(
                         SpriteLoader.loadSpriteForTile(new Tile(0, 0, "Sky")),
                         i * 32,

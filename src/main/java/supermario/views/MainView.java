@@ -9,8 +9,8 @@ public class MainView {
 
     private static final MainView mainView = new MainView();
     private final JFrame frame = new JFrame("Super Mario");
-    private final int width = 12 * 32;
-    private final int height = 8 * 32;
+    private final int width = 32 * 32;
+    private final int height = 24 * 32;
 
     private View contentView;
 

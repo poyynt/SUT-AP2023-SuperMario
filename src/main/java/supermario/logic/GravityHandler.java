@@ -4,6 +4,7 @@ import supermario.models.GameState;
 import supermario.models.KeyboardState;
 import supermario.models.State;
 import supermario.models.Tile;
+import supermario.views.MainView;
 
 import java.awt.event.KeyEvent;
 
@@ -12,7 +13,7 @@ public class GravityHandler {
     private static int playerJumpFrame = Integer.MAX_VALUE;
     public static void tick() {
         GameState state = State.getCurrentGame();
-        if (state.getPlayerY() > 8 * 32) {
+        if (state.getPlayerY() > MainView.getInstance().getHeight()) {
             GameHandler.die();
             return;
         }
