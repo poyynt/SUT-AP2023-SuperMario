@@ -43,6 +43,15 @@ public class InfoOverlayView extends Base {
                 fontMetrics.getHeight()
         );
 
+        String score = "Score: " + State.getCurrentGame().calculateMomentaryScore();
+        graphics2D.drawString(
+                score,
+                0,
+                fontMetrics.getHeight()
+        );
+
+
+
         String lives = " ♥︎ ".repeat(Math.max(0, gameState.getLives()));
         graphics2D.drawString(lives, 0, 2 * fontMetrics.getHeight());
 

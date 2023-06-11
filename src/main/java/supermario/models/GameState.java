@@ -163,6 +163,13 @@ public class GameState { // section
         return level == lastLevel && section == lastSection;
     }
 
+    public int calculateMomentaryScore() {
+        int sum = 0;
+        sum += coins * 10;
+        sum += killedBosses * 15;
+        return sum;
+    }
+
     public int calculateScore() {
         int sum = 0;
         sum += totalCoins * 10;

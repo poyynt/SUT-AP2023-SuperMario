@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="ide files">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="change pause button to esc">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/GameState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/GameState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/InfoOverlayView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -366,7 +364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1686487767625</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="add mute function">
+      <created>1686489291641</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489291641</updated>
+    </task>
+    <task id="LOCAL-00015" summary="change pause button to esc">
+      <created>1686489304099</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1686489304099</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -409,6 +421,8 @@
     <MESSAGE value="in-game background audio" />
     <MESSAGE value="move title audio to views" />
     <MESSAGE value="ide files" />
-    <option name="LAST_COMMIT_MESSAGE" value="ide files" />
+    <MESSAGE value="add mute function" />
+    <MESSAGE value="change pause button to esc" />
+    <option name="LAST_COMMIT_MESSAGE" value="change pause button to esc" />
   </component>
 </project>
