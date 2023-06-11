@@ -58,8 +58,7 @@ public class GameView implements View {
         TimeHandler.tick();
         MapHandler.itemsTick();
 
-        if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SHIFT, false)
-                && KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_P, false)) {
+        if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_ESCAPE, false)) {
             GameHandler.pause();
         }
     }

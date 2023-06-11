@@ -20,7 +20,7 @@ public class InfoOverlayView extends Base {
         FontMetrics fontMetrics = graphics2D.getFontMetrics();
 
         graphics2D.setColor(Color.BLUE);
-        String help = "Shift + P to pause / exit. Jump with space, move with ← →, enter doors with ↑. ";
+        String help = "esc to pause / exit. Jump with space, move with ← →, enter doors with ↑. ";
         graphics2D.drawString(
                 help,
                 getPreferredSize().width - fontMetrics.stringWidth(help),
