@@ -1,5 +1,6 @@
 package supermario.logic;
 
+import supermario.controllers.AudioController;
 import supermario.models.GameState;
 import supermario.models.State;
 import supermario.models.User;
@@ -62,6 +63,7 @@ public class GameHandler {
     public static void die() {
         GameState currentGame = State.getCurrentGame();
         currentGame.decreaseLives();
+        AudioController.playWavAudioOnChannel("foreground", "Dead", 0);
         if (currentGame.getLives() == 0) {
             State.getCurrentUser().setHighScore(
                     Math.max(
