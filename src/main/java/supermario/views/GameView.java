@@ -1,5 +1,6 @@
 package supermario.views;
 
+import supermario.controllers.AudioController;
 import supermario.logic.*;
 import supermario.models.KeyboardState;
 import supermario.models.State;
@@ -7,6 +8,7 @@ import supermario.views.gameviews.InfoOverlayView;
 import supermario.views.gameviews.PlayerView;
 import supermario.views.gameviews.TilesView;
 
+import javax.sound.sampled.Clip;
 import javax.swing.*;
 import java.awt.event.KeyEvent;
 
@@ -38,6 +40,7 @@ public class GameView implements View {
     @Override
     public void show() {
         MainView.getInstance().setContentView(this);
+        AudioController.playWavAudioOnChannel("background", "World3", Clip.LOOP_CONTINUOUSLY);
     }
 
     @Override
