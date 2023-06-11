@@ -7,25 +7,18 @@ import java.io.InputStream;
 import java.util.*;
 
 public class AudioController {
-    private static final Map<String, AudioInputStream> cache = new HashMap<>();
     private static final Map<String, Clip> playingClips = new HashMap<>();
 
     public static AudioInputStream loadWavAudioWithName(String audioName) {
-        if (cache.get(audioName) == null) {
-            try {
-                InputStream bufferedInputStream = AudioController.class.getResourceAsStream("/audio/" + audioName + ".wav");
-                if (bufferedInputStream == null)
-                    throw new RuntimeException("Audio file " + audioName + " does not exist.");
-                bufferedInputStream = new BufferedInputStream(bufferedInputStream);
-                AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(bufferedInputStream);
-                cache.put(audioName, audioInputStream);
-                return audioInputStream;
-            } catch (UnsupportedAudioFileException | IOException e) {
-                throw new RuntimeException(e);
-            }
+            InputStream inputStream = AudioController.class.getResourceAsStream("/audio/" + audioName + ".wav");
+            if (inputStream == null)
+                throw new RuntimeException("Audio file " + audioName + " does not exist.");
+            BufferedInputStream bufferedInputStream = new BufferedInputStream(inputStream);
+        try {
+            return AudioSystem.getAudioInputStream(bufferedInputStream);
+        } catch (UnsupportedAudioFileException | IOException e) {
+            throw new RuntimeException(e);
         }
-        else
-            return cache.get(audioName);
     }
 
     public static void playWavAudioOnChannel(String channelName, String audioName, int loopCount) {
