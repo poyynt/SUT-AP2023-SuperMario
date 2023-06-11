@@ -1,0 +1,776 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AnalysisUIOptions\">\n    <option name=\"ANALYZE_INJECTED_CODE\" value=\"false\" />\n  </component>\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"7b28073e-16b4-4192-95fc-9db3dc56aee7\" name=\"Changes\" comment=\"fix 1.2 map\">\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/InfoOverlayView.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/InfoOverlayView.java\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Enum\" />\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProblemsViewState\">\n    <option name=\"selectedTabId\" value=\"CurrentFile\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2NyLpXIhMURa8CA6JAMtvSkNYBV\" />\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"Downloaded.Files.Path.Enabled\": \"true\",\n    \"Repository.Attach.Annotations\": \"false\",\n    \"Repository.Attach.JavaDocs\": \"true\",\n    \"Repository.Attach.Sources\": \"false\",\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"last_opened_file_path\": \"/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block\",\n    \"project.structure.last.edited\": \"Project\",\n    \"project.structure.proportion\": \"0.0\",\n    \"project.structure.side.proportion\": \"0.2\",\n    \"run.code.analysis.last.selected.profile\": \"pProject Default\",\n    \"settings.editor.selected.configurable\": \"preferences.lookFeel\"\n  },\n  \"keyToStringList\": {\n    \"com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File\": [\n      \"PLAIN_TEXT\"\n    ]\n  }\n}]]></component>\n  <component name=\"RecentsManager\">\n    <key name=\"CopyFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/resources/sprites/block\" />\n      <recent name=\"$PROJECT_DIR$/resources/sprites/items\" />\n      <recent name=\"$PROJECT_DIR$/resources/sprites/characters\" />\n      <recent name=\"$PROJECT_DIR$/resources/characters\" />\n      <recent name=\"$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers\" />\n    </key>\n    <key name=\"MoveMembersDialog.RECENTS_KEY\">\n      <recent name=\"ir.sharif.math.ap2023.supermario.models.State\" />\n    </key>\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\n      <recent name=\"ir.sharif.math.ap2023.supermario.logic\" />\n      <recent name=\"ir.sharif.math.ap2023.supermario.models\" />\n      <recent name=\"ir.sharif.math.ap2023.supermario.views\" />\n      <recent name=\"ir.sharif.math.ap2023.supermario.views.gameviews\" />\n    </key>\n  </component>\n  <component name=\"RunManager\">\n    <configuration name=\"Main\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\n      <option name=\"MAIN_CLASS_NAME\" value=\"ir.sharif.math.ap2023.supermario.Main\" />\n      <module name=\"SuperMario\" />\n      <extension name=\"coverage\">\n        <pattern>\n          <option name=\"PATTERN\" value=\"ir.sharif.math.ap2023.supermario.*\" />\n          <option name=\"ENABLED\" value=\"true\" />\n        </pattern>\n      </extension>\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <recent_temporary>\n      <list>\n        <item itemvalue=\"Application.Main\" />\n      </list>\n    </recent_temporary>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"7b28073e-16b4-4192-95fc-9db3dc56aee7\" name=\"Changes\" comment=\"\" />\n      <created>1680631575478</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1680631575478</updated>\n    </task>\n    <task id=\"LOCAL-00025\" summary=\"add GameState model\">\n      <created>1681211742754</created>\n      <option name=\"number\" value=\"00025\" />\n      <option name=\"presentableId\" value=\"LOCAL-00025\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681211742754</updated>\n    </task>\n    <task id=\"LOCAL-00026\" summary=\"game slots work\">\n      <created>1681214089750</created>\n      <option name=\"number\" value=\"00026\" />\n      <option name=\"presentableId\" value=\"LOCAL-00026\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681214089750</updated>\n    </task>\n    <task id=\"LOCAL-00027\" summary=\"add blocks\">\n      <created>1681216082627</created>\n      <option name=\"number\" value=\"00027\" />\n      <option name=\"presentableId\" value=\"LOCAL-00027\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681216082627</updated>\n    </task>\n    <task id=\"LOCAL-00028\" summary=\"leaderboard tweaks\">\n      <created>1681223961785</created>\n      <option name=\"number\" value=\"00028\" />\n      <option name=\"presentableId\" value=\"LOCAL-00028\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681223961785</updated>\n    </task>\n    <task id=\"LOCAL-00029\" summary=\"soil and grass blocks\">\n      <created>1681226290979</created>\n      <option name=\"number\" value=\"00029\" />\n      <option name=\"presentableId\" value=\"LOCAL-00029\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226290979</updated>\n    </task>\n    <task id=\"LOCAL-00030\" summary=\"GameHandler sets current game, sets started\">\n      <created>1681226326330</created>\n      <option name=\"number\" value=\"00030\" />\n      <option name=\"presentableId\" value=\"LOCAL-00030\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226326330</updated>\n    </task>\n    <task id=\"LOCAL-00031\" summary=\"add difficulty to GameState\">\n      <created>1681226346596</created>\n      <option name=\"number\" value=\"00031\" />\n      <option name=\"presentableId\" value=\"LOCAL-00031\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226346596</updated>\n    </task>\n    <task id=\"LOCAL-00032\" summary=\"NewGameMenu proceeds to NewGameOptionsMenu\">\n      <created>1681226436537</created>\n      <option name=\"number\" value=\"00032\" />\n      <option name=\"presentableId\" value=\"LOCAL-00032\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226436537</updated>\n    </task>\n    <task id=\"LOCAL-00033\" summary=\"current game for State\">\n      <created>1681226451970</created>\n      <option name=\"number\" value=\"00033\" />\n      <option name=\"presentableId\" value=\"LOCAL-00033\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226451970</updated>\n    </task>\n    <task id=\"LOCAL-00034\" summary=\"Sky block\">\n      <created>1681226788886</created>\n      <option name=\"number\" value=\"00034\" />\n      <option name=\"presentableId\" value=\"LOCAL-00034\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226788886</updated>\n    </task>\n    <task id=\"LOCAL-00035\" summary=\"Sky block\">\n      <created>1681226792510</created>\n      <option name=\"number\" value=\"00035\" />\n      <option name=\"presentableId\" value=\"LOCAL-00035\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681226792510</updated>\n    </task>\n    <task id=\"LOCAL-00036\" summary=\"level 1.1, 1.2 maps\">\n      <created>1681563971508</created>\n      <option name=\"number\" value=\"00036\" />\n      <option name=\"presentableId\" value=\"LOCAL-00036\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681563971508</updated>\n    </task>\n    <task id=\"LOCAL-00037\" summary=\"tweak jump speed and price for characters\">\n      <created>1681563997202</created>\n      <option name=\"number\" value=\"00037\" />\n      <option name=\"presentableId\" value=\"LOCAL-00037\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681563997202</updated>\n    </task>\n    <task id=\"LOCAL-00038\" summary=\"ide\">\n      <created>1681564006281</created>\n      <option name=\"number\" value=\"00038\" />\n      <option name=\"presentableId\" value=\"LOCAL-00038\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564006281</updated>\n    </task>\n    <task id=\"LOCAL-00039\" summary=\"Tile, TileMap model\">\n      <created>1681564063099</created>\n      <option name=\"number\" value=\"00039\" />\n      <option name=\"presentableId\" value=\"LOCAL-00039\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564063099</updated>\n    </task>\n    <task id=\"LOCAL-00040\" summary=\"add level, section + handling, coins, character, score calculation to GameState\">\n      <created>1681564163939</created>\n      <option name=\"number\" value=\"00040\" />\n      <option name=\"presentableId\" value=\"LOCAL-00040\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564163939</updated>\n    </task>\n    <task id=\"LOCAL-00041\" summary=\"getSlot, setSlot for User\">\n      <created>1681564288477</created>\n      <option name=\"number\" value=\"00041\" />\n      <option name=\"presentableId\" value=\"LOCAL-00041\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564288477</updated>\n    </task>\n    <task id=\"LOCAL-00042\" summary=\"MapHandler class for loading and working with the map\">\n      <created>1681564391750</created>\n      <option name=\"number\" value=\"00042\" />\n      <option name=\"presentableId\" value=\"LOCAL-00042\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564391751</updated>\n    </task>\n    <task id=\"LOCAL-00043\" summary=\"MovementHandler class for handling non-gravitational controls + collisions\">\n      <created>1681564435780</created>\n      <option name=\"number\" value=\"00043\" />\n      <option name=\"presentableId\" value=\"LOCAL-00043\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564435780</updated>\n    </task>\n    <task id=\"LOCAL-00044\" summary=\"TileCollisionHandler\">\n      <created>1681564456364</created>\n      <option name=\"number\" value=\"00044\" />\n      <option name=\"presentableId\" value=\"LOCAL-00044\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564456364</updated>\n    </task>\n    <task id=\"LOCAL-00045\" summary=\"view for painting tiles\">\n      <created>1681564476153</created>\n      <option name=\"number\" value=\"00045\" />\n      <option name=\"presentableId\" value=\"LOCAL-00045\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564476153</updated>\n    </task>\n    <task id=\"LOCAL-00046\" summary=\"view for painting the player\">\n      <created>1681564496414</created>\n      <option name=\"number\" value=\"00046\" />\n      <option name=\"presentableId\" value=\"LOCAL-00046\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564496414</updated>\n    </task>\n    <task id=\"LOCAL-00047\" summary=\"base class for GameView opaque components\">\n      <created>1681564522310</created>\n      <option name=\"number\" value=\"00047\" />\n      <option name=\"presentableId\" value=\"LOCAL-00047\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564522310</updated>\n    </task>\n    <task id=\"LOCAL-00048\" summary=\"GameView\">\n      <created>1681564544674</created>\n      <option name=\"number\" value=\"00048\" />\n      <option name=\"presentableId\" value=\"LOCAL-00048\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564544674</updated>\n    </task>\n    <task id=\"LOCAL-00049\" summary=\"GravityHandler for gravitational controls and collisions\">\n      <created>1681564590957</created>\n      <option name=\"number\" value=\"00049\" />\n      <option name=\"presentableId\" value=\"LOCAL-00049\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564590957</updated>\n    </task>\n    <task id=\"LOCAL-00050\" summary=\"remove debug print\">\n      <created>1681564704122</created>\n      <option name=\"number\" value=\"00050\" />\n      <option name=\"presentableId\" value=\"LOCAL-00050\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564704124</updated>\n    </task>\n    <task id=\"LOCAL-00051\" summary=\"clear stale slots properly\">\n      <created>1681564778059</created>\n      <option name=\"number\" value=\"00051\" />\n      <option name=\"presentableId\" value=\"LOCAL-00051\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564778060</updated>\n    </task>\n    <task id=\"LOCAL-00052\" summary=\"new window size\">\n      <created>1681564836053</created>\n      <option name=\"number\" value=\"00052\" />\n      <option name=\"presentableId\" value=\"LOCAL-00052\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681564836053</updated>\n    </task>\n    <task id=\"LOCAL-00053\" summary=\"make SpriteLoader able to load tiles + cache properly\">\n      <created>1681565002782</created>\n      <option name=\"number\" value=\"00053\" />\n      <option name=\"presentableId\" value=\"LOCAL-00053\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681565002782</updated>\n    </task>\n    <task id=\"LOCAL-00054\" summary=\"new game proceeds to GameView\">\n      <created>1681565044361</created>\n      <option name=\"number\" value=\"00054\" />\n      <option name=\"presentableId\" value=\"LOCAL-00054\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681565044362</updated>\n    </task>\n    <task id=\"LOCAL-00055\" summary=\"continue function woks\">\n      <created>1681565059470</created>\n      <option name=\"number\" value=\"00055\" />\n      <option name=\"presentableId\" value=\"LOCAL-00055\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681565059470</updated>\n    </task>\n    <task id=\"LOCAL-00056\" summary=\"GameHandler works\">\n      <created>1681565122434</created>\n      <option name=\"number\" value=\"00056\" />\n      <option name=\"presentableId\" value=\"LOCAL-00056\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681565122434</updated>\n    </task>\n    <task id=\"LOCAL-00057\" summary=\"remove extra comments and statements, refactor\">\n      <created>1681566875104</created>\n      <option name=\"number\" value=\"00057\" />\n      <option name=\"presentableId\" value=\"LOCAL-00057\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681566875104</updated>\n    </task>\n    <task id=\"LOCAL-00058\" summary=\"improve boss fight area\">\n      <created>1681570447813</created>\n      <option name=\"number\" value=\"00058\" />\n      <option name=\"presentableId\" value=\"LOCAL-00058\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681570447813</updated>\n    </task>\n    <task id=\"LOCAL-00059\" summary=\"ide\">\n      <created>1681570455209</created>\n      <option name=\"number\" value=\"00059\" />\n      <option name=\"presentableId\" value=\"LOCAL-00059\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681570455209</updated>\n    </task>\n    <task id=\"LOCAL-00060\" summary=\"add game over, game won views\">\n      <created>1681570471350</created>\n      <option name=\"number\" value=\"00060\" />\n      <option name=\"presentableId\" value=\"LOCAL-00060\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681570471350</updated>\n    </task>\n    <task id=\"LOCAL-00061\" summary=\"fix sizes\">\n      <created>1681570483447</created>\n      <option name=\"number\" value=\"00061\" />\n      <option name=\"presentableId\" value=\"LOCAL-00061\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681570483447</updated>\n    </task>\n    <task id=\"LOCAL-00062\" summary=\"refactor\">\n      <created>1681713470078</created>\n      <option name=\"number\" value=\"00062\" />\n      <option name=\"presentableId\" value=\"LOCAL-00062\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713470079</updated>\n    </task>\n    <task id=\"LOCAL-00063\" summary=\"refactor\">\n      <created>1681713499290</created>\n      <option name=\"number\" value=\"00063\" />\n      <option name=\"presentableId\" value=\"LOCAL-00063\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713499290</updated>\n    </task>\n    <task id=\"LOCAL-00064\" summary=\"GravityHandler tweaks\">\n      <created>1681713518947</created>\n      <option name=\"number\" value=\"00064\" />\n      <option name=\"presentableId\" value=\"LOCAL-00064\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713518947</updated>\n    </task>\n    <task id=\"LOCAL-00065\" summary=\"MovementHandler tweaks\">\n      <created>1681713531633</created>\n      <option name=\"number\" value=\"00065\" />\n      <option name=\"presentableId\" value=\"LOCAL-00065\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713531633</updated>\n    </task>\n    <task id=\"LOCAL-00066\" summary=\"ide\">\n      <created>1681713538069</created>\n      <option name=\"number\" value=\"00066\" />\n      <option name=\"presentableId\" value=\"LOCAL-00066\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713538069</updated>\n    </task>\n    <task id=\"LOCAL-00067\" summary=\"time for sections\">\n      <created>1681713597610</created>\n      <option name=\"number\" value=\"00067\" />\n      <option name=\"presentableId\" value=\"LOCAL-00067\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713597610</updated>\n    </task>\n    <task id=\"LOCAL-00068\" summary=\"game info overlay\">\n      <created>1681713683768</created>\n      <option name=\"number\" value=\"00068\" />\n      <option name=\"presentableId\" value=\"LOCAL-00068\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681713683768</updated>\n    </task>\n    <task id=\"LOCAL-00069\" summary=\"refactor TileMap to SectionMap\">\n      <created>1681721909406</created>\n      <option name=\"number\" value=\"00069\" />\n      <option name=\"presentableId\" value=\"LOCAL-00069\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681721909406</updated>\n    </task>\n    <task id=\"LOCAL-00070\" summary=\"reset gravity on start\">\n      <created>1681721925722</created>\n      <option name=\"number\" value=\"00070\" />\n      <option name=\"presentableId\" value=\"LOCAL-00070\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681721925722</updated>\n    </task>\n    <task id=\"LOCAL-00071\" summary=\"add Item model\">\n      <created>1681721934541</created>\n      <option name=\"number\" value=\"00071\" />\n      <option name=\"presentableId\" value=\"LOCAL-00071\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681721934541</updated>\n    </task>\n    <task id=\"LOCAL-00072\" summary=\"Items work\">\n      <created>1681744610543</created>\n      <option name=\"number\" value=\"00072\" />\n      <option name=\"presentableId\" value=\"LOCAL-00072\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681744610543</updated>\n    </task>\n    <task id=\"LOCAL-00073\" summary=\"fix 1.2 map\">\n      <created>1681744973536</created>\n      <option name=\"number\" value=\"00073\" />\n      <option name=\"presentableId\" value=\"LOCAL-00073\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1681744973536</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"74\" />\n    <servers />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"GravityHandler for gravitational controls and collisions\" />\n    <MESSAGE value=\"remove debug print\" />\n    <MESSAGE value=\"clear stale slots properly\" />\n    <MESSAGE value=\"new window size\" />\n    <MESSAGE value=\"make SpriteLoader able to load tiles + cache properly\" />\n    <MESSAGE value=\"new game proceeds to GameView\" />\n    <MESSAGE value=\"continue function woks\" />\n    <MESSAGE value=\"GameHandler works\" />\n    <MESSAGE value=\"remove extra comments\" />\n    <MESSAGE value=\"remove extra comments and statements\" />\n    <MESSAGE value=\"remove extra comments and statements, refactor\" />\n    <MESSAGE value=\"improve boss fight area\" />\n    <MESSAGE value=\"add game over, game won views\" />\n    <MESSAGE value=\"fix sizes\" />\n    <MESSAGE value=\"refactor\" />\n    <MESSAGE value=\"GravityHandler tweaks\" />\n    <MESSAGE value=\"MovementHandler tweaks\" />\n    <MESSAGE value=\"ide\" />\n    <MESSAGE value=\"time for sections\" />\n    <MESSAGE value=\"game info overlay\" />\n    <MESSAGE value=\"refactor TileMap to SectionMap\" />\n    <MESSAGE value=\"reset gravity on start\" />\n    <MESSAGE value=\"add Item model\" />\n    <MESSAGE value=\"Items work\" />\n    <MESSAGE value=\"fix 1.2 map\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"fix 1.2 map\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision d4b82fe65050c433689e0a586fe529ac70a6ab81)
++++ b/.idea/workspace.xml	(date 1686399562719)
+@@ -1,495 +1,300 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="AnalysisUIOptions">
+-    <option name="ANALYZE_INJECTED_CODE" value="false" />
+-  </component>
+   <component name="AutoImportSettings">
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="fix 1.2 map">
+-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/LeaderboardMenu.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/NewGameOptionsMenu.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/InfoOverlayView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/views/gameviews/InfoOverlayView.java" afterDir="false" />
+-    </list>
++    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="fix 1.2 map" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
+   </component>
++  <component name="ExternalProjectsData">
++    <projectState path="$PROJECT_DIR$">
++      <ProjectState />
++    </projectState>
++  </component>
++  <component name="ExternalProjectsManager">
++    <system id="GRADLE">
++      <state>
++        <task path="$PROJECT_DIR$">
++          <activation />
++        </task>
++        <task path="$PROJECT_DIR$/app">
++          <activation />
++        </task>
++        <projects_view>
++          <tree_state>
++            <expand>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="application" type="c8890929:TasksNode$1" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="build" type="c8890929:TasksNode$1" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Tasks" type="e4a08cd1:TasksNode" />
++                <item name="other" type="c8890929:TasksNode$1" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
++              </path>
++              <path>
++                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
++                <item name="SuperMario" type="f1a62948:ProjectNode" />
++                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
++              </path>
++            </expand>
++            <select />
++          </tree_state>
++        </projects_view>
++      </state>
++    </system>
++  </component>
+   <component name="FileTemplateManagerImpl">
+     <option name="RECENT_TEMPLATES">
+       <list>
+-        <option value="Enum" />
+-        <option value="Class" />
++        <option value="module-info" />
+       </list>
++    </option>
++  </component>
++  <component name="Git.Settings">
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="phase2" />
++      </map>
+     </option>
+   </component>
+   <component name="MarkdownSettingsMigration">
+     <option name="stateVersion" value="1" />
+   </component>
+-  <component name="ProblemsViewState">
+-    <option name="selectedTabId" value="CurrentFile" />
++  <component name="MavenImportPreferences">
++    <option name="importingSettings">
++      <MavenImportingSettings>
++        <option name="downloadAnnotationsAutomatically" value="true" />
++        <option name="downloadDocsAutomatically" value="true" />
++        <option name="downloadSourcesAutomatically" value="true" />
++      </MavenImportingSettings>
++    </option>
+   </component>
+-  <component name="ProjectId" id="2NyLpXIhMURa8CA6JAMtvSkNYBV" />
++  <component name="ProjectId" id="2R0dxjQNkhmouZ55VyRpr4CPl5M" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "Downloaded.Files.Path.Enabled": "true",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "true",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/SuperMario/resources/sprites/block",
+-    "project.structure.last.edited": "Project",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.2",
+-    "run.code.analysis.last.selected.profile": "pProject Default",
+-    "settings.editor.selected.configurable": "preferences.lookFeel"
+-  },
+-  "keyToStringList": {
+-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+-      "PLAIN_TEXT"
+-    ]
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
++    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
++    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="RecentsManager">
+-    <key name="CopyFile.RECENT_KEYS">
+-      <recent name="$PROJECT_DIR$/resources/sprites/block" />
+-      <recent name="$PROJECT_DIR$/resources/sprites/items" />
+-      <recent name="$PROJECT_DIR$/resources/sprites/characters" />
+-      <recent name="$PROJECT_DIR$/resources/characters" />
+-      <recent name="$PROJECT_DIR$/src/ir/sharif/math/ap2023/supermario/controllers" />
++    <key name="MoveFile.RECENT_KEYS">
++      <recent name="$PROJECT_DIR$/src/main/resources" />
++      <recent name="$PROJECT_DIR$/src/main/java" />
+     </key>
+-    <key name="MoveMembersDialog.RECENTS_KEY">
+-      <recent name="ir.sharif.math.ap2023.supermario.models.State" />
+-    </key>
+-    <key name="CopyClassDialog.RECENTS_KEY">
+-      <recent name="ir.sharif.math.ap2023.supermario.logic" />
+-      <recent name="ir.sharif.math.ap2023.supermario.models" />
+-      <recent name="ir.sharif.math.ap2023.supermario.views" />
+-      <recent name="ir.sharif.math.ap2023.supermario.views.gameviews" />
+-    </key>
++  </component>
++  <component name="RunAnythingCache">
++    <option name="myCommands">
++      <command value="gradle sync" />
++      <command value="gradle ini" />
++      <command value="gradle init" />
++      <command value="gradle tasks" />
++      <command value="gradle app:run" />
++      <command value="gradle run" />
++    </option>
+   </component>
+-  <component name="RunManager">
+-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+-      <option name="MAIN_CLASS_NAME" value="ir.sharif.math.ap2023.supermario.Main" />
+-      <module name="SuperMario" />
+-      <extension name="coverage">
+-        <pattern>
+-          <option name="PATTERN" value="ir.sharif.math.ap2023.supermario.*" />
+-          <option name="ENABLED" value="true" />
+-        </pattern>
+-      </extension>
+-      <method v="2">
+-        <option name="Make" enabled="true" />
+-      </method>
++  <component name="RunManager" selected="Gradle.SuperMario [run]">
++    <configuration name="SuperMario [app:run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="app:run" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="SuperMario [buildDependents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="buildDependents" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="SuperMario [dependentComponents]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="dependentComponents" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="SuperMario [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="init" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
++    </configuration>
++    <configuration name="SuperMario [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
++      <ExternalSystemSettings>
++        <option name="executionName" />
++        <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="externalSystemIdString" value="GRADLE" />
++        <option name="scriptParameters" value="" />
++        <option name="taskDescriptions">
++          <list />
++        </option>
++        <option name="taskNames">
++          <list>
++            <option value="run" />
++          </list>
++        </option>
++        <option name="vmOptions" />
++      </ExternalSystemSettings>
++      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
++      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
++      <DebugAllEnabled>false</DebugAllEnabled>
++      <method v="2" />
+     </configuration>
++    <list>
++      <item itemvalue="Gradle.SuperMario [app:run]" />
++      <item itemvalue="Gradle.SuperMario [buildDependents]" />
++      <item itemvalue="Gradle.SuperMario [dependentComponents]" />
++      <item itemvalue="Gradle.SuperMario [run]" />
++      <item itemvalue="Gradle.SuperMario [init]" />
++    </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="Application.Main" />
++        <item itemvalue="Gradle.SuperMario [run]" />
++        <item itemvalue="Gradle.SuperMario [dependentComponents]" />
++        <item itemvalue="Gradle.SuperMario [buildDependents]" />
++        <item itemvalue="Gradle.SuperMario [app:run]" />
++        <item itemvalue="Gradle.SuperMario [init]" />
+       </list>
+     </recent_temporary>
+   </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+-      <changelist id="7b28073e-16b4-4192-95fc-9db3dc56aee7" name="Changes" comment="" />
+-      <created>1680631575478</created>
++      <changelist id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="" />
++      <created>1686391181189</created>
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+-      <updated>1680631575478</updated>
+-    </task>
+-    <task id="LOCAL-00025" summary="add GameState model">
+-      <created>1681211742754</created>
+-      <option name="number" value="00025" />
+-      <option name="presentableId" value="LOCAL-00025" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681211742754</updated>
+-    </task>
+-    <task id="LOCAL-00026" summary="game slots work">
+-      <created>1681214089750</created>
+-      <option name="number" value="00026" />
+-      <option name="presentableId" value="LOCAL-00026" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681214089750</updated>
+-    </task>
+-    <task id="LOCAL-00027" summary="add blocks">
+-      <created>1681216082627</created>
+-      <option name="number" value="00027" />
+-      <option name="presentableId" value="LOCAL-00027" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681216082627</updated>
+-    </task>
+-    <task id="LOCAL-00028" summary="leaderboard tweaks">
+-      <created>1681223961785</created>
+-      <option name="number" value="00028" />
+-      <option name="presentableId" value="LOCAL-00028" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681223961785</updated>
+-    </task>
+-    <task id="LOCAL-00029" summary="soil and grass blocks">
+-      <created>1681226290979</created>
+-      <option name="number" value="00029" />
+-      <option name="presentableId" value="LOCAL-00029" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226290979</updated>
+-    </task>
+-    <task id="LOCAL-00030" summary="GameHandler sets current game, sets started">
+-      <created>1681226326330</created>
+-      <option name="number" value="00030" />
+-      <option name="presentableId" value="LOCAL-00030" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226326330</updated>
+-    </task>
+-    <task id="LOCAL-00031" summary="add difficulty to GameState">
+-      <created>1681226346596</created>
+-      <option name="number" value="00031" />
+-      <option name="presentableId" value="LOCAL-00031" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226346596</updated>
+-    </task>
+-    <task id="LOCAL-00032" summary="NewGameMenu proceeds to NewGameOptionsMenu">
+-      <created>1681226436537</created>
+-      <option name="number" value="00032" />
+-      <option name="presentableId" value="LOCAL-00032" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226436537</updated>
+-    </task>
+-    <task id="LOCAL-00033" summary="current game for State">
+-      <created>1681226451970</created>
+-      <option name="number" value="00033" />
+-      <option name="presentableId" value="LOCAL-00033" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226451970</updated>
+-    </task>
+-    <task id="LOCAL-00034" summary="Sky block">
+-      <created>1681226788886</created>
+-      <option name="number" value="00034" />
+-      <option name="presentableId" value="LOCAL-00034" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226788886</updated>
+-    </task>
+-    <task id="LOCAL-00035" summary="Sky block">
+-      <created>1681226792510</created>
+-      <option name="number" value="00035" />
+-      <option name="presentableId" value="LOCAL-00035" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681226792510</updated>
+-    </task>
+-    <task id="LOCAL-00036" summary="level 1.1, 1.2 maps">
+-      <created>1681563971508</created>
+-      <option name="number" value="00036" />
+-      <option name="presentableId" value="LOCAL-00036" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681563971508</updated>
+-    </task>
+-    <task id="LOCAL-00037" summary="tweak jump speed and price for characters">
+-      <created>1681563997202</created>
+-      <option name="number" value="00037" />
+-      <option name="presentableId" value="LOCAL-00037" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681563997202</updated>
+-    </task>
+-    <task id="LOCAL-00038" summary="ide">
+-      <created>1681564006281</created>
+-      <option name="number" value="00038" />
+-      <option name="presentableId" value="LOCAL-00038" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564006281</updated>
+-    </task>
+-    <task id="LOCAL-00039" summary="Tile, TileMap model">
+-      <created>1681564063099</created>
+-      <option name="number" value="00039" />
+-      <option name="presentableId" value="LOCAL-00039" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564063099</updated>
+-    </task>
+-    <task id="LOCAL-00040" summary="add level, section + handling, coins, character, score calculation to GameState">
+-      <created>1681564163939</created>
+-      <option name="number" value="00040" />
+-      <option name="presentableId" value="LOCAL-00040" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564163939</updated>
+-    </task>
+-    <task id="LOCAL-00041" summary="getSlot, setSlot for User">
+-      <created>1681564288477</created>
+-      <option name="number" value="00041" />
+-      <option name="presentableId" value="LOCAL-00041" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564288477</updated>
+-    </task>
+-    <task id="LOCAL-00042" summary="MapHandler class for loading and working with the map">
+-      <created>1681564391750</created>
+-      <option name="number" value="00042" />
+-      <option name="presentableId" value="LOCAL-00042" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564391751</updated>
+-    </task>
+-    <task id="LOCAL-00043" summary="MovementHandler class for handling non-gravitational controls + collisions">
+-      <created>1681564435780</created>
+-      <option name="number" value="00043" />
+-      <option name="presentableId" value="LOCAL-00043" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564435780</updated>
+-    </task>
+-    <task id="LOCAL-00044" summary="TileCollisionHandler">
+-      <created>1681564456364</created>
+-      <option name="number" value="00044" />
+-      <option name="presentableId" value="LOCAL-00044" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564456364</updated>
+-    </task>
+-    <task id="LOCAL-00045" summary="view for painting tiles">
+-      <created>1681564476153</created>
+-      <option name="number" value="00045" />
+-      <option name="presentableId" value="LOCAL-00045" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564476153</updated>
+-    </task>
+-    <task id="LOCAL-00046" summary="view for painting the player">
+-      <created>1681564496414</created>
+-      <option name="number" value="00046" />
+-      <option name="presentableId" value="LOCAL-00046" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564496414</updated>
+-    </task>
+-    <task id="LOCAL-00047" summary="base class for GameView opaque components">
+-      <created>1681564522310</created>
+-      <option name="number" value="00047" />
+-      <option name="presentableId" value="LOCAL-00047" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564522310</updated>
+-    </task>
+-    <task id="LOCAL-00048" summary="GameView">
+-      <created>1681564544674</created>
+-      <option name="number" value="00048" />
+-      <option name="presentableId" value="LOCAL-00048" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564544674</updated>
+-    </task>
+-    <task id="LOCAL-00049" summary="GravityHandler for gravitational controls and collisions">
+-      <created>1681564590957</created>
+-      <option name="number" value="00049" />
+-      <option name="presentableId" value="LOCAL-00049" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564590957</updated>
+-    </task>
+-    <task id="LOCAL-00050" summary="remove debug print">
+-      <created>1681564704122</created>
+-      <option name="number" value="00050" />
+-      <option name="presentableId" value="LOCAL-00050" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564704124</updated>
+-    </task>
+-    <task id="LOCAL-00051" summary="clear stale slots properly">
+-      <created>1681564778059</created>
+-      <option name="number" value="00051" />
+-      <option name="presentableId" value="LOCAL-00051" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564778060</updated>
+-    </task>
+-    <task id="LOCAL-00052" summary="new window size">
+-      <created>1681564836053</created>
+-      <option name="number" value="00052" />
+-      <option name="presentableId" value="LOCAL-00052" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681564836053</updated>
+-    </task>
+-    <task id="LOCAL-00053" summary="make SpriteLoader able to load tiles + cache properly">
+-      <created>1681565002782</created>
+-      <option name="number" value="00053" />
+-      <option name="presentableId" value="LOCAL-00053" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681565002782</updated>
+-    </task>
+-    <task id="LOCAL-00054" summary="new game proceeds to GameView">
+-      <created>1681565044361</created>
+-      <option name="number" value="00054" />
+-      <option name="presentableId" value="LOCAL-00054" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681565044362</updated>
+-    </task>
+-    <task id="LOCAL-00055" summary="continue function woks">
+-      <created>1681565059470</created>
+-      <option name="number" value="00055" />
+-      <option name="presentableId" value="LOCAL-00055" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681565059470</updated>
+-    </task>
+-    <task id="LOCAL-00056" summary="GameHandler works">
+-      <created>1681565122434</created>
+-      <option name="number" value="00056" />
+-      <option name="presentableId" value="LOCAL-00056" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681565122434</updated>
+-    </task>
+-    <task id="LOCAL-00057" summary="remove extra comments and statements, refactor">
+-      <created>1681566875104</created>
+-      <option name="number" value="00057" />
+-      <option name="presentableId" value="LOCAL-00057" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681566875104</updated>
+-    </task>
+-    <task id="LOCAL-00058" summary="improve boss fight area">
+-      <created>1681570447813</created>
+-      <option name="number" value="00058" />
+-      <option name="presentableId" value="LOCAL-00058" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681570447813</updated>
+-    </task>
+-    <task id="LOCAL-00059" summary="ide">
+-      <created>1681570455209</created>
+-      <option name="number" value="00059" />
+-      <option name="presentableId" value="LOCAL-00059" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681570455209</updated>
+-    </task>
+-    <task id="LOCAL-00060" summary="add game over, game won views">
+-      <created>1681570471350</created>
+-      <option name="number" value="00060" />
+-      <option name="presentableId" value="LOCAL-00060" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681570471350</updated>
+-    </task>
+-    <task id="LOCAL-00061" summary="fix sizes">
+-      <created>1681570483447</created>
+-      <option name="number" value="00061" />
+-      <option name="presentableId" value="LOCAL-00061" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681570483447</updated>
++      <updated>1686391181189</updated>
+     </task>
+-    <task id="LOCAL-00062" summary="refactor">
+-      <created>1681713470078</created>
+-      <option name="number" value="00062" />
+-      <option name="presentableId" value="LOCAL-00062" />
++    <task id="LOCAL-00001" summary="move resource files to reflect gradle folder structure">
++      <created>1686397503724</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
+       <option name="project" value="LOCAL" />
+-      <updated>1681713470079</updated>
++      <updated>1686397503724</updated>
+     </task>
+-    <task id="LOCAL-00063" summary="refactor">
+-      <created>1681713499290</created>
+-      <option name="number" value="00063" />
+-      <option name="presentableId" value="LOCAL-00063" />
++    <task id="LOCAL-00002" summary="move source files to reflect gradle folder structure">
++      <created>1686397598361</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
+       <option name="project" value="LOCAL" />
+-      <updated>1681713499290</updated>
++      <updated>1686397598361</updated>
+     </task>
+-    <task id="LOCAL-00064" summary="GravityHandler tweaks">
+-      <created>1681713518947</created>
+-      <option name="number" value="00064" />
+-      <option name="presentableId" value="LOCAL-00064" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681713518947</updated>
+-    </task>
+-    <task id="LOCAL-00065" summary="MovementHandler tweaks">
+-      <created>1681713531633</created>
+-      <option name="number" value="00065" />
+-      <option name="presentableId" value="LOCAL-00065" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681713531633</updated>
+-    </task>
+-    <task id="LOCAL-00066" summary="ide">
+-      <created>1681713538069</created>
+-      <option name="number" value="00066" />
+-      <option name="presentableId" value="LOCAL-00066" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681713538069</updated>
+-    </task>
+-    <task id="LOCAL-00067" summary="time for sections">
+-      <created>1681713597610</created>
+-      <option name="number" value="00067" />
+-      <option name="presentableId" value="LOCAL-00067" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681713597610</updated>
+-    </task>
+-    <task id="LOCAL-00068" summary="game info overlay">
+-      <created>1681713683768</created>
+-      <option name="number" value="00068" />
+-      <option name="presentableId" value="LOCAL-00068" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681713683768</updated>
+-    </task>
+-    <task id="LOCAL-00069" summary="refactor TileMap to SectionMap">
+-      <created>1681721909406</created>
+-      <option name="number" value="00069" />
+-      <option name="presentableId" value="LOCAL-00069" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681721909406</updated>
+-    </task>
+-    <task id="LOCAL-00070" summary="reset gravity on start">
+-      <created>1681721925722</created>
+-      <option name="number" value="00070" />
+-      <option name="presentableId" value="LOCAL-00070" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681721925722</updated>
+-    </task>
+-    <task id="LOCAL-00071" summary="add Item model">
+-      <created>1681721934541</created>
+-      <option name="number" value="00071" />
+-      <option name="presentableId" value="LOCAL-00071" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681721934541</updated>
+-    </task>
+-    <task id="LOCAL-00072" summary="Items work">
+-      <created>1681744610543</created>
+-      <option name="number" value="00072" />
+-      <option name="presentableId" value="LOCAL-00072" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681744610543</updated>
+-    </task>
+-    <task id="LOCAL-00073" summary="fix 1.2 map">
+-      <created>1681744973536</created>
+-      <option name="number" value="00073" />
+-      <option name="presentableId" value="LOCAL-00073" />
+-      <option name="project" value="LOCAL" />
+-      <updated>1681744973536</updated>
+-    </task>
+-    <option name="localTasksCounter" value="74" />
++    <option name="localTasksCounter" value="3" />
+     <servers />
+-  </component>
+-  <component name="Vcs.Log.Tabs.Properties">
+-    <option name="TAB_STATES">
+-      <map>
+-        <entry key="MAIN">
+-          <value>
+-            <State />
+-          </value>
+-        </entry>
+-      </map>
+-    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="GravityHandler for gravitational controls and collisions" />
+-    <MESSAGE value="remove debug print" />
+-    <MESSAGE value="clear stale slots properly" />
+-    <MESSAGE value="new window size" />
+-    <MESSAGE value="make SpriteLoader able to load tiles + cache properly" />
+-    <MESSAGE value="new game proceeds to GameView" />
+-    <MESSAGE value="continue function woks" />
+-    <MESSAGE value="GameHandler works" />
+-    <MESSAGE value="remove extra comments" />
+-    <MESSAGE value="remove extra comments and statements" />
+-    <MESSAGE value="remove extra comments and statements, refactor" />
+-    <MESSAGE value="improve boss fight area" />
+-    <MESSAGE value="add game over, game won views" />
+-    <MESSAGE value="fix sizes" />
+-    <MESSAGE value="refactor" />
+-    <MESSAGE value="GravityHandler tweaks" />
+-    <MESSAGE value="MovementHandler tweaks" />
+-    <MESSAGE value="ide" />
+-    <MESSAGE value="time for sections" />
+-    <MESSAGE value="game info overlay" />
+-    <MESSAGE value="refactor TileMap to SectionMap" />
+-    <MESSAGE value="reset gravity on start" />
+-    <MESSAGE value="add Item model" />
+-    <MESSAGE value="Items work" />
+-    <MESSAGE value="fix 1.2 map" />
+-    <option name="LAST_COMMIT_MESSAGE" value="fix 1.2 map" />
++    <MESSAGE value="move resource files to reflect gradle folder structure" />
++    <MESSAGE value="move source files to reflect gradle folder structure" />
++    <option name="LAST_COMMIT_MESSAGE" value="move source files to reflect gradle folder structure" />
++  </component>
++  <component name="XDebuggerManager">
++    <breakpoint-manager>
++      <breakpoints>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
++          <option name="timeStamp" value="1" />
++        </breakpoint>
++        <breakpoint enabled="true" type="java-exception">
++          <properties class="java.lang.RuntimeException" package="java.lang" />
++          <option name="timeStamp" value="2" />
++        </breakpoint>
++      </breakpoints>
++    </breakpoint-manager>
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"ProjectModuleManager\">\n    <modules>\n      <module fileurl=\"file://$PROJECT_DIR$/SuperMario.iml\" filepath=\"$PROJECT_DIR$/SuperMario.iml\" />\n    </modules>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+--- a/.idea/modules.xml	(revision d4b82fe65050c433689e0a586fe529ac70a6ab81)
++++ b/.idea/modules.xml	(date 1686399562711)
+@@ -2,7 +2,7 @@
+ <project version="4">
+   <component name="ProjectModuleManager">
+     <modules>
+-      <module fileurl="file://$PROJECT_DIR$/SuperMario.iml" filepath="$PROJECT_DIR$/SuperMario.iml" />
++      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SuperMario.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SuperMario.main.iml" />
+     </modules>
+   </component>
+ </project>
+\ No newline at end of file

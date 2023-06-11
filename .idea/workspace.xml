@@ -4,20 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="move source files to reflect gradle folder structure">
-      <change afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/CourseClear.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Dead.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Ending.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/GameOver.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/Title.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/audio/World3.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="start Title audio on game start">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/gson-2.10.1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/gson-2.10.1.jar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/AudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/GameOverMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/GameOverMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/GameView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/StartMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/StartMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +91,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="phase2" />
+        <entry key="$PROJECT_DIR$" value="phase2-dev-audio" />
       </map>
     </option>
   </component>
@@ -267,10 +262,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.SuperMario [run]" />
+        <item itemvalue="Gradle.SuperMario [init]" />
+        <item itemvalue="Gradle.SuperMario [jlink]" />
         <item itemvalue="Gradle.SuperMario [jlinkZip]" />
         <item itemvalue="Gradle.SuperMario [clean]" />
-        <item itemvalue="Gradle.SuperMario [jlink]" />
-        <item itemvalue="Gradle.SuperMario [init]" />
       </list>
     </recent_temporary>
   </component>
@@ -297,7 +292,35 @@
       <option name="project" value="LOCAL" />
       <updated>1686397598361</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clean up build file">
+      <created>1686417667818</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686417667818</updated>
+    </task>
+    <task id="LOCAL-00004" summary="audio resources">
+      <created>1686417706048</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686417706048</updated>
+    </task>
+    <task id="LOCAL-00005" summary="add AudioController class for handling audio ops">
+      <created>1686417731223</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686417731223</updated>
+    </task>
+    <task id="LOCAL-00006" summary="start Title audio on game start">
+      <created>1686417746457</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686417746457</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,11 +333,30 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="phase2-dev-audio" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="move resource files to reflect gradle folder structure" />
     <MESSAGE value="move source files to reflect gradle folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="move source files to reflect gradle folder structure" />
+    <MESSAGE value="clean up build file" />
+    <MESSAGE value="audio resources" />
+    <MESSAGE value="add AudioController class for handling audio ops" />
+    <MESSAGE value="start Title audio on game start" />
+    <option name="LAST_COMMIT_MESSAGE" value="start Title audio on game start" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
