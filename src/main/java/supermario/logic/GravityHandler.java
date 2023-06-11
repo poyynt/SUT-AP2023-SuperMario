@@ -12,7 +12,7 @@ public class GravityHandler {
     private static int playerJumpFrame = Integer.MAX_VALUE;
     public static void tick() {
         GameState state = State.getCurrentGame();
-        if (state.getPlayerY() > 8 * 64) {
+        if (state.getPlayerY() > 8 * 32) {
             GameHandler.die();
             return;
         }
@@ -45,8 +45,8 @@ public class GravityHandler {
     private static boolean playerShouldFall() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 64;
-        int playerGridY = playerY / 64;
+        int playerGridX = playerX / 32;
+        int playerGridY = playerY / 32;
         if (playerY < 0)
             playerGridY = -1;
         if (playerX < 0)
@@ -56,11 +56,11 @@ public class GravityHandler {
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + 1);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
 //        if (toCheck[2] != null)
-//            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
+//            if (playerGridX * 32 + 32 - playerX < 0 || playerGridX * 32 - playerX > 2)
 //                toCheck[2] = null;
-        if ((playerX + 128) % 64 <= 8)
+        if ((playerX + 128) % 32 <= 8)
             toCheck[2] = null;
-        if ((playerX + 128) % 64 >= 56)
+        if ((playerX + 128) % 32 >= 56)
             toCheck[1] = null;
         boolean fall = true;
         for (Tile t: toCheck) {
@@ -77,24 +77,24 @@ public class GravityHandler {
     private static boolean playerCanGoUp() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 64;
-        int playerGridY = playerY / 64;
+        int playerGridX = playerX / 32;
+        int playerGridY = playerY / 32;
         if (playerY < 0)
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
         Tile[] toCheck = new Tile[3];
 
-        if ((playerY + 128) % 64 > 8)
+        if ((playerY + 128) % 32 > 8)
             return true;
         int yAdditive = 0;
-        if (playerY % 64 == 0)
+        if (playerY % 32 == 0)
             yAdditive = -1;
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + yAdditive);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + yAdditive);
-        if ((playerX + 128) % 64 <= 8)
+        if ((playerX + 128) % 32 <= 8)
             toCheck[2] = null;
-        if ((playerX + 128) % 64 >= 56)
+        if ((playerX + 128) % 32 >= 56)
             toCheck[1] = null;
         boolean result = true;
         for (Tile t: toCheck) {

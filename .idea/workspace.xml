@@ -4,8 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="add exit button to user/pause menu">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="resize sprites to 32x32">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/ItemCollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/ItemCollisionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/PlayerView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/gameviews/PlayerView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/Brick.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/Brick.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/DoorButt.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/DoorButt.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/DoorHead.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/DoorHead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/Grass.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/Grass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/PipeBody.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/PipeBody.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/PipeHead.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/PipeHead.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/PurpleSky.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/PurpleSky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/Question.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/Question.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/RedGround.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/RedGround.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/Sky.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/Sky.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/block/Soil.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/block/Soil.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/character/Bowser.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/character/Bowser.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/character/Luigi.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/character/Luigi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/character/Mario.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/character/Mario.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/character/Peach.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/character/Peach.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/character/Toad.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/character/Toad.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/item/Coin.gif" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/item/Coin.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sprites/item/Plant.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sprites/item/Plant.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +420,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686489973301</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="rename SectionMap.width to SectionMap.length">
+      <created>1686499041693</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1686499041693</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,6 +474,8 @@
     <MESSAGE value="change pause button to esc" />
     <MESSAGE value="add score to overlay" />
     <MESSAGE value="add exit button to user/pause menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="add exit button to user/pause menu" />
+    <MESSAGE value="rename SectionMap.width to SectionMap.length" />
+    <MESSAGE value="resize sprites to 32x32" />
+    <option name="LAST_COMMIT_MESSAGE" value="resize sprites to 32x32" />
   </component>
 </project>

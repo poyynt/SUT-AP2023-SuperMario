@@ -58,8 +58,8 @@ public class MapHandler {
             for (int j = 0; j < 8; j++)
                 graphics2D.drawImage(
                         SpriteLoader.loadSpriteForTile(new Tile(0, 0, "Sky")),
-                        i * 64,
-                        j * 64,
+                        i * 32,
+                        j * 32,
                         null
                 );
 
@@ -68,8 +68,8 @@ public class MapHandler {
         for (Tile t: sectionMap.tiles) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForTile(t),
-                    t.x * 64 - state.getScreenX(),
-                    t.y * 64,
+                    t.x * 32 - state.getScreenX(),
+                    t.y * 32,
                     null
             );
         }
@@ -79,8 +79,8 @@ public class MapHandler {
                 continue;
             graphics2D.drawImage(
                     i.getImage(),
-                    i.x * 64 - state.getScreenX(),
-                    i.y * 64,
+                    i.x * 32 - state.getScreenX(),
+                    i.y * 32,
                     null
             );
         }

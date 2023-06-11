@@ -64,8 +64,8 @@ public class ItemCollisionHandler {
     public static void handleItemCollisions() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int gridX = State.getCurrentGame().getPlayerX() / 64;
-        int gridY = State.getCurrentGame().getPlayerY() / 64;
+        int gridX = State.getCurrentGame().getPlayerX() / 32;
+        int gridY = State.getCurrentGame().getPlayerY() / 32;
         if (State.getCurrentGame().getPlayerX() < 0)
             gridX = -1;
         if (State.getCurrentGame().getPlayerY() < 0)
@@ -73,12 +73,12 @@ public class ItemCollisionHandler {
         Item[] toCheck;
 
         boolean collision_happened = false;
-        if (playerX % 64 != 0) {
+        if (playerX % 32 != 0) {
             // left
             toCheck = new Item[2];
             toCheck[0] = MapHandler.getItemAt(gridX + 1, gridY);
             toCheck[1] = MapHandler.getItemAt(gridX + 1, gridY + 1);
-            if (playerY % 64 == 0)
+            if (playerY % 32 == 0)
                 toCheck[1] = null;
             for (Item i: toCheck) {
                 if (i == null)
@@ -96,7 +96,7 @@ public class ItemCollisionHandler {
             toCheck = new Item[2];
             toCheck[0] = MapHandler.getItemAt(gridX, gridY);
             toCheck[1] = MapHandler.getItemAt(gridX, gridY + 1);
-            if (playerY % 64 == 0)
+            if (playerY % 32 == 0)
                 toCheck[1] = null;
             for (Item i: toCheck) {
                 if (i == null)
@@ -111,12 +111,12 @@ public class ItemCollisionHandler {
             if (collision_happened)
                 return;
         }
-        if (playerY % 64 != 0) {
+        if (playerY % 32 != 0) {
             // up
             toCheck = new Item[2];
             toCheck[0] = MapHandler.getItemAt(gridX, gridY + 1);
             toCheck[1] = MapHandler.getItemAt(gridX + 1, gridY + 1);
-            if (playerX % 64 == 0)
+            if (playerX % 32 == 0)
                 toCheck[1] = null;
             for (Item i : toCheck) {
                 if (i == null)
@@ -135,7 +135,7 @@ public class ItemCollisionHandler {
         toCheck = new Item[2];
         toCheck[0] = MapHandler.getItemAt(gridX, gridY);
         toCheck[1] = MapHandler.getItemAt(gridX + 1, gridY);
-        if (playerX % 64 == 0)
+        if (playerX % 32 == 0)
             toCheck[1] = null;
         for (Item i: toCheck) {
             if (i == null)

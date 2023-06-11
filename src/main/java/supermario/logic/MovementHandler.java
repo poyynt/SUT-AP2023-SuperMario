@@ -20,7 +20,7 @@ public class MovementHandler {
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_RIGHT, false) && canMoveRight()) {
             playerX += gameState.getCharacter().getMoveSpeed();
             if (playerX - screenX >= MainView.getInstance().getWidth() / 2)
-                if (MapHandler.sectionMap.length * 64 - playerX >= MainView.getInstance().getWidth() / 2)
+                if (MapHandler.sectionMap.length * 32 - playerX >= MainView.getInstance().getWidth() / 2)
                     screenX += gameState.getCharacter().getMoveSpeed();
             playerFacingRight = true;
 
@@ -53,8 +53,8 @@ public class MovementHandler {
     private static boolean canMoveRight() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 64;
-        int playerGridY = playerY / 64;
+        int playerGridX = playerX / 32;
+        int playerGridY = playerY / 32;
         if (playerY < 0)
             playerGridY = -1;
         if (playerX < 0)
@@ -65,11 +65,11 @@ public class MovementHandler {
         toCheck[1] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
 //        if (toCheck[2] != null)
-//            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
+//            if (playerGridY * 32 + 32 - playerY < 0 || playerGridY * 32 - playerY > 2)
 //                toCheck[2] = null;
-        if ((playerY + 128) % 64 <= 4)
+        if ((playerY + 128) % 32 <= 4)
             toCheck[2] = null;
-        if ((playerY + 128) % 64 >= 60)
+        if ((playerY + 128) % 32 >= 60)
             toCheck[1] = null;
         boolean result = true;
         for (Tile t: toCheck) {
@@ -86,8 +86,8 @@ public class MovementHandler {
     private static boolean canMoveLeft() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 64;
-        int playerGridY = playerY / 64;
+        int playerGridX = playerX / 32;
+        int playerGridY = playerY / 32;
         if (playerY < 0)
             playerGridY = -1;
         if (playerX < 0)
@@ -96,16 +96,16 @@ public class MovementHandler {
             return false;
         Tile[] toCheck = new Tile[3];
         int xAdditive = 0;
-        if (playerX % 64 == 0)
+        if (playerX % 32 == 0)
             xAdditive = -1;
         toCheck[1] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY + 1);
 //        if (toCheck[2] != null)
-//            if (playerGridY * 64 + 64 - playerY < 0 || playerGridY * 64 - playerY > 2)
+//            if (playerGridY * 32 + 32 - playerY < 0 || playerGridY * 32 - playerY > 2)
 //                toCheck[2] = null;
-        if ((playerY + 128) % 64 <= 4)
+        if ((playerY + 128) % 32 <= 4)
             toCheck[2] = null;
-        if ((playerY + 128) % 64 >= 60)
+        if ((playerY + 128) % 32 >= 60)
             toCheck[2] = null;
         boolean result = true;
         for (Tile t: toCheck) {
@@ -122,13 +122,13 @@ public class MovementHandler {
     private static Tile getDoor() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 64;
-        int playerGridY = playerY / 64;
+        int playerGridX = playerX / 32;
+        int playerGridY = playerY / 32;
         if (playerY < 0)
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
-        if ((playerY + 128) % 64 > 8)
+        if ((playerY + 128) % 32 > 8)
             return null;
 
         Tile[] toCheck = new Tile[3];
@@ -136,9 +136,9 @@ public class MovementHandler {
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
         if (toCheck[2] != null)
-            if (playerGridX * 64 + 64 - playerX < 0 || playerGridX * 64 - playerX > 2)
+            if (playerGridX * 32 + 32 - playerX < 0 || playerGridX * 32 - playerX > 2)
                 toCheck[2] = null;
-        if ((playerX + 128) % 64 < 4)
+        if ((playerX + 128) % 32 < 4)
             toCheck[2] = null;
         for (Tile t: toCheck) {
             if (t == null)

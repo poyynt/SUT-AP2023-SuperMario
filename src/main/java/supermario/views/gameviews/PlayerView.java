@@ -21,10 +21,10 @@ public class PlayerView extends Base {
         if (MovementHandler.isPlayerFacingRight())
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForCharacter(gameState.getCharacter()),
-                    gameState.getPlayerX() - gameState.getScreenX() + 64,
+                    gameState.getPlayerX() - gameState.getScreenX() + 32,
                     gameState.getPlayerY(),
-                    -64,
-                    64,
+                    -32,
+                    32,
                     null
             );
         else
