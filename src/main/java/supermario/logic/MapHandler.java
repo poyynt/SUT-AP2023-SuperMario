@@ -38,17 +38,6 @@ public class MapHandler {
         return null;
     }
 
-    public static Item getItemAt(int gridX, int gridY) {
-        if (sectionMap == null)
-            return null;
-        if (sectionMap.items == null)
-            return null;
-        for (Item i: sectionMap.items)
-            if (i.x == gridX && i.y == gridY)
-                return i;
-        return null;
-    }
-
     public static void paint(Graphics2D graphics2D) {
         for (int i = 0; i < 32; i++)
             for (int j = 0; j < 24; j++)
@@ -69,17 +58,6 @@ public class MapHandler {
                     null
             );
         }
-
-        for (Item i: sectionMap.items) {
-            if (i.properties.getOrDefault("hidden", "false").equals("true"))
-                continue;
-            graphics2D.drawImage(
-                    i.getImage(),
-                    i.x * 32 - state.getScreenX(),
-                    i.y * 32,
-                    null
-            );
-        }
     }
 
     public static void forceReload() {
@@ -92,8 +70,4 @@ public class MapHandler {
         return sectionMap.time;
     }
 
-    public static void itemsTick() {
-        for (Item i: sectionMap.items)
-            i.tick();
-    }
 }
