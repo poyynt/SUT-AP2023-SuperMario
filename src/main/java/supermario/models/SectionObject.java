@@ -5,5 +5,5 @@ import java.util.List;
 public class SectionObject {
     public List<BlockObject> blocks;
     public int length;
-    public int time = 0;
+    public int time;
 }
