@@ -5,7 +5,6 @@ import supermario.models.*;
 
 import java.awt.*;
 import java.io.InputStreamReader;
-import java.lang.reflect.Type;
 
 public class MapHandler {
     public static SectionObject sectionObject;
@@ -15,18 +14,15 @@ public class MapHandler {
     private static final Gson gson;
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
-        gsonBuilder.registerTypeAdapter(BlockObject.class, new JsonDeserializer<BlockObject>() {
-            @Override
-            public BlockObject deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
-                JsonObject jsonObject = json.getAsJsonObject();
-                int x = jsonObject.get("x").getAsInt();
-                int y = 20 - (jsonObject.get("y").getAsInt());
-                BlockType type = BlockType.valueOf(jsonObject.get("type").getAsString());
-                ItemType item = null;
-                if (jsonObject.has("item"))
-                    item = ItemType.valueOf(jsonObject.get("item").getAsString());
-                return new BlockObject(x, y, type, item);
-            }
+        gsonBuilder.registerTypeAdapter(BlockObject.class, (JsonDeserializer<BlockObject>) (json, typeOfT, context) -> {
+            JsonObject jsonObject = json.getAsJsonObject();
+            int x = jsonObject.get("x").getAsInt();
+            int y = 20 - (jsonObject.get("y").getAsInt());
+            BlockType type = BlockType.valueOf(jsonObject.get("type").getAsString());
+            ItemType item = null;
+            if (jsonObject.has("item"))
+                item = ItemType.valueOf(jsonObject.get("item").getAsString());
+            return new BlockObject(x, y, type, item);
         });
 
         gson = gsonBuilder.create();

@@ -56,21 +56,17 @@ public class GravityHandler {
 
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + 1);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
-//        if (toCheck[2] != null)
-//            if (playerGridX * 32 + 32 - playerX < 0 || playerGridX * 32 - playerX > 2)
-//                toCheck[2] = null;
-        if ((playerX + 128) % 32 <= 8)
+        if ((playerX + 128) % 32 <= 4)
             toCheck[2] = null;
-        if ((playerX + 128) % 32 >= 56)
+        if ((playerX + 128) % 32 >= 28)
             toCheck[1] = null;
         boolean fall = true;
         for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
-            if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
-                fall = false;
-                TileCollisionHandler.handleCollisionWith(t, "up");
-            }
+            fall = false;
+            TileCollisionHandler.handleCollisionWith(t, "up");
+//            }
         }
         return fall;
     }
@@ -93,18 +89,16 @@ public class GravityHandler {
             yAdditive = -1;
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + yAdditive);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + yAdditive);
-        if ((playerX + 128) % 32 <= 8)
+        if ((playerX + 128) % 32 <= 4)
             toCheck[2] = null;
-        if ((playerX + 128) % 32 >= 56)
+        if ((playerX + 128) % 32 >= 28)
             toCheck[1] = null;
         boolean result = true;
         for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
-            if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
-                result = false;
-                TileCollisionHandler.handleCollisionWith(t, "down");
-            }
+            result = false;
+            TileCollisionHandler.handleCollisionWith(t, "down");
         }
         return result;
     }

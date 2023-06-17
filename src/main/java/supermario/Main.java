@@ -1,11 +1,8 @@
 package supermario;
 
-import supermario.controllers.AudioController;
 import supermario.controllers.GameLoop;
 import supermario.controllers.PersistenceController;
 import supermario.views.StartMenu;
-
-import javax.sound.sampled.Clip;
 
 public class Main {
     public static void main(String[] args) {

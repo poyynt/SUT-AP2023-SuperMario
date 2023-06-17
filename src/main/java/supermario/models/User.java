@@ -38,6 +38,7 @@ public class User {
     }
 
     public boolean validatePassword(String password) {
+        assert this.hashedPassword != null;
         return this.hashedPassword.validate(password);
     }
 

@@ -34,6 +34,7 @@ public class HashedPassword {
         if (passwordHash.length != this.saltedPasswordHash.length)
             return false;
 
+        //noinspection ConstantValue
         assert passwordHash.length == this.saltedPasswordHash.length;
         for (int i = 0; i < passwordHash.length; i++)
             if (passwordHash[i] != this.saltedPasswordHash[i])

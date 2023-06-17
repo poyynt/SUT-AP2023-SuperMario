@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="ANALYZE_INJECTED_CODE" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="resize sprites to 32x32">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/views/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/views/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +84,7 @@
       <list>
         <option value="module-info" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -117,17 +121,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sounds",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sprites/block",
     "project.structure.last.edited": "Problems",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/sprites/block" />
       <recent name="$PROJECT_DIR$/src/main/resources/sounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -413,7 +420,126 @@
       <option name="project" value="LOCAL" />
       <updated>1686499802330</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="adjust screen size to 32x24 blocks">
+      <created>1686500849986</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1686500849986</updated>
+    </task>
+    <task id="LOCAL-00021" summary="remove section 2 temporarily">
+      <created>1686501097270</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1686501097270</updated>
+    </task>
+    <task id="LOCAL-00022" summary="ignore idea workspace.xml">
+      <created>1686502431193</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1686502431193</updated>
+    </task>
+    <task id="LOCAL-00023" summary="refactor SectionMap to SectionObject">
+      <created>1686978285464</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1686978285464</updated>
+    </task>
+    <task id="LOCAL-00024" summary="remove Item and its utils">
+      <created>1686978966049</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1686978966049</updated>
+    </task>
+    <task id="LOCAL-00025" summary="remove Item and its utils">
+      <created>1686978985564</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1686978985564</updated>
+    </task>
+    <task id="LOCAL-00026" summary="refactor sectionMap to sectionObject">
+      <created>1686979167537</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1686979167537</updated>
+    </task>
+    <task id="LOCAL-00027" summary="refactor Tile to BlockObject">
+      <created>1686979183997</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1686979183997</updated>
+    </task>
+    <task id="LOCAL-00028" summary="BlockType enum">
+      <created>1686979843666</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1686979843666</updated>
+    </task>
+    <task id="LOCAL-00029" summary="BlockType enum">
+      <created>1686979866890</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1686979866890</updated>
+    </task>
+    <task id="LOCAL-00030" summary="refactor">
+      <created>1686979873012</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686979873012</updated>
+    </task>
+    <task id="LOCAL-00031" summary="ItemType enum">
+      <created>1686981016691</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1686981016691</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Block y starts at bottom">
+      <created>1686981092981</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1686981092981</updated>
+    </task>
+    <task id="LOCAL-00033" summary="rename sprite">
+      <created>1686981099812</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1686981099812</updated>
+    </task>
+    <task id="LOCAL-00034" summary="new sprites for blocks">
+      <created>1686981215141</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1686981215141</updated>
+    </task>
+    <task id="LOCAL-00035" summary="remove debug statement">
+      <created>1686988608545</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1686988608545</updated>
+    </task>
+    <task id="LOCAL-00036" summary="refactor">
+      <created>1686988699362</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1686988699362</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -443,14 +569,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="move resource files to reflect gradle folder structure" />
-    <MESSAGE value="move source files to reflect gradle folder structure" />
-    <MESSAGE value="clean up build file" />
-    <MESSAGE value="audio resources" />
-    <MESSAGE value="add AudioController class for handling audio ops" />
-    <MESSAGE value="start Title audio on game start" />
-    <MESSAGE value="remove cache from AudioController because doing it properly is hard :)" />
-    <MESSAGE value="fix AudioController channels" />
     <MESSAGE value="play audio on death" />
     <MESSAGE value="play audio on game over" />
     <MESSAGE value="in-game background audio" />
@@ -462,6 +580,20 @@
     <MESSAGE value="add exit button to user/pause menu" />
     <MESSAGE value="rename SectionMap.width to SectionMap.length" />
     <MESSAGE value="resize sprites to 32x32" />
-    <option name="LAST_COMMIT_MESSAGE" value="resize sprites to 32x32" />
+    <MESSAGE value="adjust screen size to 32x24 blocks" />
+    <MESSAGE value="remove section 2 temporarily" />
+    <MESSAGE value="ignore idea workspace.xml" />
+    <MESSAGE value="refactor SectionMap to SectionObject" />
+    <MESSAGE value="remove Item and its utils" />
+    <MESSAGE value="refactor sectionMap to sectionObject" />
+    <MESSAGE value="refactor Tile to BlockObject" />
+    <MESSAGE value="BlockType enum" />
+    <MESSAGE value="ItemType enum" />
+    <MESSAGE value="Block y starts at bottom" />
+    <MESSAGE value="rename sprite" />
+    <MESSAGE value="new sprites for blocks" />
+    <MESSAGE value="remove debug statement" />
+    <MESSAGE value="refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
   </component>
 </project>

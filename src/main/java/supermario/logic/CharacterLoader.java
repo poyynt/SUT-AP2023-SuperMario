@@ -5,8 +5,6 @@ import com.google.gson.reflect.TypeToken;
 import supermario.models.GameCharacter;
 
 import java.io.*;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.util.HashMap;
 import java.util.List;
 
