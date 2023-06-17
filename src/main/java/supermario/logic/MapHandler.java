@@ -3,6 +3,7 @@ package supermario.logic;
 import com.google.gson.*;
 import supermario.models.*;
 import supermario.utils.typeadapters.BlockObjectDeserializer;
+import supermario.utils.typeadapters.EnemyObjectDeserializer;
 import supermario.utils.typeadapters.PipeObjectDeserializer;
 
 import java.awt.*;
@@ -18,6 +19,7 @@ public class MapHandler {
         GsonBuilder gsonBuilder = new GsonBuilder();
 
         gsonBuilder.registerTypeAdapter(BlockObject.class, new BlockObjectDeserializer());
+        gsonBuilder.registerTypeAdapter(EnemyObject.class, new EnemyObjectDeserializer());
         gsonBuilder.registerTypeAdapter(PipeObject.class, new PipeObjectDeserializer());
 
         gson = gsonBuilder.create();
