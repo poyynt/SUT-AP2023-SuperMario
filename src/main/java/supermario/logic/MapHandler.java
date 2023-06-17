@@ -4,14 +4,10 @@ import com.google.gson.Gson;
 import supermario.models.*;
 
 import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.InputStreamReader;
-import java.net.URISyntaxException;
 
 public class MapHandler {
-    public static SectionMap sectionMap;
+    public static SectionObject sectionMap;
     private static int loadedLevel = -1;
     private static int loadedSection = -1;
 
@@ -28,7 +24,7 @@ public class MapHandler {
         sectionMap = gson.fromJson(
                 new InputStreamReader(
                         MapHandler.class.getResourceAsStream("/map/" + level + "/" + section + ".json")
-                ), SectionMap.class);
+                ), SectionObject.class);
     }
 
     public static Tile getTileAt(int gridX, int gridY) {
