@@ -1,7 +1,7 @@
 package supermario.logic;
 
 import supermario.models.GameCharacter;
-import supermario.models.Tile;
+import supermario.models.BlockObject;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
@@ -43,7 +43,7 @@ public class SpriteLoader {
         return loadSpriteWithName("character", c.getName());
     }
 
-    public static Image loadSpriteForTile(Tile t) {
+    public static Image loadSpriteForTile(BlockObject t) {
         return loadSpriteWithName("block", t.name);
     }
 }

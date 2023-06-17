@@ -3,7 +3,7 @@ package supermario.logic;
 import supermario.models.GameState;
 import supermario.models.KeyboardState;
 import supermario.models.State;
-import supermario.models.Tile;
+import supermario.models.BlockObject;
 import supermario.views.MainView;
 
 import java.awt.event.KeyEvent;
@@ -52,7 +52,7 @@ public class GravityHandler {
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
-        Tile[] toCheck = new Tile[3];
+        BlockObject[] toCheck = new BlockObject[3];
 
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + 1);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
@@ -64,7 +64,7 @@ public class GravityHandler {
         if ((playerX + 128) % 32 >= 56)
             toCheck[1] = null;
         boolean fall = true;
-        for (Tile t: toCheck) {
+        for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
             if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
@@ -84,7 +84,7 @@ public class GravityHandler {
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
-        Tile[] toCheck = new Tile[3];
+        BlockObject[] toCheck = new BlockObject[3];
 
         if ((playerY + 128) % 32 > 8)
             return true;
@@ -98,7 +98,7 @@ public class GravityHandler {
         if ((playerX + 128) % 32 >= 56)
             toCheck[1] = null;
         boolean result = true;
-        for (Tile t: toCheck) {
+        for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
             if (t.properties.getOrDefault("not_solid", "false").equals("false")) {

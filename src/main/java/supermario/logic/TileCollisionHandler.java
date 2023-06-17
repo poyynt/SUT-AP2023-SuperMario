@@ -2,10 +2,10 @@ package supermario.logic;
 
 import supermario.models.GameState;
 import supermario.models.State;
-import supermario.models.Tile;
+import supermario.models.BlockObject;
 
 public class TileCollisionHandler {
-    public static void handleCollisionWith(Tile t, String direction) {
+    public static void handleCollisionWith(BlockObject t, String direction) {
         if (t == null)
             return;
 

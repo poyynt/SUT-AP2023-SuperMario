@@ -3,7 +3,7 @@ package supermario.logic;
 import supermario.models.GameState;
 import supermario.models.KeyboardState;
 import supermario.models.State;
-import supermario.models.Tile;
+import supermario.models.BlockObject;
 import supermario.views.MainView;
 
 import java.awt.event.KeyEvent;
@@ -20,7 +20,7 @@ public class MovementHandler {
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_RIGHT, false) && canMoveRight()) {
             playerX += gameState.getCharacter().getMoveSpeed();
             if (playerX - screenX >= MainView.getInstance().getWidth() / 2)
-                if (MapHandler.sectionMap.length * 32 - playerX >= MainView.getInstance().getWidth() / 2)
+                if (MapHandler.sectionObject.length * 32 - playerX >= MainView.getInstance().getWidth() / 2)
                     screenX += gameState.getCharacter().getMoveSpeed();
             playerFacingRight = true;
 
@@ -34,7 +34,7 @@ public class MovementHandler {
         }
 
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_UP, false) && getDoor() != null) {
-            Tile door = getDoor();
+            BlockObject door = getDoor();
             int toLevel = Integer.parseInt(door.properties.get("to_level"));
             int toSection = Integer.parseInt(door.properties.get("to_section"));
             GameHandler.loadSection(toLevel, toSection);
@@ -59,9 +59,9 @@ public class MovementHandler {
             playerGridY = -1;
         if (playerX < 0)
             playerGridX = -1;
-        if (playerGridX + 1 >= MapHandler.sectionMap.length)
+        if (playerGridX + 1 >= MapHandler.sectionObject.length)
             return false;
-        Tile[] toCheck = new Tile[3];
+        BlockObject[] toCheck = new BlockObject[3];
         toCheck[1] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
 //        if (toCheck[2] != null)
@@ -72,7 +72,7 @@ public class MovementHandler {
         if ((playerY + 128) % 32 >= 60)
             toCheck[1] = null;
         boolean result = true;
-        for (Tile t: toCheck) {
+        for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
             if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
@@ -94,7 +94,7 @@ public class MovementHandler {
             playerGridX = -1;
         if (playerX <= 4)
             return false;
-        Tile[] toCheck = new Tile[3];
+        BlockObject[] toCheck = new BlockObject[3];
         int xAdditive = 0;
         if (playerX % 32 == 0)
             xAdditive = -1;
@@ -108,7 +108,7 @@ public class MovementHandler {
         if ((playerY + 128) % 32 >= 60)
             toCheck[2] = null;
         boolean result = true;
-        for (Tile t: toCheck) {
+        for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
             if (t.properties.getOrDefault("not_solid", "false").equals("false")) {
@@ -119,7 +119,7 @@ public class MovementHandler {
         return result;
     }
 
-    private static Tile getDoor() {
+    private static BlockObject getDoor() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
         int playerGridX = playerX / 32;
@@ -131,7 +131,7 @@ public class MovementHandler {
         if ((playerY + 128) % 32 > 8)
             return null;
 
-        Tile[] toCheck = new Tile[3];
+        BlockObject[] toCheck = new BlockObject[3];
 
         toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY);
         toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
@@ -140,7 +140,7 @@ public class MovementHandler {
                 toCheck[2] = null;
         if ((playerX + 128) % 32 < 4)
             toCheck[2] = null;
-        for (Tile t: toCheck) {
+        for (BlockObject t: toCheck) {
             if (t == null)
                 continue;
             if (t.properties.getOrDefault("is_door", "false").equals("true"))
