@@ -44,6 +44,6 @@ public class SpriteLoader {
     }
 
     public static Image loadSpriteForTile(BlockObject t) {
-        return loadSpriteWithName("block", t.name);
+        return loadSpriteWithName("block", t.type.name());
     }
 }
