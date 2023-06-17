@@ -25,7 +25,6 @@ public class MapHandler {
                 ItemType item = null;
                 if (jsonObject.has("item"))
                     item = ItemType.valueOf(jsonObject.get("item").getAsString());
-                System.err.println("DES " + x + " " + y + " " + type.name());
                 return new BlockObject(x, y, type, item);
             }
         });
