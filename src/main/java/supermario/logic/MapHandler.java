@@ -30,9 +30,9 @@ public class MapHandler {
     public static BlockObject getTileAt(int gridX, int gridY) {
         if (sectionObject == null)
             return null;
-        if (sectionObject.blockObjects == null)
+        if (sectionObject.blocks == null)
             return null;
-        for (BlockObject t: sectionObject.blockObjects)
+        for (BlockObject t: sectionObject.blocks)
             if (t.x == gridX && t.y == gridY)
                 return t;
         return null;
@@ -42,7 +42,7 @@ public class MapHandler {
         for (int i = 0; i < 32; i++)
             for (int j = 0; j < 24; j++)
                 graphics2D.drawImage(
-                        SpriteLoader.loadSpriteForTile(new BlockObject(0, 0, "Sky")),
+                        SpriteLoader.loadSpriteWithName("block", "Sky"),
                         i * 32,
                         j * 32,
                         null
@@ -50,7 +50,7 @@ public class MapHandler {
 
         GameState state = State.getCurrentGame();
 
-        for (BlockObject t: sectionObject.blockObjects) {
+        for (BlockObject t: sectionObject.blocks) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForTile(t),
                     t.x * 32 - state.getScreenX(),
