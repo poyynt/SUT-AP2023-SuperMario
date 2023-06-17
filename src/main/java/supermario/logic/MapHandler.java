@@ -7,7 +7,7 @@ import java.awt.*;
 import java.io.InputStreamReader;
 
 public class MapHandler {
-    public static SectionObject sectionMap;
+    public static SectionObject sectionObject;
     private static int loadedLevel = -1;
     private static int loadedSection = -1;
 
@@ -21,18 +21,18 @@ public class MapHandler {
         loadedLevel = level;
         loadedSection = section;
         //noinspection DataFlowIssue
-        sectionMap = gson.fromJson(
+        sectionObject = gson.fromJson(
                 new InputStreamReader(
                         MapHandler.class.getResourceAsStream("/map/" + level + "/" + section + ".json")
                 ), SectionObject.class);
     }
 
-    public static Tile getTileAt(int gridX, int gridY) {
-        if (sectionMap == null)
+    public static BlockObject getTileAt(int gridX, int gridY) {
+        if (sectionObject == null)
             return null;
-        if (sectionMap.tiles == null)
+        if (sectionObject.blockObjects == null)
             return null;
-        for (Tile t: sectionMap.tiles)
+        for (BlockObject t: sectionObject.blockObjects)
             if (t.x == gridX && t.y == gridY)
                 return t;
         return null;
@@ -42,7 +42,7 @@ public class MapHandler {
         for (int i = 0; i < 32; i++)
             for (int j = 0; j < 24; j++)
                 graphics2D.drawImage(
-                        SpriteLoader.loadSpriteForTile(new Tile(0, 0, "Sky")),
+                        SpriteLoader.loadSpriteForTile(new BlockObject(0, 0, "Sky")),
                         i * 32,
                         j * 32,
                         null
@@ -50,7 +50,7 @@ public class MapHandler {
 
         GameState state = State.getCurrentGame();
 
-        for (Tile t: sectionMap.tiles) {
+        for (BlockObject t: sectionObject.blockObjects) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForTile(t),
                     t.x * 32 - state.getScreenX(),
@@ -67,7 +67,7 @@ public class MapHandler {
     }
 
     public static int getTime() {
-        return sectionMap.time;
+        return sectionObject.time;
     }
 
 }
