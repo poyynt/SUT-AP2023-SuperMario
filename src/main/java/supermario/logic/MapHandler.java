@@ -17,8 +17,8 @@ public class MapHandler {
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
 
-        gsonBuilder.registerTypeAdapter(BlockObject.class, BlockObjectDeserializer.class);
-        gsonBuilder.registerTypeAdapter(PipeObject.class, PipeObjectDeserializer.class);
+        gsonBuilder.registerTypeAdapter(BlockObject.class, new BlockObjectDeserializer());
+        gsonBuilder.registerTypeAdapter(PipeObject.class, new PipeObjectDeserializer());
 
         gson = gsonBuilder.create();
     }
@@ -31,10 +31,12 @@ public class MapHandler {
         loadedLevel = level;
         loadedSection = section;
         //noinspection DataFlowIssue
-        sectionObject = gson.fromJson(
+        LevelObject levelObject = gson.fromJson(
                 new InputStreamReader(
-                        MapHandler.class.getResourceAsStream("/map/" + level + "/" + section + ".json")
-                ), SectionObject.class);
+                        MapHandler.class.getResourceAsStream("/map/" + level + ".json")
+                ), LevelObject.class);
+
+        sectionObject = levelObject.sections.get(section - 1);
     }
 
     public static BlockObject getTileAt(int gridX, int gridY) {
@@ -60,11 +62,41 @@ public class MapHandler {
 
         GameState state = State.getCurrentGame();
 
+        for (int i = 0; i <= 32; i++) {
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteWithName("block", "Grass"),
+                    i * 32 - state.getScreenX() % 32,
+                    (20 - (-1)) * 32,
+                    null
+            );
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteWithName("block", "Soil"),
+                    i * 32 - state.getScreenX() % 32,
+                    (20 - (-2)) * 32,
+                    null
+            );
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteWithName("block", "Soil"),
+                    i * 32 - state.getScreenX() % 32,
+                    (20 - (-3)) * 32,
+                    null
+            );
+        }
+
         for (BlockObject t: sectionObject.blocks) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForTile(t),
                     t.x * 32 - state.getScreenX(),
                     t.y * 32,
+                    null
+            );
+        }
+
+        for (PipeObject p: sectionObject.pipes) {
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteWithName("block", "Pipe"),
+                    p.x * 32 - state.getScreenX(),
+                    p.y * 32,
                     null
             );
         }
