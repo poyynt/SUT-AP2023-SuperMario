@@ -2,6 +2,8 @@ package supermario.logic;
 
 import com.google.gson.*;
 import supermario.models.*;
+import supermario.utils.typeadapters.BlockObjectDeserializer;
+import supermario.utils.typeadapters.PipeObjectDeserializer;
 
 import java.awt.*;
 import java.io.InputStreamReader;
@@ -14,16 +16,9 @@ public class MapHandler {
     private static final Gson gson;
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
-        gsonBuilder.registerTypeAdapter(BlockObject.class, (JsonDeserializer<BlockObject>) (json, typeOfT, context) -> {
-            JsonObject jsonObject = json.getAsJsonObject();
-            int x = jsonObject.get("x").getAsInt();
-            int y = 20 - (jsonObject.get("y").getAsInt());
-            BlockType type = BlockType.valueOf(jsonObject.get("type").getAsString());
-            ItemType item = null;
-            if (jsonObject.has("item"))
-                item = ItemType.valueOf(jsonObject.get("item").getAsString());
-            return new BlockObject(x, y, type, item);
-        });
+
+        gsonBuilder.registerTypeAdapter(BlockObject.class, BlockObjectDeserializer.class);
+        gsonBuilder.registerTypeAdapter(PipeObject.class, PipeObjectDeserializer.class);
 
         gson = gsonBuilder.create();
     }
