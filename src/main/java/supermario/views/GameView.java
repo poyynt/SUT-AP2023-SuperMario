@@ -53,7 +53,6 @@ public class GameView implements View {
         State.getCurrentGame().incrementFramesElapsed();
         MapHandler.loadSection();
         MovementHandler.tick();
-        GravityHandler.tick();
         TimeHandler.tick();
 
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_ESCAPE, false)) {

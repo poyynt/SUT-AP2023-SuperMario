@@ -36,7 +36,7 @@ public class GameHandler {
     public static void startNewGame() {
         State.getCurrentGame().setStarted();
         State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
-        GravityHandler.reset();
+        new MarioGravityHandler(State.getCurrentGame().getPlayer()).start();
     }
 
     public static void loadSection(int level, int section) {
@@ -57,7 +57,7 @@ public class GameHandler {
         currentGame.setPlayerY(0);
         currentGame.setScreenX(0);
         currentGame.setFramesElapsed(0);
-        GravityHandler.reset();
+        new MarioGravityHandler(currentGame.getPlayer()).start();
     }
 
     public static void die() {
@@ -78,10 +78,11 @@ public class GameHandler {
             currentGame.setPlayerY(0);
             currentGame.setScreenX(0);
             currentGame.setCoins(0);
+            currentGame.setCurrentScore(0);
             currentGame.setSecondsForScore(0);
             currentGame.setFramesElapsed(0);
             currentGame.setPowerups(0);
-            GravityHandler.reset();
+            new MarioGravityHandler(currentGame.getPlayer()).start();
             MapHandler.forceReload();
         }
     }
