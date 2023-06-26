@@ -7,11 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="refactor">
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="add enemies field to 1.json map">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_6_10_23,_15_49_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_6_10_23__15_49__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/BlockObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/BlockObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/PipeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/PipeObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +88,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -119,19 +124,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sprites/block",
-    "project.structure.last.edited": "Problems",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sprites/block&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/sprites/block" />
@@ -140,6 +145,9 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="supermario.utils.typeadapters" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -539,7 +547,77 @@
       <option name="project" value="LOCAL" />
       <updated>1686988699362</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="refactor">
+      <created>1686989101169</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1686989101169</updated>
+    </task>
+    <task id="LOCAL-00038" summary="PipeObject model">
+      <created>1687001497472</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1687001497472</updated>
+    </task>
+    <task id="LOCAL-00039" summary="refactor and add PipeObjectDeserializer">
+      <created>1687001516051</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1687001516051</updated>
+    </task>
+    <task id="LOCAL-00040" summary="block object assigns random variable to item if null">
+      <created>1687001534141</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1687001534141</updated>
+    </task>
+    <task id="LOCAL-00041" summary="update SectionObject model">
+      <created>1687001650373</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1687001650373</updated>
+    </task>
+    <task id="LOCAL-00042" summary="move sections from separate files to level files">
+      <created>1687008106862</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008106862</updated>
+    </task>
+    <task id="LOCAL-00043" summary="pipe sprite">
+      <created>1687008114615</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008114615</updated>
+    </task>
+    <task id="LOCAL-00044" summary="add EnemyObject and relatives">
+      <created>1687008488095</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008488095</updated>
+    </task>
+    <task id="LOCAL-00045" summary="load SectionObject.enemies from file">
+      <created>1687008622664</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008622664</updated>
+    </task>
+    <task id="LOCAL-00046" summary="add enemies field to 1.json map">
+      <created>1687008753739</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1687008753739</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -569,15 +647,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="play audio on death" />
-    <MESSAGE value="play audio on game over" />
-    <MESSAGE value="in-game background audio" />
-    <MESSAGE value="move title audio to views" />
-    <MESSAGE value="ide files" />
-    <MESSAGE value="add mute function" />
-    <MESSAGE value="change pause button to esc" />
-    <MESSAGE value="add score to overlay" />
-    <MESSAGE value="add exit button to user/pause menu" />
     <MESSAGE value="rename SectionMap.width to SectionMap.length" />
     <MESSAGE value="resize sprites to 32x32" />
     <MESSAGE value="adjust screen size to 32x24 blocks" />
@@ -594,6 +663,15 @@
     <MESSAGE value="new sprites for blocks" />
     <MESSAGE value="remove debug statement" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="PipeObject model" />
+    <MESSAGE value="refactor and add PipeObjectDeserializer" />
+    <MESSAGE value="block object assigns random variable to item if null" />
+    <MESSAGE value="update SectionObject model" />
+    <MESSAGE value="move sections from separate files to level files" />
+    <MESSAGE value="pipe sprite" />
+    <MESSAGE value="add EnemyObject and relatives" />
+    <MESSAGE value="load SectionObject.enemies from file" />
+    <MESSAGE value="add enemies field to 1.json map" />
+    <option name="LAST_COMMIT_MESSAGE" value="add enemies field to 1.json map" />
   </component>
 </project>

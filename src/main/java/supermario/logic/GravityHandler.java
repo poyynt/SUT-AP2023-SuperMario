@@ -1,12 +1,11 @@
 package supermario.logic;
 
-import supermario.models.GameState;
-import supermario.models.KeyboardState;
-import supermario.models.State;
-import supermario.models.BlockObject;
+import supermario.models.*;
 import supermario.views.MainView;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Rectangle2D;
 
 public class GravityHandler {
     private static boolean playerIsJumping = false;
@@ -48,27 +47,31 @@ public class GravityHandler {
         int playerY = State.getCurrentGame().getPlayerY();
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        if (playerY < 0)
-            playerGridY = -1;
-        if (playerX < 0)
-            playerGridX = -1;
-        BlockObject[] toCheck = new BlockObject[3];
-
-        toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + 1);
-        toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
-        if ((playerX + 128) % 32 <= 4)
-            toCheck[2] = null;
-        if ((playerX + 128) % 32 >= 28)
-            toCheck[1] = null;
-        boolean fall = true;
-        for (BlockObject t: toCheck) {
-            if (t == null)
-                continue;
-            fall = false;
-            TileCollisionHandler.handleCollisionWith(t, "up");
-//            }
+        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 36);
+        for (int dx = -2; dx <= 2; dx++) {
+            if (playerGridY >= 20)
+                return false;
+            for (int dy = -2; dy <= 2; dy++) {
+                BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
+                if (t == null)
+                    continue;
+                Rectangle blockHitBox = t.getHitBox();
+                if (blockHitBox.intersects(player)) {
+                    int oc = player.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (oc == Rectangle2D.OUT_BOTTOM)
+                        return false;
+                }
+            }
         }
-        return fall;
+        for (PipeObject p: MapHandler.sectionObject.pipes) {
+            Rectangle pipeHitBox = p.getHitBox();
+            if (pipeHitBox.intersects(player)) {
+                int oc = player.outcode(pipeHitBox.getCenterX(), pipeHitBox.getCenterY());
+                if (oc == Rectangle2D.OUT_BOTTOM)
+                    return false;
+            }
+        }
+        return true;
     }
 
     private static boolean playerCanGoUp() {
@@ -76,31 +79,21 @@ public class GravityHandler {
         int playerY = State.getCurrentGame().getPlayerY();
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        if (playerY < 0)
-            playerGridY = -1;
-        if (playerX < 0)
-            playerGridX = -1;
-        BlockObject[] toCheck = new BlockObject[3];
-
-        if ((playerY + 128) % 32 > 8)
-            return true;
-        int yAdditive = 0;
-        if (playerY % 32 == 0)
-            yAdditive = -1;
-        toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY + yAdditive);
-        toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + yAdditive);
-        if ((playerX + 128) % 32 <= 4)
-            toCheck[2] = null;
-        if ((playerX + 128) % 32 >= 28)
-            toCheck[1] = null;
-        boolean result = true;
-        for (BlockObject t: toCheck) {
-            if (t == null)
-                continue;
-            result = false;
-            TileCollisionHandler.handleCollisionWith(t, "down");
+        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 36);
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dy = -2; dy <= 2; dy++) {
+                BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
+                if (t == null)
+                    continue;
+                Rectangle blockHitBox = t.getHitBox();
+                if (blockHitBox.intersects(player)) {
+                    int oc = player.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (oc == Rectangle2D.OUT_TOP)
+                        return false;
+                }
+            }
         }
-        return result;
+        return true;
     }
 
     public static void reset() {

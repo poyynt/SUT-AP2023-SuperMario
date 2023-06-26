@@ -41,7 +41,7 @@ public class MapHandler {
         sectionObject = levelObject.sections.get(section - 1);
     }
 
-    public static BlockObject getTileAt(int gridX, int gridY) {
+    public static BlockObject getBlockAt(int gridX, int gridY) {
         if (sectionObject == null)
             return null;
         if (sectionObject.blocks == null)

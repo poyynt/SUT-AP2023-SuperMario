@@ -6,7 +6,9 @@ import supermario.models.State;
 import supermario.models.BlockObject;
 import supermario.views.MainView;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.awt.geom.Rectangle2D;
 
 public class MovementHandler {
 
@@ -47,58 +49,45 @@ public class MovementHandler {
         int playerY = State.getCurrentGame().getPlayerY();
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        if (playerY < 0)
-            playerGridY = -1;
-        if (playerX < 0)
-            playerGridX = -1;
-        if (playerGridX + 1 >= MapHandler.sectionObject.length)
-            return false;
-        BlockObject[] toCheck = new BlockObject[3];
-        toCheck[1] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
-        toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY + 1);
-        if ((playerY + 128) % 32 <= 2)
-            toCheck[2] = null;
-        if ((playerY + 128) % 32 >= 30)
-            toCheck[1] = null;
-        boolean result = true;
-        for (BlockObject t: toCheck) {
-            if (t == null)
-                continue;
-            result = false;
-            TileCollisionHandler.handleCollisionWith(t, "left");
+        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 32);
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dy = -2; dy <= 2; dy++) {
+                BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
+                if (t == null)
+                    continue;
+                Rectangle blockHitBox = t.getHitBox();
+                if (blockHitBox.intersects(player)) {
+                    int oc = player.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (oc == Rectangle2D.OUT_RIGHT)
+                        return false;
+                }
+            }
         }
-        return result;
+        return true;
     }
 
     private static boolean canMoveLeft() {
         int playerX = State.getCurrentGame().getPlayerX();
         int playerY = State.getCurrentGame().getPlayerY();
+        if (playerX <= 0)
+            return false;
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        if (playerY < 0)
-            playerGridY = -1;
-        if (playerX < 0)
-            playerGridX = -1;
-        if (playerX <= 4)
-            return false;
-        BlockObject[] toCheck = new BlockObject[3];
-        int xAdditive = 0;
-        if (playerX % 32 == 0)
-            xAdditive = -1;
-        toCheck[1] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY);
-        toCheck[2] = MapHandler.getTileAt(playerGridX + xAdditive, playerGridY + 1);
-        if ((playerY + 128) % 32 <= 2)
-            toCheck[2] = null;
-        if ((playerY + 128) % 32 >= 30)
-            toCheck[2] = null;
-        boolean result = true;
-        for (BlockObject t: toCheck) {
-            if (t == null)
-                continue;
-            result = false;
-            TileCollisionHandler.handleCollisionWith(t, "right");
+        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 32);
+        for (int dx = -2; dx <= 2; dx++) {
+            for (int dy = -2; dy <= 2; dy++) {
+                BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
+                if (t == null)
+                    continue;
+                Rectangle blockHitBox = t.getHitBox();
+                if (blockHitBox.intersects(player)) {
+                    int oc = player.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (oc == Rectangle2D.OUT_LEFT)
+                        return false;
+                }
+            }
         }
-        return result;
+        return true;
     }
 
     private static BlockObject getDoor() {
@@ -115,8 +104,8 @@ public class MovementHandler {
 
         BlockObject[] toCheck = new BlockObject[3];
 
-        toCheck[1] = MapHandler.getTileAt(playerGridX, playerGridY);
-        toCheck[2] = MapHandler.getTileAt(playerGridX + 1, playerGridY);
+        toCheck[1] = MapHandler.getBlockAt(playerGridX, playerGridY);
+        toCheck[2] = MapHandler.getBlockAt(playerGridX + 1, playerGridY);
         if (toCheck[2] != null)
             if (playerGridX * 32 + 32 - playerX < 0 || playerGridX * 32 - playerX > 2)
                 toCheck[2] = null;
