@@ -8,8 +8,7 @@ public class GameState { // section
     private int lastLevel = 1;
     private int lastSection = 1;
     private int lives = 3;
-    private int playerX = 0;
-    private int playerY = 0;
+    private Mario player = new Mario();
     private int screenX = 0;
     private int coins = 0;
     private int secondsForScore = 0;
@@ -37,19 +36,19 @@ public class GameState { // section
     }
 
     public int getPlayerX() {
-        return playerX;
+        return player.getX();
     }
 
     public void setPlayerX(int playerX) {
-        this.playerX = playerX;
+        player.setX(playerX);
     }
 
     public int getPlayerY() {
-        return playerY;
+        return player.getY();
     }
 
     public void setPlayerY(int playerY) {
-        this.playerY = playerY;
+        player.setY(playerY);
     }
 
     public int getScreenX() {
@@ -149,6 +148,10 @@ public class GameState { // section
 
     public void setSecondsForScore(int secondsForScore) {
         this.secondsForScore = secondsForScore;
+    }
+
+    public Mario getPlayer() {
+        return player;
     }
 
     public void handleSectionEnd() {
