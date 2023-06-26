@@ -1,12 +1,14 @@
 package supermario.models;
 
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class SectionObject {
     public int length;
     public int time;
-    public List<BlockObject> blocks;
-    public List<EnemyObject> enemies;
-    public List<PipeObject> pipes;
+    public CopyOnWriteArrayList<BlockObject> blocks;
+    public CopyOnWriteArrayList<EnemyObject> enemies;
+    public CopyOnWriteArrayList<PipeObject> pipes;
+    public transient List<ItemObject> items = new CopyOnWriteArrayList<>();
     public PipeObject spawnPipe = null;
 }
