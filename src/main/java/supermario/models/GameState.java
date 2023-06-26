@@ -11,6 +11,7 @@ public class GameState { // section
     private Mario player = new Mario();
     private int screenX = 0;
     private int coins = 0;
+    private int currentScore = 0;
     private int secondsForScore = 0;
     private int totalCoins = 0;
     private int killedBosses = 0;
@@ -70,6 +71,14 @@ public class GameState { // section
     public void addCoins(int amount) {
         if (isNewSection())
             this.coins += amount;
+    }
+
+    public void setCurrentScore(int currentScore) {
+        this.currentScore = currentScore;
+    }
+
+    public void addScore(int amount) {
+        this.currentScore += 1;
     }
 
     public int getKilledBosses() {
@@ -167,14 +176,14 @@ public class GameState { // section
     }
 
     public int calculateMomentaryScore() {
-        int sum = 0;
+        int sum = currentScore;
         sum += coins * 10;
         sum += killedBosses * 15;
         return sum;
     }
 
     public int calculateScore() {
-        int sum = 0;
+        int sum = currentScore;
         sum += totalCoins * 10;
         sum += lives * 20;
         sum += killedBosses * 15;
