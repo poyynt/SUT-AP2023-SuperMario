@@ -87,7 +87,7 @@ public class MapHandler {
 
         for (BlockObject t: sectionObject.blocks) {
             graphics2D.drawImage(
-                    SpriteLoader.loadSpriteForTile(t),
+                    SpriteLoader.loadSpriteForBlock(t),
                     t.x * 32 - state.getScreenX(),
                     t.y * 32,
                     null
