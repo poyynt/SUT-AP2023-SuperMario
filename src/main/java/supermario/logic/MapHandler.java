@@ -102,6 +102,15 @@ public class MapHandler {
                     null
             );
         }
+
+        for (ItemObject i: sectionObject.items) {
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteForItem(i),
+                    i.getX() - state.getScreenX(),
+                    i.getY(),
+                    null
+            );
+        }
     }
 
     public static void forceReload() {
