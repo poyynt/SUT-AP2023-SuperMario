@@ -42,6 +42,9 @@ public class Mario implements GravityItem {
     }
 
     public Rectangle getHitBox() {
-        return new Rectangle(x, y, 32, 32);
+        if (state == 0)
+            return new Rectangle(x, y, 32, 32);
+        else
+            return new Rectangle(x, y - 32, 32, 64);
     }
 }

@@ -64,7 +64,7 @@ public class StoreMenuCharacterPanel extends JPanel {
             buyButton.setEnabled(false);
         }
 
-        JLabel spriteLabel = new JLabel(new ImageIcon(SpriteLoader.loadSpriteForCharacter(c)));
+        JLabel spriteLabel = new JLabel(new ImageIcon(SpriteLoader.loadSpriteForCharacter(c, 0)));
 
         leftPanel.add(spriteLabel);
 

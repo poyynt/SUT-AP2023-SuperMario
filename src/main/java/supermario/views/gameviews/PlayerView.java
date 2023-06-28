@@ -18,21 +18,42 @@ public class PlayerView extends Base {
         super.paintComponent(graphics);
         Graphics2D graphics2D = (Graphics2D) graphics;
         GameState gameState = State.getCurrentGame();
-        if (MovementHandler.isPlayerFacingRight())
-            graphics2D.drawImage(
-                    SpriteLoader.loadSpriteForCharacter(gameState.getCharacter()),
-                    gameState.getPlayerX() - gameState.getScreenX() + 32,
-                    gameState.getPlayerY(),
-                    -32,
-                    32,
-                    null
-            );
-        else
-            graphics2D.drawImage(
-                    SpriteLoader.loadSpriteForCharacter(gameState.getCharacter()),
-                    gameState.getPlayerX() - gameState.getScreenX(),
-                    gameState.getPlayerY(),
-                    null
-            );
+        int playerState = State.getCurrentGame().getPlayer().getState();
+        if (playerState == 0) {
+            if (MovementHandler.isPlayerFacingRight())
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), 0),
+                        gameState.getPlayerX() - gameState.getScreenX() + 32,
+                        gameState.getPlayerY(),
+                        -32,
+                        32,
+                        null
+                );
+            else
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), 0),
+                        gameState.getPlayerX() - gameState.getScreenX(),
+                        gameState.getPlayerY(),
+                        null
+                );
+        }
+        else {
+            if (MovementHandler.isPlayerFacingRight())
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
+                        gameState.getPlayerX() - gameState.getScreenX() + 32,
+                        gameState.getPlayerY() - 32,
+                        -32,
+                        64,
+                        null
+                );
+            else
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
+                        gameState.getPlayerX() - gameState.getScreenX(),
+                        gameState.getPlayerY() - 32,
+                        null
+                );
+        }
     }
 }

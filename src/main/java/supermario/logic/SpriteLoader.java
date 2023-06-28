@@ -40,8 +40,8 @@ public class SpriteLoader {
         throw new RuntimeException("No sprite with name " + spriteName + " found.");
     }
 
-    public static Image loadSpriteForCharacter(GameCharacter c) {
-        return loadSpriteWithName("character", c.getName());
+    public static Image loadSpriteForCharacter(GameCharacter c, int state) {
+        return loadSpriteWithName("character." + state, c.getName());
     }
 
     public static Image loadSpriteForBlock(BlockObject t) {
