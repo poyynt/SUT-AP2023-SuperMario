@@ -3,6 +3,7 @@ package supermario.logic;
 import supermario.controllers.Loop;
 import supermario.models.BlockObject;
 import supermario.models.KeyboardState;
+import supermario.models.State;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -28,6 +29,8 @@ public class MarioGravityHandler extends Loop {
 
     @Override
     public void update() {
+        if (State.getCurrentGame() == null || !State.getCurrentGame().isRunning())
+            return;
         int y = target.getY();
         Rectangle hitBox = target.getHitBox();
         hitBox.translate(0, (int) vy);

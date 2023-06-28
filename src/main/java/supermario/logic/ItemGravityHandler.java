@@ -1,23 +1,34 @@
 package supermario.logic;
 
+import java.util.List;
 import supermario.controllers.Loop;
 import supermario.models.BlockObject;
+import supermario.models.State;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ItemGravityHandler extends Loop {
+    private List<ItemGravityHandler> instances = new CopyOnWriteArrayList<>();
     private GravityItem target;
     private double vy = 0;
     private double g = 0.05;
 
     public ItemGravityHandler(GravityItem target) {
         super(60.0);
+        for (ItemGravityHandler instance: instances)
+            if (instance.target == target)
+                instance.stop();
+        instances.removeIf(i -> i.target == target);
         this.target = target;
+        instances.add(this);
     }
 
     @Override
     public void update() {
+        if (State.getCurrentGame() == null || !State.getCurrentGame().isRunning())
+            return;
         int y = target.getY();
         Rectangle hitBox = target.getHitBox();
         hitBox.translate(0, (int) vy);
