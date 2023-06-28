@@ -3,6 +3,8 @@ package supermario.logic;
 import java.util.List;
 import supermario.controllers.Loop;
 import supermario.models.BlockObject;
+import supermario.models.ItemObject;
+import supermario.models.ItemType;
 import supermario.models.State;
 
 import java.awt.*;
@@ -13,7 +15,9 @@ public class ItemGravityHandler extends Loop {
     private List<ItemGravityHandler> instances = new CopyOnWriteArrayList<>();
     private GravityItem target;
     private double vy = 0;
-    private double g = 0.05;
+    private double g = 0.08;
+    private int lastFall = 0;
+    private int framesElapsed = 0;
 
     public ItemGravityHandler(GravityItem target) {
         super(60.0);
@@ -29,6 +33,7 @@ public class ItemGravityHandler extends Loop {
     public void update() {
         if (State.getCurrentGame() == null || !State.getCurrentGame().isRunning())
             return;
+        framesElapsed++;
         int y = target.getY();
         Rectangle hitBox = target.getHitBox();
         hitBox.translate(0, (int) vy);
@@ -45,13 +50,19 @@ public class ItemGravityHandler extends Loop {
                 }
             }
         }
-        if (y + vy > 20 * 32)
+        if (y + vy > 20 * 32) {
             collides = true;
+            if (vy > 0.01)
+                lastFall = framesElapsed;
+        }
         if (collides)
             vy = 0.;
         else {
             target.setY((int) (y + vy));
             vy += g;
+        }
+        if (vy <= 0.01 && ((ItemObject) target).type == ItemType.STAR && framesElapsed - lastFall >= 1. * getFPS()) {
+            vy = -3.54;
         }
     }
 }
