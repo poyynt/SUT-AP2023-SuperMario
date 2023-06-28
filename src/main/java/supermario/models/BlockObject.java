@@ -39,8 +39,10 @@ public class BlockObject {
     public void gotHit() {
         switch (type) {
             case SIMPLE -> {
-                MapHandler.sectionObject.blocks.remove(this);
-                State.getCurrentGame().addScore(1);
+                if (State.getCurrentGame().getPlayer().getState() > 0) {
+                    MapHandler.sectionObject.blocks.remove(this);
+                    State.getCurrentGame().addScore(1);
+                }
             }
             case COIN -> {
                 ItemObject item = new ItemObject(this.x * 32, (this.y - 1) * 32, ItemType.COIN);
