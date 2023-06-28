@@ -79,7 +79,7 @@ public class GameState { // section
     }
 
     public void addScore(int amount) {
-        this.currentScore += 1;
+        this.currentScore += amount;
     }
 
     public int getKilledBosses() {
