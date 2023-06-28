@@ -61,19 +61,19 @@ public class ItemObject implements GravityItem {
             case FLOWER -> {
                 State.getCurrentGame().addScore(20);
                 int marioState = State.getCurrentGame().getPlayer().getState();
-                marioState = Math.max(marioState + 1, 2);
+                marioState = Math.min(marioState + 1, 2);
                 State.getCurrentGame().getPlayer().setState(marioState);
             }
             case MUSHROOM -> {
                 State.getCurrentGame().addScore(30);
                 int marioState = State.getCurrentGame().getPlayer().getState();
-                marioState = Math.max(marioState + 1, 2);
+                marioState = Math.min(marioState + 1, 2);
                 State.getCurrentGame().getPlayer().setState(marioState);
             }
             case STAR -> {
                 State.getCurrentGame().addScore(40);
                 int marioState = State.getCurrentGame().getPlayer().getState();
-                marioState = Math.max(marioState + 1, 2);
+                marioState = Math.min(marioState + 1, 2);
                 State.getCurrentGame().getPlayer().setState(marioState);
                 Mario mario = State.getCurrentGame().getPlayer();
                 mario.setInvincible(mario.getInvincible() + 1);
