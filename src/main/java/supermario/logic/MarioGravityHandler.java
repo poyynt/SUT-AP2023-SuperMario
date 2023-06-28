@@ -7,15 +7,23 @@ import supermario.models.KeyboardState;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MarioGravityHandler extends Loop {
+    private static List<MarioGravityHandler> instances = new CopyOnWriteArrayList<>();
     private GravityItem target;
     private double vy = 0;
     private double g = 0.08;
 
     public MarioGravityHandler(GravityItem target) {
         super(60.0);
+        for (MarioGravityHandler instance: instances)
+            if (instance.target == target)
+                instance.stop();
+        instances.removeIf(i -> i.target == target);
         this.target = target;
+        instances.add(this);
     }
 
     @Override
