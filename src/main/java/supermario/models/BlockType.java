@@ -5,5 +5,6 @@ public enum BlockType {
     COIN,
     COINS,
     EMPTY,
-    QUESTION
+    QUESTION,
+    SLIME
 }

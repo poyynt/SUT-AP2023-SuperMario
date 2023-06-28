@@ -2,6 +2,7 @@ package supermario.logic;
 
 import supermario.controllers.Loop;
 import supermario.models.BlockObject;
+import supermario.models.BlockType;
 import supermario.models.KeyboardState;
 import supermario.models.State;
 
@@ -34,7 +35,7 @@ public class MarioGravityHandler extends Loop {
         int y = target.getY();
         Rectangle hitBox = target.getHitBox();
         hitBox.translate(0, (int) vy);
-        boolean collides = false, canJump = false;
+        boolean collides = false, canJump = false, onSlime = false;
         if (MapHandler.sectionObject != null) {
             for (BlockObject b : MapHandler.sectionObject.blocks) {
                 Rectangle blockHitBox = b.getHitBox();
@@ -48,8 +49,11 @@ public class MarioGravityHandler extends Loop {
                         b.gotHit();
                         vy = 0.1;
                     }
-                    if (vy >= 0 && oc == Rectangle2D.OUT_BOTTOM)
+                    if (vy >= 0 && oc == Rectangle2D.OUT_BOTTOM) {
                         canJump = true;
+                        if (b.type == BlockType.SLIME)
+                            onSlime = true;
+                    }
                 }
             }
         }
@@ -64,6 +68,8 @@ public class MarioGravityHandler extends Loop {
         if (collides && canJump) {
             if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SPACE, false)) {
                 vy = -5.;
+                if (onSlime)
+                    vy = -6.12; // 5 * sqrt(1.5)
             }
         }
     }

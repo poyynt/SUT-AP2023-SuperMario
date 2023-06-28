@@ -11,7 +11,8 @@
         {"x": 22, "y": 4, "type": "QUESTION"},
         {"x": 27, "y": 4, "type": "COINS"},
         {"x": 32, "y": 4, "type": "QUESTION"},
-        {"x": 6, "y": 1, "type": "QUESTION"}
+        {"x": 6, "y": 1, "type": "SLIME"},
+        {"x": 5, "y": 1, "type": "EMPTY"}
       ],
       "enemies": [
 
