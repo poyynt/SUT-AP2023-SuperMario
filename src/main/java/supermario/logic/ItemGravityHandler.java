@@ -57,7 +57,6 @@ public class ItemGravityHandler extends Loop {
             groundFrames++;
         else {
             groundFrames = 0;
-            System.out.println("DD DD" + y + " " + vy);
         }
         if (collides)
             vy = 0.;
