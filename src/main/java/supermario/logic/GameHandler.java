@@ -14,10 +14,12 @@ public class GameHandler {
         GameState gameState = new GameState();
         State.getCurrentUser().setSlot(slot, gameState);
         State.setCurrentGame(gameState);
+        State.getCurrentGame().setRunning(true);
     }
 
     public static void continueGameInSlot(int slot) {
         State.setCurrentGame(State.getCurrentUser().getSlot(slot));
+        State.getCurrentGame().setRunning(true);
     }
 
     public static boolean slotIsContinuable(int slot) {
@@ -37,6 +39,7 @@ public class GameHandler {
         State.getCurrentGame().setStarted();
         State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
         new MarioGravityHandler(State.getCurrentGame().getPlayer()).start();
+        State.getCurrentGame().setRunning(true);
     }
 
     public static void loadSection(int level, int section) {
@@ -58,6 +61,7 @@ public class GameHandler {
         currentGame.setScreenX(0);
         currentGame.setFramesElapsed(0);
         new MarioGravityHandler(currentGame.getPlayer()).start();
+        State.getCurrentGame().setRunning(true);
     }
 
     public static void die() {
@@ -84,10 +88,12 @@ public class GameHandler {
             currentGame.setPowerups(0);
             new MarioGravityHandler(currentGame.getPlayer()).start();
             MapHandler.forceReload();
+            State.getCurrentGame().setRunning(true);
         }
     }
 
     public static void pause() {
+        State.getCurrentGame().setRunning(false);
         GameView.getInstance().remove();
         MainMenu.getInstance().show();
     }

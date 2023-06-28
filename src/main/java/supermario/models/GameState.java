@@ -27,6 +27,7 @@ public class GameState { // section
     };
 
     private boolean started = false;
+    private boolean running = false;
 
     public int getLives() {
         return lives;
@@ -161,6 +162,14 @@ public class GameState { // section
 
     public Mario getPlayer() {
         return player;
+    }
+
+    public boolean isRunning() {
+        return running;
+    }
+
+    public void setRunning(boolean running) {
+        this.running = running;
     }
 
     public void handleSectionEnd() {
