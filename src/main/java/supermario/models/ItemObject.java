@@ -1,5 +1,6 @@
 package supermario.models;
 
+import supermario.controllers.GameTimer;
 import supermario.logic.GravityItem;
 import supermario.logic.ItemCollisionHandler;
 import supermario.logic.ItemGravityHandler;
@@ -71,12 +72,12 @@ public class ItemObject implements GravityItem {
                 State.getCurrentGame().getPlayer().setState(marioState);
                 Mario mario = State.getCurrentGame().getPlayer();
                 mario.setInvincible(mario.getInvincible() + 1);
-                new Timer().schedule(new TimerTask() {
+                new GameTimer(new TimerTask() {
                     @Override
                     public synchronized void run() {
                         mario.setInvincible(mario.getInvincible() - 1);
                     }
-                }, 15000);
+                }, 15).start();
             }
         }
         MapHandler.sectionObject.items.remove(this);
