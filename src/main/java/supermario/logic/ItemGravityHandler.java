@@ -16,7 +16,7 @@ public class ItemGravityHandler extends Loop {
     private GravityItem target;
     private double vy = 0;
     private double g = 0.08;
-    private int lastFall = 0;
+    private int groundFrames = 0;
     private int framesElapsed = 0;
 
     public ItemGravityHandler(GravityItem target) {
@@ -50,10 +50,14 @@ public class ItemGravityHandler extends Loop {
                 }
             }
         }
-        if (y + vy > 20 * 32) {
+        if (y + vy >= 20 * 32) {
             collides = true;
-            if (vy > 0.01)
-                lastFall = framesElapsed;
+        }
+        if (y + vy + 5 >= 20 * 32)
+            groundFrames++;
+        else {
+            groundFrames = 0;
+            System.out.println("DD DD" + y + " " + vy);
         }
         if (collides)
             vy = 0.;
@@ -61,7 +65,7 @@ public class ItemGravityHandler extends Loop {
             target.setY((int) (y + vy));
             vy += g;
         }
-        if (vy <= 0.01 && ((ItemObject) target).type == ItemType.STAR && framesElapsed - lastFall >= 1. * getFPS()) {
+        if (((ItemObject) target).type == ItemType.STAR && groundFrames >= 1. * getFPS()) {
             vy = -3.54;
         }
     }
