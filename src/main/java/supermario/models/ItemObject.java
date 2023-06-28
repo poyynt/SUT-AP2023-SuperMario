@@ -1,10 +1,7 @@
 package supermario.models;
 
 import supermario.controllers.GameTimer;
-import supermario.logic.GravityItem;
-import supermario.logic.ItemCollisionHandler;
-import supermario.logic.ItemGravityHandler;
-import supermario.logic.MapHandler;
+import supermario.logic.*;
 
 import java.awt.*;
 import java.util.Timer;
@@ -15,6 +12,7 @@ public class ItemObject implements GravityItem {
     public final ItemType type;
     private final ItemGravityHandler gravityHandler;
     private final ItemCollisionHandler collisionHandler;
+    private final ItemMovementHandler movementHandler;
 
     public ItemObject(int x, int y, ItemType type) {
         this.x = x;
@@ -24,6 +22,13 @@ public class ItemObject implements GravityItem {
         this.gravityHandler.start();
         this.collisionHandler = new ItemCollisionHandler(this);
         this.collisionHandler.start();
+        this.movementHandler = new ItemMovementHandler(this);
+        new GameTimer(new TimerTask() {
+            @Override
+            public void run() {
+                movementHandler.start();
+            }
+        }, 3).start();
     }
 
     @Override
