@@ -18,7 +18,7 @@ public class MapHandler {
     private static int loadedLevel = -1;
     private static int loadedSection = -1;
 
-    private static final Gson gson;
+    public static final Gson gson;
     private static File customMapFile;
 
     static {

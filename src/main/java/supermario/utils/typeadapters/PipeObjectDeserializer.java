@@ -1,6 +1,7 @@
 package supermario.utils.typeadapters;
 
 import com.google.gson.*;
+import supermario.logic.MapHandler;
 import supermario.models.*;
 
 import java.lang.reflect.Type;
@@ -14,7 +15,7 @@ public class PipeObjectDeserializer implements JsonDeserializer<PipeObject> {
         PipeType type = PipeType.valueOf(jsonObject.get("type").getAsString());
         SectionObject section = null;
         if (jsonObject.has("section"))
-            section = new Gson().fromJson(jsonObject.get("section"), SectionObject.class);
+            section = MapHandler.gson.fromJson(jsonObject.get("section"), SectionObject.class);
         boolean activated = false;
         if (jsonObject.has("activated"))
             activated = jsonObject.get("activated").getAsBoolean();
