@@ -8,12 +8,14 @@ import java.util.concurrent.ThreadLocalRandom;
 import java.util.random.RandomGenerator;
 
 public class BlockObject {
-    public final int x, y;
-    public final BlockType type;
-    public final ItemType item;
-    private transient final Rectangle hitBox;
+    public int x, y;
+    public BlockType type;
+    public ItemType item;
+    private transient Rectangle hitBox;
     private transient int state = 0;
 
+    public BlockObject() {
+    }
 
     public BlockObject(int x, int y, BlockType type, ItemType item) {
         this.x = x;

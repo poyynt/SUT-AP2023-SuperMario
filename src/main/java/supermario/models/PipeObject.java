@@ -3,12 +3,15 @@ package supermario.models;
 import java.awt.*;
 
 public class PipeObject {
-    public final int x, y;
-    public final PipeType type;
-    public final SectionObject section;
-    public final boolean activated;
+    public int x, y;
+    public PipeType type;
+    public SectionObject section;
+    public boolean activated;
 
-    private transient final Rectangle hitBox;
+    private transient Rectangle hitBox;
+
+    public PipeObject() {
+    }
 
     public PipeObject(int x, int y, PipeType type, SectionObject section, boolean activated) {
         this.x = x;

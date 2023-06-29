@@ -7,11 +7,14 @@ import java.awt.*;
 
 public class EnemyObject implements GravityItem {
     public int x, y;
-    public final EnemyType type;
-    private EnemyGravityHandler gravityHandler;
-    private EnemyMovementHandler movementHandler;
-    private EnemyCollisionHandler collisionHandler;
+    public EnemyType type;
+    private transient EnemyGravityHandler gravityHandler;
+    private transient EnemyMovementHandler movementHandler;
+    private transient EnemyCollisionHandler collisionHandler;
     private transient int phase = 1;
+
+    public EnemyObject() {
+    }
 
     public EnemyObject(int x, int y, EnemyType type) {
         this.x = x;
