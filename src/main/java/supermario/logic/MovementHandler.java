@@ -1,9 +1,6 @@
 package supermario.logic;
 
-import supermario.models.GameState;
-import supermario.models.KeyboardState;
-import supermario.models.State;
-import supermario.models.BlockObject;
+import supermario.models.*;
 import supermario.views.MainView;
 
 import java.awt.*;
@@ -42,6 +39,19 @@ public class MovementHandler {
                 gameState.getPlayer().setSitting(true);
             else
                 gameState.getPlayer().setSitting(false);
+        }
+
+        if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_Q, false)) {
+            if (gameState.getPlayer().getState() == 2) {
+                if (gameState.getPlayer().isOnSomewhere()) {
+                    int bulletY = gameState.getPlayer().getY() - 16;
+                    if (gameState.getPlayer().isSitting())
+                        bulletY += 32;
+                    BulletObject bulletObject = new BulletObject(gameState.getPlayer().getX(), bulletY);
+                    MapHandler.sectionObject.bullets.add(bulletObject);
+                }
+            }
+
         }
 
         gameState.getPlayer().setX(playerX);
