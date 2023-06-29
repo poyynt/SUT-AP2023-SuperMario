@@ -26,6 +26,7 @@ public class EnemyObject implements GravityItem {
         switch (type) {
             case GOOMBA -> this.collisionHandler = new GoombaCollisionHandler(this);
             case KOOPA -> this.collisionHandler = new KoopaCollisionHandler(this);
+            case SPINY -> this.collisionHandler = new SpinyCollisionHandler(this);
         }
         if (this.collisionHandler != null) {
             this.collisionHandler.start();
