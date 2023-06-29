@@ -21,7 +21,6 @@ public class GoombaCollisionHandler extends EnemyCollisionHandler {
         if (headHitBox.intersects(marioHitBox))
             target.getKilled();
         else if (hitBox.intersects(marioHitBox)) {
-            System.out.println("DD");
             State.getCurrentGame().getPlayer().getHit();
         }
     }
