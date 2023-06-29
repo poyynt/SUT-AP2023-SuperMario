@@ -131,6 +131,15 @@ public class MapHandler {
             );
         }
 
+        for (EnemyObject e : sectionObject.enemies) {
+            graphics2D.drawImage(
+                    SpriteLoader.loadSpriteForEnemy(e),
+                    e.getX() - state.getScreenX(),
+                    e.getY(),
+                    null
+            );
+        }
+
         for (BulletObject b : sectionObject.bullets) {
             Color prevColor = graphics2D.getColor();
             graphics2D.setColor(Color.RED);
