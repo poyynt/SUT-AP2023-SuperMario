@@ -1,5 +1,6 @@
 package supermario.models;
 
+import supermario.controllers.AudioController;
 import supermario.logic.*;
 
 import java.awt.*;
@@ -9,6 +10,7 @@ public class EnemyObject implements GravityItem {
     public final EnemyType type;
     private EnemyGravityHandler gravityHandler;
     private EnemyMovementHandler movementHandler;
+    private EnemyCollisionHandler collisionHandler;
 
     public EnemyObject(int x, int y, EnemyType type) {
         this.x = x;
@@ -19,6 +21,8 @@ public class EnemyObject implements GravityItem {
         if (type == EnemyType.GOOMBA || type == EnemyType.KOOPA) {
             this.movementHandler = new GoombaMovementHandler(this);
             this.movementHandler.start();
+            this.collisionHandler = new GoombaCollisionHandler(this);
+            this.collisionHandler.start();
         }
     }
 
@@ -47,6 +51,7 @@ public class EnemyObject implements GravityItem {
     }
 
     public void getHit() {
+        AudioController.playWavAudioOnChannel("killedEnemy", "Killed", 0);
         switch (type) {
             case GOOMBA -> State.getCurrentGame().addScore(1);
             case KOOPA -> State.getCurrentGame().addScore(2);
@@ -59,5 +64,21 @@ public class EnemyObject implements GravityItem {
         if (this.movementHandler != null)
             this.movementHandler.stop();
         this.gravityHandler.stop();
+    }
+
+    public void getKilled() {
+        AudioController.playWavAudioOnChannel("killedEnemy", "Killed", 0);
+        switch (type) {
+            case GOOMBA -> {
+                State.getCurrentGame().addScore(1);
+                State.getCurrentGame().addCoins(3);
+                MapHandler.sectionObject.enemies.remove(this);
+                if (this.movementHandler != null)
+                    this.movementHandler.stop();
+                if (this.collisionHandler != null)
+                    this.collisionHandler.stop();
+                this.gravityHandler.stop();
+            }
+        }
     }
 }
