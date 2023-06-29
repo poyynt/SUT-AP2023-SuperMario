@@ -11,7 +11,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class BulletMovementHandler extends Loop {
     private List<BulletMovementHandler> instances = new CopyOnWriteArrayList<>();
     private BulletObject target;
-    private double vx = 2.5;
+    private double vx = 3;
 
     public BulletMovementHandler(BulletObject target) {
         super(60.0);
@@ -21,6 +21,8 @@ public class BulletMovementHandler extends Loop {
         instances.removeIf(i -> i.target == target);
         this.target = target;
         instances.add(this);
+        if (!MovementHandler.isPlayerFacingRight())
+            vx *= -1;
     }
 
     @Override
