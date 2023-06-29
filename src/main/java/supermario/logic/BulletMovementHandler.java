@@ -40,6 +40,12 @@ public class BulletMovementHandler extends Loop {
                     target.destroy();
                 }
             }
+            for (PipeObject b : MapHandler.sectionObject.pipes) {
+                Rectangle blockHitBox = b.getHitBox();
+                if (blockHitBox.intersects(hitBox)) {
+                    target.destroy();
+                }
+            }
             for (EnemyObject e : MapHandler.sectionObject.enemies) {
                 Rectangle enemyHitBox = e.getHitBox();
                 if (enemyHitBox.intersects(hitBox)) {

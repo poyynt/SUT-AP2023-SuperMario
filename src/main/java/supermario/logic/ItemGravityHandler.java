@@ -2,10 +2,7 @@ package supermario.logic;
 
 import java.util.List;
 import supermario.controllers.Loop;
-import supermario.models.BlockObject;
-import supermario.models.ItemObject;
-import supermario.models.ItemType;
-import supermario.models.State;
+import supermario.models.*;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -40,6 +37,16 @@ public class ItemGravityHandler extends Loop {
         boolean collides = false;
         if (MapHandler.sectionObject != null) {
             for (BlockObject b : MapHandler.sectionObject.blocks) {
+                Rectangle blockHitBox = b.getHitBox();
+                if (blockHitBox.intersects(hitBox)) {
+                    int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (
+                            (vy >= 0 && oc == Rectangle2D.OUT_BOTTOM) ||
+                                    (vy < 0 && oc == Rectangle2D.OUT_TOP))
+                        collides = true;
+                }
+            }
+            for (PipeObject b : MapHandler.sectionObject.pipes) {
                 Rectangle blockHitBox = b.getHitBox();
                 if (blockHitBox.intersects(hitBox)) {
                     int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());

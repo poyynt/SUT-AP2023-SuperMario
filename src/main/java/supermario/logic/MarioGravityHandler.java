@@ -1,10 +1,7 @@
 package supermario.logic;
 
 import supermario.controllers.Loop;
-import supermario.models.BlockObject;
-import supermario.models.BlockType;
-import supermario.models.KeyboardState;
-import supermario.models.State;
+import supermario.models.*;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -52,6 +49,22 @@ public class MarioGravityHandler extends Loop {
                         canJump = true;
                         if (b.type == BlockType.SLIME)
                             onSlime = true;
+                    }
+                }
+            }
+            for (PipeObject b : MapHandler.sectionObject.pipes) {
+                Rectangle blockHitBox = b.getHitBox();
+                if (blockHitBox.intersects(hitBox)) {
+                    int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (
+                            (vy >= 0 && oc == Rectangle2D.OUT_BOTTOM) ||
+                                    (vy < 0 && oc == Rectangle2D.OUT_TOP))
+                        collides = true;
+                    if (vy < 0 && oc == Rectangle2D.OUT_TOP) {
+                        vy = 0.1;
+                    }
+                    if (vy >= 0 && oc == Rectangle2D.OUT_BOTTOM) {
+                        canJump = true;
                     }
                 }
             }

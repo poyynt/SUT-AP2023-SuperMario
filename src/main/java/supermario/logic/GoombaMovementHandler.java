@@ -1,10 +1,7 @@
 package supermario.logic;
 
 import supermario.controllers.Loop;
-import supermario.models.BlockObject;
-import supermario.models.EnemyObject;
-import supermario.models.EnemyType;
-import supermario.models.State;
+import supermario.models.*;
 
 import java.awt.*;
 import java.awt.geom.Rectangle2D;
@@ -39,6 +36,16 @@ public class GoombaMovementHandler extends EnemyMovementHandler {
                         collides = true;
                 }
             }
+            for (PipeObject b : MapHandler.sectionObject.pipes) {
+                Rectangle blockHitBox = b.getHitBox();
+                if (blockHitBox.intersects(hitBox)) {
+                    int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (
+                            (vx >= 0 && oc == Rectangle2D.OUT_RIGHT) ||
+                                    (vx <= 0 && oc == Rectangle2D.OUT_LEFT))
+                        collides = true;
+                }
+            }
         }
         hitBox = target.getHitBox();
         if (vx >= 0)
@@ -48,6 +55,14 @@ public class GoombaMovementHandler extends EnemyMovementHandler {
         boolean falls = true;
         if (MapHandler.sectionObject != null) {
             for (BlockObject b : MapHandler.sectionObject.blocks) {
+                Rectangle blockHitBox = b.getHitBox();
+                if (blockHitBox.intersects(hitBox)) {
+                    int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
+                    if (oc == Rectangle2D.OUT_BOTTOM)
+                        falls = false;
+                }
+            }
+            for (PipeObject b : MapHandler.sectionObject.pipes) {
                 Rectangle blockHitBox = b.getHitBox();
                 if (blockHitBox.intersects(hitBox)) {
                     int oc = hitBox.outcode(blockHitBox.getCenterX(), blockHitBox.getCenterY());
