@@ -56,4 +56,8 @@ public abstract class Loop implements Runnable {
     public double getFPS() {
         return fps;
     }
+
+    public boolean isRunning() {
+        return isRunning;
+    }
 }

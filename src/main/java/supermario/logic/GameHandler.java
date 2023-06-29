@@ -1,9 +1,7 @@
 package supermario.logic;
 
 import supermario.controllers.AudioController;
-import supermario.models.GameState;
-import supermario.models.State;
-import supermario.models.User;
+import supermario.models.*;
 import supermario.views.GameOverMenu;
 import supermario.views.GameView;
 import supermario.views.GameWonMenu;
@@ -46,7 +44,6 @@ public class GameHandler {
 
     public static void loadSection(int level, int section) {
         GameState currentGame = State.getCurrentGame();
-        currentGame.handleSectionEnd();
         if (level == -1 && section == -1) {
             State.getCurrentUser().setHighScore(
                     Math.max(
@@ -56,13 +53,18 @@ public class GameHandler {
             GameView.getInstance().remove();
             GameWonMenu.getInstance().show();
         }
-        currentGame.setLevel(level);
-        currentGame.setSection(section);
-        currentGame.setPlayerX(0);
-        currentGame.setPlayerY(0);
+        currentGame.getPlayer().setX(0);
+        currentGame.getPlayer().setY(0);
         currentGame.setScreenX(0);
         currentGame.setFramesElapsed(0);
+        currentGame.setLevel(level);
+        currentGame.setSection(section);
+        currentGame.handleSectionEnd();
         State.getCurrentGame().setRunning(true);
+        for (EnemyObject e : MapHandler.sectionObject.enemies)
+            e.stopHandlers();
+        for (ItemObject i : MapHandler.sectionObject.items)
+            i.stopHandlers();
     }
 
     public static void die() {
@@ -74,6 +76,10 @@ public class GameHandler {
         Dn /= 4;
         State.getCurrentGame().addCoins(-Dn);
         AudioController.playWavAudioOnChannel("foreground", "Dead", 0);
+        for (EnemyObject e : MapHandler.sectionObject.enemies)
+            e.stopHandlers();
+        for (ItemObject i : MapHandler.sectionObject.items)
+            i.stopHandlers();
         if (currentGame.getLives() == 0) {
             State.getCurrentUser().setHighScore(
                     Math.max(

@@ -58,6 +58,10 @@ public class MapHandler {
         int section = State.getCurrentGame().getSection();
 
         sectionObject = fileObject.levels.get(level - 1).sections.get(section - 1);
+        for (EnemyObject e : sectionObject.enemies)
+            e.startHandlers();
+        for (ItemObject i: sectionObject.items)
+            i.startHandlers();
     }
 
     public static int lastSectionForLevel(int level) {

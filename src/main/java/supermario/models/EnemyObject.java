@@ -18,18 +18,13 @@ public class EnemyObject implements GravityItem {
         this.y = y;
         this.type = type;
         this.gravityHandler = new EnemyGravityHandler(this);
-        this.gravityHandler.start();
         if (type == EnemyType.GOOMBA || type == EnemyType.KOOPA) {
             this.movementHandler = new GoombaMovementHandler(this);
-            this.movementHandler.start();
         }
         switch (type) {
             case GOOMBA -> this.collisionHandler = new GoombaCollisionHandler(this);
             case KOOPA -> this.collisionHandler = new KoopaCollisionHandler(this);
             case SPINY -> this.collisionHandler = new SpinyCollisionHandler(this);
-        }
-        if (this.collisionHandler != null) {
-            this.collisionHandler.start();
         }
     }
 
@@ -95,5 +90,24 @@ public class EnemyObject implements GravityItem {
                 this.gravityHandler.stop();
             }
         }
+    }
+
+    public void startHandlers() {
+        if (!this.gravityHandler.isRunning()) {
+            if (this.collisionHandler != null)
+                this.collisionHandler.start();
+            if (this.movementHandler != null)
+                this.movementHandler.start();
+            if (this.gravityHandler != null)
+                this.gravityHandler.start();
+        }
+    }
+    public void stopHandlers() {
+        if (this.collisionHandler != null)
+            this.collisionHandler.stop();
+        if (this.movementHandler != null)
+            this.movementHandler.stop();
+        if (this.gravityHandler != null)
+            this.gravityHandler.stop();
     }
 }

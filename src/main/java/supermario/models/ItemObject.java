@@ -19,16 +19,8 @@ public class ItemObject implements GravityItem {
         this.y = y;
         this.type = type;
         this.gravityHandler = new ItemGravityHandler(this);
-        this.gravityHandler.start();
         this.collisionHandler = new ItemCollisionHandler(this);
-        this.collisionHandler.start();
         this.movementHandler = new ItemMovementHandler(this);
-        new GameTimer(new TimerTask() {
-            @Override
-            public void run() {
-                movementHandler.start();
-            }
-        }, 3).start();
     }
 
     @Override
@@ -88,5 +80,27 @@ public class ItemObject implements GravityItem {
         MapHandler.sectionObject.items.remove(this);
         this.gravityHandler.stop();
         this.collisionHandler.stop();
+    }
+
+    public void startHandlers() {
+        if (!this.gravityHandler.isRunning()) {
+            this.gravityHandler.start();
+            this.collisionHandler.start();
+            new GameTimer(new TimerTask() {
+                @Override
+                public void run() {
+                    movementHandler.start();
+                }
+            }, 3).start();
+        }
+    }
+
+    public void stopHandlers() {
+        if (this.collisionHandler != null)
+            this.collisionHandler.stop();
+        if (this.movementHandler != null)
+            this.movementHandler.stop();
+        if (this.gravityHandler != null)
+            this.gravityHandler.stop();
     }
 }
