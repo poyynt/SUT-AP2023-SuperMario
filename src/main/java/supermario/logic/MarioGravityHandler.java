@@ -66,7 +66,8 @@ public class MarioGravityHandler extends Loop {
             vy += g;
         }
         if (collides && canJump) {
-            if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SPACE, false)) {
+            if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SPACE, false)
+            && !KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SHIFT, false)) {
                 vy = -5.;
                 if (onSlime)
                     vy = -6.12; // 5 * sqrt(1.5)

@@ -37,7 +37,7 @@ public class PlayerView extends Base {
                         null
                 );
         }
-        else {
+        else if (!gameState.getPlayer().isSitting()) {
             if (MovementHandler.isPlayerFacingRight())
                 graphics2D.drawImage(
                         SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
@@ -52,6 +52,26 @@ public class PlayerView extends Base {
                         SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
                         gameState.getPlayerX() - gameState.getScreenX(),
                         gameState.getPlayerY() - 32,
+                        null
+                );
+        }
+        else {
+            if (MovementHandler.isPlayerFacingRight())
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
+                        gameState.getPlayerX() - gameState.getScreenX() + 32,
+                        gameState.getPlayerY(),
+                        -32,
+                        32,
+                        null
+                );
+            else
+                graphics2D.drawImage(
+                        SpriteLoader.loadSpriteForCharacter(gameState.getCharacter(), playerState),
+                        gameState.getPlayerX() - gameState.getScreenX(),
+                        gameState.getPlayerY(),
+                        32,
+                        32,
                         null
                 );
         }

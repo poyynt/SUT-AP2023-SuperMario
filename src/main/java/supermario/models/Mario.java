@@ -8,6 +8,7 @@ public class Mario implements GravityItem {
     private int x = 0, y = 0;
     private int state = 0; // mini -> 0, mega -> 1, fire -> 2
     private int invincible = 0;
+    private boolean sitting = false;
 
     public int getX() {
         return x;
@@ -41,8 +42,16 @@ public class Mario implements GravityItem {
         this.state = state;
     }
 
+    public boolean isSitting() {
+        return sitting;
+    }
+
+    public void setSitting(boolean sitting) {
+        this.sitting = sitting;
+    }
+
     public Rectangle getHitBox() {
-        if (state == 0)
+        if (sitting || state == 0)
             return new Rectangle(x, y, 32, 32);
         else
             return new Rectangle(x, y - 32, 32, 64);

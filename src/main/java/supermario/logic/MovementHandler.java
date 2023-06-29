@@ -13,10 +13,11 @@ import java.awt.geom.Rectangle2D;
 public class MovementHandler {
 
     private static boolean playerFacingRight = true;
+
     public static void tick() {
         GameState gameState = State.getCurrentGame();
-        int playerX = gameState.getPlayerX();
-        int playerY = gameState.getPlayerY();
+        int playerX = gameState.getPlayer().getX();
+        int playerY = gameState.getPlayer().getY();
         int screenX = gameState.getScreenX();
 
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_RIGHT, false) && canMoveRight()) {
@@ -35,8 +36,16 @@ public class MovementHandler {
             playerFacingRight = false;
         }
 
-        gameState.setPlayerX(playerX);
-        gameState.setPlayerY(playerY);
+        if (gameState.getPlayer().getState() > 0) {
+            if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SHIFT, false)
+                    && !KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_SPACE, false))
+                gameState.getPlayer().setSitting(true);
+            else
+                gameState.getPlayer().setSitting(false);
+        }
+
+        gameState.getPlayer().setX(playerX);
+        gameState.getPlayer().setY(playerY);
         gameState.setScreenX(screenX);
     }
 
@@ -111,7 +120,7 @@ public class MovementHandler {
                 toCheck[2] = null;
         if ((playerX + 128) % 32 < 2)
             toCheck[2] = null;
-        for (BlockObject t: toCheck) {
+        for (BlockObject t : toCheck) {
             if (t == null)
                 continue;
             return t;
