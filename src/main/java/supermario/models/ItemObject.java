@@ -10,9 +10,9 @@ import java.util.TimerTask;
 public class ItemObject implements GravityItem {
     private int x, y;
     public final ItemType type;
-    private final ItemGravityHandler gravityHandler;
-    private final ItemCollisionHandler collisionHandler;
-    private final ItemMovementHandler movementHandler;
+    private final transient ItemGravityHandler gravityHandler;
+    private final transient ItemCollisionHandler collisionHandler;
+    private final transient ItemMovementHandler movementHandler;
 
     public ItemObject(int x, int y, ItemType type) {
         this.x = x;
