@@ -83,6 +83,7 @@ public class MarioGravityHandler extends Loop {
                 vy = -5.;
                 if (onSlime)
                     vy = -6.12; // 5 * sqrt(1.5)
+                vy *= State.getCurrentGame().getPlayer().getJumpSpeed() / 4.;
             }
         }
     }
