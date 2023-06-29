@@ -1,7 +1,6 @@
 package supermario.logic;
 
 import com.google.gson.*;
-import com.google.gson.stream.JsonReader;
 import supermario.models.*;
 import supermario.utils.typeadapters.BlockObjectDeserializer;
 import supermario.utils.typeadapters.EnemyObjectDeserializer;
@@ -57,15 +56,6 @@ public class MapHandler {
             loadMap();
         int level = State.getCurrentGame().getLevel();
         int section = State.getCurrentGame().getSection();
-//        if (level == loadedLevel && section == loadedSection)
-//            return;
-//        loadedLevel = level;
-//        loadedSection = section;
-//        //noinspection DataFlowIssue
-//        LevelObject levelObject = gson.fromJson(
-//                new InputStreamReader(
-//                        MapHandler.class.getResourceAsStream("/map/" + level + ".json")
-//                ), LevelObject.class);
 
         sectionObject = fileObject.levels.get(level - 1).sections.get(section - 1);
     }
