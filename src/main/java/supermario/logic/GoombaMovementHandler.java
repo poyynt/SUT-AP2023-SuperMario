@@ -59,6 +59,5 @@ public class GoombaMovementHandler extends EnemyMovementHandler {
             vx = -vx;
 
         target.setX((int) (x + vx));
-        System.out.println("U" + vx);
     }
 }
