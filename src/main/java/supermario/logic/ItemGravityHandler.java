@@ -72,7 +72,7 @@ public class ItemGravityHandler extends Loop {
             vy += g;
         }
         if (((ItemObject) target).type == ItemType.STAR && groundFrames >= 1. * getFPS()) {
-            vy = -3.54;
+            vy = -3.54 * State.getCurrentGame().getPlayer().getJumpSpeed() / 4;
         }
     }
 }

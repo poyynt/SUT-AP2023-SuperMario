@@ -96,4 +96,8 @@ public class Mario implements GravityItem {
         return State.getCurrentGame().getCharacter().getMoveSpeed();
     }
 
+    public int getJumpSpeed() {
+        return State.getCurrentGame().getCharacter().getJumpSpeed();
+    }
+
 }
