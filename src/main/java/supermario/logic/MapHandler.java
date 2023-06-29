@@ -10,11 +10,13 @@ import java.awt.*;
 import java.io.InputStreamReader;
 
 public class MapHandler {
+    public static FileObject fileObject;
     public static SectionObject sectionObject;
     private static int loadedLevel = -1;
     private static int loadedSection = -1;
 
     private static final Gson gson;
+
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
 
@@ -25,20 +27,30 @@ public class MapHandler {
         gson = gsonBuilder.create();
     }
 
+    public static void loadMap() {
+        FileObject loadedFileObject = gson.fromJson(
+                new InputStreamReader(
+                        MapHandler.class.getResourceAsStream("/map/map.json")
+                ), FileObject.class);
+        fileObject = loadedFileObject;
+    }
+
     public static void loadSection() {
+        if (fileObject == null)
+            loadMap();
         int level = State.getCurrentGame().getLevel();
         int section = State.getCurrentGame().getSection();
-        if (level == loadedLevel && section == loadedSection)
-            return;
-        loadedLevel = level;
-        loadedSection = section;
-        //noinspection DataFlowIssue
-        LevelObject levelObject = gson.fromJson(
-                new InputStreamReader(
-                        MapHandler.class.getResourceAsStream("/map/" + level + ".json")
-                ), LevelObject.class);
+//        if (level == loadedLevel && section == loadedSection)
+//            return;
+//        loadedLevel = level;
+//        loadedSection = section;
+//        //noinspection DataFlowIssue
+//        LevelObject levelObject = gson.fromJson(
+//                new InputStreamReader(
+//                        MapHandler.class.getResourceAsStream("/map/" + level + ".json")
+//                ), LevelObject.class);
 
-        sectionObject = levelObject.sections.get(section - 1);
+        sectionObject = fileObject.levels.get(level - 1).sections.get(section - 1);
     }
 
     public static BlockObject getBlockAt(int gridX, int gridY) {
@@ -46,7 +58,7 @@ public class MapHandler {
             return null;
         if (sectionObject.blocks == null)
             return null;
-        for (BlockObject t: sectionObject.blocks)
+        for (BlockObject t : sectionObject.blocks)
             if (t.x == gridX && t.y == gridY)
                 return t;
         return null;
@@ -85,7 +97,7 @@ public class MapHandler {
             );
         }
 
-        for (BlockObject t: sectionObject.blocks) {
+        for (BlockObject t : sectionObject.blocks) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForBlock(t),
                     t.x * 32 - state.getScreenX(),
@@ -94,7 +106,7 @@ public class MapHandler {
             );
         }
 
-        for (PipeObject p: sectionObject.pipes) {
+        for (PipeObject p : sectionObject.pipes) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteWithName("block", "Pipe"),
                     p.x * 32 - state.getScreenX(),
@@ -103,7 +115,7 @@ public class MapHandler {
             );
         }
 
-        for (ItemObject i: sectionObject.items) {
+        for (ItemObject i : sectionObject.items) {
             graphics2D.drawImage(
                     SpriteLoader.loadSpriteForItem(i),
                     i.getX() - state.getScreenX(),
@@ -114,6 +126,7 @@ public class MapHandler {
     }
 
     public static void forceReload() {
+        loadMap();
         loadedLevel = -1;
         loadedSection = -1;
         loadSection();

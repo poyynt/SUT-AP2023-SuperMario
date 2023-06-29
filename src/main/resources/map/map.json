@@ -1,0 +1,31 @@
+{
+  "levels": [
+    {
+      "sections": [
+        {
+          "length": 43,
+          "time": 30,
+          "blocks": [
+            {"x": 2, "y": 4, "type": "QUESTION"},
+            {"x": 7, "y": 4, "type": "QUESTION"},
+            {"x": 12, "y": 4, "type": "COIN"},
+            {"x": 17, "y": 4, "type": "SIMPLE"},
+            {"x": 22, "y": 4, "type": "QUESTION"},
+            {"x": 27, "y": 4, "type": "COINS"},
+            {"x": 32, "y": 4, "type": "QUESTION"},
+            {"x": 6, "y": 1, "type": "SLIME"},
+            {"x": 5, "y": 1, "type": "EMPTY"}
+          ],
+          "enemies": [
+
+          ],
+          "pipes": [
+            {"x":  0, "y":  0, "type":  "SIMPLE"}
+          ]
+        }
+      ]
+    }
+  ],
+  "hearts": 3,
+  "marioState": 0
+}
