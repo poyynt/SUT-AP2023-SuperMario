@@ -3,6 +3,7 @@ package supermario.logic;
 import supermario.controllers.Loop;
 import supermario.models.BlockObject;
 import supermario.models.EnemyObject;
+import supermario.models.EnemyType;
 import supermario.models.State;
 
 import java.awt.*;
@@ -20,6 +21,8 @@ public class GoombaMovementHandler extends EnemyMovementHandler {
     @Override
     public void update() {
         if (State.getCurrentGame() == null || !State.getCurrentGame().isRunning())
+            return;
+        if (target.type == EnemyType.KOOPA && target.getPhase() == 2)
             return;
         int x = target.getX();
         Rectangle hitBox = target.getHitBox();

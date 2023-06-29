@@ -11,6 +11,7 @@ public class EnemyObject implements GravityItem {
     private EnemyGravityHandler gravityHandler;
     private EnemyMovementHandler movementHandler;
     private EnemyCollisionHandler collisionHandler;
+    private transient int phase = 1;
 
     public EnemyObject(int x, int y, EnemyType type) {
         this.x = x;
@@ -21,7 +22,12 @@ public class EnemyObject implements GravityItem {
         if (type == EnemyType.GOOMBA || type == EnemyType.KOOPA) {
             this.movementHandler = new GoombaMovementHandler(this);
             this.movementHandler.start();
-            this.collisionHandler = new GoombaCollisionHandler(this);
+        }
+        switch (type) {
+            case GOOMBA -> this.collisionHandler = new GoombaCollisionHandler(this);
+            case KOOPA -> this.collisionHandler = new KoopaCollisionHandler(this);
+        }
+        if (this.collisionHandler != null) {
             this.collisionHandler.start();
         }
     }
@@ -42,12 +48,20 @@ public class EnemyObject implements GravityItem {
         this.y = y;
     }
 
+    public int getPhase() {
+        return phase;
+    }
+
+    public void setPhase(int phase) {
+        this.phase = phase;
+    }
+
     public Rectangle getHitBox() {
         return new Rectangle(x, y, 32, 32);
     }
 
     public Rectangle getHeadHitBox() {
-        return new Rectangle(x + 8, y, 16, 16);
+        return new Rectangle(x + 4, y, 24, 16);
     }
 
     public void getHit() {
