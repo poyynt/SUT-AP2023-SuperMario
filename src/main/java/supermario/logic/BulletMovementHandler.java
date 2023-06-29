@@ -4,17 +4,16 @@ import supermario.controllers.Loop;
 import supermario.models.*;
 
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 public class BulletMovementHandler extends Loop {
     private List<BulletMovementHandler> instances = new CopyOnWriteArrayList<>();
     private BulletObject target;
-    private double vx = 3;
+    private double vx = State.getCurrentGame().getPlayer().getMoveSpeed();
 
     public BulletMovementHandler(BulletObject target) {
-        super(60.0);
+        super(30.0);
         for (BulletMovementHandler instance : instances)
             if (instance.target == target)
                 instance.stop();
