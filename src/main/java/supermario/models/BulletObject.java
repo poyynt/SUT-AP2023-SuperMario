@@ -7,7 +7,7 @@ import java.awt.*;
 
 public class BulletObject {
     private int x, y, ix;
-    private transient BulletMovementHandler movementHandler;
+    private BulletMovementHandler movementHandler;
 
     public BulletObject(int x, int y) {
         this.ix = x;
