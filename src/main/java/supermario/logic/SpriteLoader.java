@@ -1,5 +1,6 @@
 package supermario.logic;
 
+import supermario.models.EnemyObject;
 import supermario.models.GameCharacter;
 import supermario.models.BlockObject;
 import supermario.models.ItemObject;
@@ -50,5 +51,9 @@ public class SpriteLoader {
 
     public static Image loadSpriteForItem(ItemObject t) {
         return loadSpriteWithName("item", t.type.name());
+    }
+
+    public static Image loadSpriteForEnemy(EnemyObject t) {
+        return loadSpriteWithName("enemy", t.type.name());
     }
 }
