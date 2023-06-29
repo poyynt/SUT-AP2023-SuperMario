@@ -1,12 +1,16 @@
 package supermario.logic;
 
 import com.google.gson.*;
+import com.google.gson.stream.JsonReader;
 import supermario.models.*;
 import supermario.utils.typeadapters.BlockObjectDeserializer;
 import supermario.utils.typeadapters.EnemyObjectDeserializer;
 import supermario.utils.typeadapters.PipeObjectDeserializer;
 
 import java.awt.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.InputStreamReader;
 
 public class MapHandler {
@@ -16,6 +20,7 @@ public class MapHandler {
     private static int loadedSection = -1;
 
     private static final Gson gson;
+    private static File customMapFile;
 
     static {
         GsonBuilder gsonBuilder = new GsonBuilder();
@@ -27,12 +32,24 @@ public class MapHandler {
         gson = gsonBuilder.create();
     }
 
+    public static void setCustomMapFile(File customMapFile) {
+        MapHandler.customMapFile = customMapFile;
+    }
+
     public static void loadMap() {
-        FileObject loadedFileObject = gson.fromJson(
-                new InputStreamReader(
-                        MapHandler.class.getResourceAsStream("/map/map.json")
-                ), FileObject.class);
-        fileObject = loadedFileObject;
+        if (customMapFile == null) {
+            fileObject = gson.fromJson(
+                    new InputStreamReader(
+                            MapHandler.class.getResourceAsStream("/map/map.json")
+                    ), FileObject.class);
+        }
+        else {
+            try {
+                fileObject = gson.fromJson(new FileReader(customMapFile), FileObject.class);
+            } catch (FileNotFoundException e) {
+                throw new RuntimeException(e);
+            }
+        }
     }
 
     public static void loadSection() {

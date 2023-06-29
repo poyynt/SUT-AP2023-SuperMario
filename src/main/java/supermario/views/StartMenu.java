@@ -2,6 +2,7 @@ package supermario.views;
 
 import supermario.Main;
 import supermario.controllers.AudioController;
+import supermario.logic.MapHandler;
 
 import javax.sound.sampled.Clip;
 import javax.swing.*;
@@ -25,6 +26,15 @@ public class StartMenu implements View {
             RegisterMenu.getInstance().show();
         });
         panel.add(registerButton);
+        JFileChooser fileChooser = new JFileChooser();
+        JButton uploadButton = new JButton("Upload Game File");
+        uploadButton.addActionListener(e -> {
+            int rv = fileChooser.showOpenDialog(panel);
+            if (rv == JFileChooser.APPROVE_OPTION) {
+                MapHandler.setCustomMapFile(fileChooser.getSelectedFile());
+            }
+        });
+        panel.add(uploadButton);
         JButton exitButton = new JButton("Exit");
         exitButton.addActionListener(e -> Main.exit(0));
         panel.add(exitButton);
