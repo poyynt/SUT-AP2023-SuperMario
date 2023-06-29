@@ -7,16 +7,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="add enemies field to 1.json map">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_6_10_23,_15_49_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_6_10_23__15_49__Changes_.xml" beforeDir="false" />
+    <list default="true" id="2eab934a-9e30-4b13-b4f9-41b854522a38" name="Changes" comment="make *Handlers transient">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GravityHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/controllers/Loop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/controllers/Loop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/GameHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MapHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/MovementHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/logic/TileCollisionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/BlockObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/BlockObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/PipeObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/PipeObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/EnemyObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/EnemyObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/models/ItemObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/models/ItemObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/supermario/utils/typeadapters/PipeObjectDeserializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supermario/utils/typeadapters/PipeObjectDeserializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/map/map.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/map/map.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +89,7 @@
       <list>
         <option value="module-info" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -124,29 +125,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/sprites/block&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Problems&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/Users/parsa/Documents/Uni/Spring 1402/AP/Project/Phase 2/SuperMario/src/main/resources/audio",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "settings.sync"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/audio" />
+      <recent name="$PROJECT_DIR$/src/main/resources/sprites/enemy" />
+      <recent name="$PROJECT_DIR$/src/main/resources/sprites/character.2" />
+      <recent name="$PROJECT_DIR$/src/main/resources/sprites/character.1" />
       <recent name="$PROJECT_DIR$/src/main/resources/sprites/block" />
-      <recent name="$PROJECT_DIR$/src/main/resources/sounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="supermario.logic" />
       <recent name="supermario.utils.typeadapters" />
     </key>
   </component>
@@ -295,329 +300,350 @@
       <option name="presentableId" value="Default" />
       <updated>1686391181189</updated>
     </task>
-    <task id="LOCAL-00001" summary="move resource files to reflect gradle folder structure">
-      <created>1686397503724</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+    <task id="LOCAL-00076" summary="mini mario can't destroy simple blocks">
+      <created>1687992585295</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
       <option name="project" value="LOCAL" />
-      <updated>1686397503724</updated>
+      <updated>1687992585295</updated>
     </task>
-    <task id="LOCAL-00002" summary="move source files to reflect gradle folder structure">
-      <created>1686397598361</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+    <task id="LOCAL-00077" summary="add sitting mario">
+      <created>1688029125683</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
       <option name="project" value="LOCAL" />
-      <updated>1686397598361</updated>
+      <updated>1688029125683</updated>
     </task>
-    <task id="LOCAL-00003" summary="clean up build file">
-      <created>1686417667818</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+    <task id="LOCAL-00078" summary="fix mario hitbox bug">
+      <created>1688029287363</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
       <option name="project" value="LOCAL" />
-      <updated>1686417667818</updated>
+      <updated>1688029287363</updated>
     </task>
-    <task id="LOCAL-00004" summary="audio resources">
-      <created>1686417706048</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+    <task id="LOCAL-00079" summary="add FileObject model">
+      <created>1688029390767</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
       <option name="project" value="LOCAL" />
-      <updated>1686417706048</updated>
+      <updated>1688029390767</updated>
     </task>
-    <task id="LOCAL-00005" summary="add AudioController class for handling audio ops">
-      <created>1686417731223</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+    <task id="LOCAL-00080" summary="move map to FileObject">
+      <created>1688029804156</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
       <option name="project" value="LOCAL" />
-      <updated>1686417731223</updated>
+      <updated>1688029804156</updated>
     </task>
-    <task id="LOCAL-00006" summary="start Title audio on game start">
-      <created>1686417746457</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+    <task id="LOCAL-00081" summary="reload map on new game">
+      <created>1688029994401</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
       <option name="project" value="LOCAL" />
-      <updated>1686417746457</updated>
+      <updated>1688029994401</updated>
     </task>
-    <task id="LOCAL-00007" summary="remove cache from AudioController because doing it properly is hard :)">
-      <created>1686487651021</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
+    <task id="LOCAL-00082" summary="add custom map upload">
+      <created>1688039168341</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
       <option name="project" value="LOCAL" />
-      <updated>1686487651021</updated>
+      <updated>1688039168341</updated>
     </task>
-    <task id="LOCAL-00008" summary="fix AudioController channels">
-      <created>1686487666973</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
+    <task id="LOCAL-00083" summary="bullet model">
+      <created>1688040240184</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
       <option name="project" value="LOCAL" />
-      <updated>1686487666973</updated>
+      <updated>1688040240184</updated>
     </task>
-    <task id="LOCAL-00009" summary="play audio on death">
-      <created>1686487692386</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
+    <task id="LOCAL-00084" summary="bullets list">
+      <created>1688040245834</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
       <option name="project" value="LOCAL" />
-      <updated>1686487692386</updated>
+      <updated>1688040245834</updated>
     </task>
-    <task id="LOCAL-00010" summary="play audio on game over">
-      <created>1686487721638</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
+    <task id="LOCAL-00085" summary="enemy getHitBox and getHit">
+      <created>1688040286445</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
       <option name="project" value="LOCAL" />
-      <updated>1686487721638</updated>
+      <updated>1688040286445</updated>
     </task>
-    <task id="LOCAL-00011" summary="in-game background audio">
-      <created>1686487746523</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
+    <task id="LOCAL-00086" summary="BulletMovementHandler done">
+      <created>1688040294143</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
       <option name="project" value="LOCAL" />
-      <updated>1686487746523</updated>
+      <updated>1688040294143</updated>
     </task>
-    <task id="LOCAL-00012" summary="move title audio to views">
-      <created>1686487759864</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
+    <task id="LOCAL-00087" summary="clean up getDoor remaining from phase1">
+      <created>1688040318936</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
       <option name="project" value="LOCAL" />
-      <updated>1686487759864</updated>
+      <updated>1688040318936</updated>
     </task>
-    <task id="LOCAL-00013" summary="ide files">
-      <created>1686487767625</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
+    <task id="LOCAL-00088" summary="fix bullet direction">
+      <created>1688042317782</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
       <option name="project" value="LOCAL" />
-      <updated>1686487767625</updated>
+      <updated>1688042317782</updated>
     </task>
-    <task id="LOCAL-00014" summary="add mute function">
-      <created>1686489291641</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
+    <task id="LOCAL-00089" summary="draw bullets">
+      <created>1688042328129</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1686489291641</updated>
+      <updated>1688042328129</updated>
     </task>
-    <task id="LOCAL-00015" summary="change pause button to esc">
-      <created>1686489304099</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
+    <task id="LOCAL-00090" summary="improve MarioGravityHandler creation flow">
+      <created>1688042374740</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
       <option name="project" value="LOCAL" />
-      <updated>1686489304099</updated>
+      <updated>1688042374740</updated>
     </task>
-    <task id="LOCAL-00016" summary="add score to overlay">
-      <created>1686489911486</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
+    <task id="LOCAL-00091" summary="shoot bullets">
+      <created>1688042382760</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
       <option name="project" value="LOCAL" />
-      <updated>1686489911486</updated>
+      <updated>1688042382760</updated>
     </task>
-    <task id="LOCAL-00017" summary="add exit button to user/pause menu">
-      <created>1686489973301</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
+    <task id="LOCAL-00092" summary="comments cleanup">
+      <created>1688043408183</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
       <option name="project" value="LOCAL" />
-      <updated>1686489973301</updated>
+      <updated>1688043408183</updated>
     </task>
-    <task id="LOCAL-00018" summary="rename SectionMap.width to SectionMap.length">
-      <created>1686499041693</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
+    <task id="LOCAL-00093" summary="enemy sprites">
+      <created>1688043417224</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
       <option name="project" value="LOCAL" />
-      <updated>1686499041693</updated>
+      <updated>1688043417224</updated>
     </task>
-    <task id="LOCAL-00019" summary="resize sprites to 32x32">
-      <created>1686499802330</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
+    <task id="LOCAL-00094" summary="enemy SpriteLoader">
+      <created>1688043424776</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
       <option name="project" value="LOCAL" />
-      <updated>1686499802330</updated>
+      <updated>1688043424776</updated>
     </task>
-    <task id="LOCAL-00020" summary="adjust screen size to 32x24 blocks">
-      <created>1686500849986</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
+    <task id="LOCAL-00095" summary="multiply enemy x and y by tile size">
+      <created>1688043440444</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
       <option name="project" value="LOCAL" />
-      <updated>1686500849986</updated>
+      <updated>1688043440444</updated>
     </task>
-    <task id="LOCAL-00021" summary="remove section 2 temporarily">
-      <created>1686501097270</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
+    <task id="LOCAL-00096" summary="enemy gravity handler, hit by bullet">
+      <created>1688043461756</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
       <option name="project" value="LOCAL" />
-      <updated>1686501097270</updated>
+      <updated>1688043461756</updated>
     </task>
-    <task id="LOCAL-00022" summary="ignore idea workspace.xml">
-      <created>1686502431193</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
+    <task id="LOCAL-00097" summary="draw enemies">
+      <created>1688043679281</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
       <option name="project" value="LOCAL" />
-      <updated>1686502431193</updated>
+      <updated>1688043679281</updated>
     </task>
-    <task id="LOCAL-00023" summary="refactor SectionMap to SectionObject">
-      <created>1686978285464</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
+    <task id="LOCAL-00098" summary="add enemies">
+      <created>1688043683383</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
       <option name="project" value="LOCAL" />
-      <updated>1686978285464</updated>
+      <updated>1688043683383</updated>
     </task>
-    <task id="LOCAL-00024" summary="remove Item and its utils">
-      <created>1686978966049</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
+    <task id="LOCAL-00099" summary="type 1 (goomba) movement handler">
+      <created>1688045379135</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
       <option name="project" value="LOCAL" />
-      <updated>1686978966049</updated>
+      <updated>1688045379135</updated>
     </task>
-    <task id="LOCAL-00025" summary="remove Item and its utils">
-      <created>1686978985564</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
+    <task id="LOCAL-00100" summary="remove extra file remaining from phase1">
+      <created>1688045403178</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
       <option name="project" value="LOCAL" />
-      <updated>1686978985564</updated>
+      <updated>1688045403178</updated>
     </task>
-    <task id="LOCAL-00026" summary="refactor sectionMap to sectionObject">
-      <created>1686979167537</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
+    <task id="LOCAL-00101" summary="add audio assets">
+      <created>1688046709241</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
       <option name="project" value="LOCAL" />
-      <updated>1686979167537</updated>
+      <updated>1688046709241</updated>
     </task>
-    <task id="LOCAL-00027" summary="refactor Tile to BlockObject">
-      <created>1686979183997</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
+    <task id="LOCAL-00102" summary="add EnemyCollisionHandler abstract class">
+      <created>1688046730684</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
       <option name="project" value="LOCAL" />
-      <updated>1686979183997</updated>
+      <updated>1688046730684</updated>
     </task>
-    <task id="LOCAL-00028" summary="BlockType enum">
-      <created>1686979843666</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
+    <task id="LOCAL-00103" summary="implement mario getting hit">
+      <created>1688046751818</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
       <option name="project" value="LOCAL" />
-      <updated>1686979843666</updated>
+      <updated>1688046751818</updated>
     </task>
-    <task id="LOCAL-00029" summary="BlockType enum">
-      <created>1686979866890</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
+    <task id="LOCAL-00104" summary="play audio on section end">
+      <created>1688046766363</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
       <option name="project" value="LOCAL" />
-      <updated>1686979866890</updated>
+      <updated>1688046766363</updated>
     </task>
-    <task id="LOCAL-00030" summary="refactor">
-      <created>1686979873012</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
+    <task id="LOCAL-00105" summary="decrease score on death">
+      <created>1688046884111</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
       <option name="project" value="LOCAL" />
-      <updated>1686979873012</updated>
+      <updated>1688046884111</updated>
     </task>
-    <task id="LOCAL-00031" summary="ItemType enum">
-      <created>1686981016691</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
+    <task id="LOCAL-00106" summary="implement GoombaCollisionHandler">
+      <created>1688046899794</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
       <option name="project" value="LOCAL" />
-      <updated>1686981016691</updated>
+      <updated>1688046899794</updated>
     </task>
-    <task id="LOCAL-00032" summary="Block y starts at bottom">
-      <created>1686981092981</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
+    <task id="LOCAL-00107" summary="implement goomba getting killed + audio">
+      <created>1688046913066</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
       <option name="project" value="LOCAL" />
-      <updated>1686981092981</updated>
+      <updated>1688046913066</updated>
     </task>
-    <task id="LOCAL-00033" summary="rename sprite">
-      <created>1686981099812</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
+    <task id="LOCAL-00108" summary="remove extra print statement">
+      <created>1688046922677</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
       <option name="project" value="LOCAL" />
-      <updated>1686981099812</updated>
+      <updated>1688046922677</updated>
     </task>
-    <task id="LOCAL-00034" summary="new sprites for blocks">
-      <created>1686981215141</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
+    <task id="LOCAL-00109" summary="remove extra print statement">
+      <created>1688047048592</created>
+      <option name="number" value="00109" />
+      <option name="presentableId" value="LOCAL-00109" />
       <option name="project" value="LOCAL" />
-      <updated>1686981215141</updated>
+      <updated>1688047048592</updated>
     </task>
-    <task id="LOCAL-00035" summary="remove debug statement">
-      <created>1686988608545</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
+    <task id="LOCAL-00110" summary="bugfix">
+      <created>1688047786865</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
       <option name="project" value="LOCAL" />
-      <updated>1686988608545</updated>
+      <updated>1688047786865</updated>
     </task>
-    <task id="LOCAL-00036" summary="refactor">
-      <created>1686988699362</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
+    <task id="LOCAL-00111" summary="koopa collision handling">
+      <created>1688047811823</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
       <option name="project" value="LOCAL" />
-      <updated>1686988699362</updated>
+      <updated>1688047811824</updated>
     </task>
-    <task id="LOCAL-00037" summary="refactor">
-      <created>1686989101169</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
+    <task id="LOCAL-00112" summary="spiny collision handling">
+      <created>1688047985279</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
       <option name="project" value="LOCAL" />
-      <updated>1686989101169</updated>
+      <updated>1688047985279</updated>
     </task>
-    <task id="LOCAL-00038" summary="PipeObject model">
-      <created>1687001497472</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
+    <task id="LOCAL-00113" summary="spiny movement handling">
+      <created>1688048245510</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
       <option name="project" value="LOCAL" />
-      <updated>1687001497472</updated>
+      <updated>1688048245510</updated>
     </task>
-    <task id="LOCAL-00039" summary="refactor and add PipeObjectDeserializer">
-      <created>1687001516051</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
+    <task id="LOCAL-00114" summary="add collision handling for pipes">
+      <created>1688048557906</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
       <option name="project" value="LOCAL" />
-      <updated>1687001516051</updated>
+      <updated>1688048557906</updated>
     </task>
-    <task id="LOCAL-00040" summary="block object assigns random variable to item if null">
-      <created>1687001534141</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
+    <task id="LOCAL-00115" summary="bullet moves with mario speed">
+      <created>1688048799357</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
       <option name="project" value="LOCAL" />
-      <updated>1687001534141</updated>
+      <updated>1688048799357</updated>
     </task>
-    <task id="LOCAL-00041" summary="update SectionObject model">
-      <created>1687001650373</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
+    <task id="LOCAL-00116" summary="fix missing &quot;;&quot;">
+      <created>1688048820587</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
       <option name="project" value="LOCAL" />
-      <updated>1687001650373</updated>
+      <updated>1688048820587</updated>
     </task>
-    <task id="LOCAL-00042" summary="move sections from separate files to level files">
-      <created>1687008106862</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
+    <task id="LOCAL-00117" summary="star jumps with half mario jump speed">
+      <created>1688048960803</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
       <option name="project" value="LOCAL" />
-      <updated>1687008106862</updated>
+      <updated>1688048960803</updated>
     </task>
-    <task id="LOCAL-00043" summary="pipe sprite">
-      <created>1687008114615</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
+    <task id="LOCAL-00118" summary="items move with half mario move speed">
+      <created>1688049031397</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
       <option name="project" value="LOCAL" />
-      <updated>1687008114615</updated>
+      <updated>1688049031397</updated>
     </task>
-    <task id="LOCAL-00044" summary="add EnemyObject and relatives">
-      <created>1687008488095</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
+    <task id="LOCAL-00119" summary="remove prints">
+      <created>1688049042689</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
       <option name="project" value="LOCAL" />
-      <updated>1687008488095</updated>
+      <updated>1688049042689</updated>
     </task>
-    <task id="LOCAL-00045" summary="load SectionObject.enemies from file">
-      <created>1687008622664</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
+    <task id="LOCAL-00120" summary="mario jump speed variation">
+      <created>1688049077681</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
       <option name="project" value="LOCAL" />
-      <updated>1687008622664</updated>
+      <updated>1688049077681</updated>
     </task>
-    <task id="LOCAL-00046" summary="add enemies field to 1.json map">
-      <created>1687008753739</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
+    <task id="LOCAL-00121" summary="go to next section">
+      <created>1688049625145</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
       <option name="project" value="LOCAL" />
-      <updated>1687008753739</updated>
+      <updated>1688049625145</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00122" summary="info overlay updated">
+      <created>1688049631868</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1688049631868</updated>
+    </task>
+    <task id="LOCAL-00123" summary="fix bugs">
+      <created>1688050211137</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1688050211137</updated>
+    </task>
+    <task id="LOCAL-00124" summary="make *Handlers transient">
+      <created>1688050656202</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1688050656202</updated>
+    </task>
+    <option name="localTasksCounter" value="125" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -647,31 +673,46 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rename SectionMap.width to SectionMap.length" />
-    <MESSAGE value="resize sprites to 32x32" />
-    <MESSAGE value="adjust screen size to 32x24 blocks" />
-    <MESSAGE value="remove section 2 temporarily" />
-    <MESSAGE value="ignore idea workspace.xml" />
-    <MESSAGE value="refactor SectionMap to SectionObject" />
-    <MESSAGE value="remove Item and its utils" />
-    <MESSAGE value="refactor sectionMap to sectionObject" />
-    <MESSAGE value="refactor Tile to BlockObject" />
-    <MESSAGE value="BlockType enum" />
-    <MESSAGE value="ItemType enum" />
-    <MESSAGE value="Block y starts at bottom" />
-    <MESSAGE value="rename sprite" />
-    <MESSAGE value="new sprites for blocks" />
-    <MESSAGE value="remove debug statement" />
-    <MESSAGE value="refactor" />
-    <MESSAGE value="PipeObject model" />
-    <MESSAGE value="refactor and add PipeObjectDeserializer" />
-    <MESSAGE value="block object assigns random variable to item if null" />
-    <MESSAGE value="update SectionObject model" />
-    <MESSAGE value="move sections from separate files to level files" />
-    <MESSAGE value="pipe sprite" />
-    <MESSAGE value="add EnemyObject and relatives" />
-    <MESSAGE value="load SectionObject.enemies from file" />
-    <MESSAGE value="add enemies field to 1.json map" />
-    <option name="LAST_COMMIT_MESSAGE" value="add enemies field to 1.json map" />
+    <MESSAGE value="type 1 (goomba) movement handler" />
+    <MESSAGE value="remove extra file remaining from phase1" />
+    <MESSAGE value="add audio assets" />
+    <MESSAGE value="add EnemyCollisionHandler abstract class" />
+    <MESSAGE value="implement mario getting hit" />
+    <MESSAGE value="play audio on section end" />
+    <MESSAGE value="decrease score on death" />
+    <MESSAGE value="implement GoombaCollisionHandler" />
+    <MESSAGE value="implement goomba getting killed + audio" />
+    <MESSAGE value="remove extra print statement" />
+    <MESSAGE value="bugfix" />
+    <MESSAGE value="koopa collision handling" />
+    <MESSAGE value="spiny collision handling" />
+    <MESSAGE value="spiny movement handling" />
+    <MESSAGE value="add collision handling for pipes" />
+    <MESSAGE value="bullet moves with mario speed" />
+    <MESSAGE value="fix missing &quot;;&quot;" />
+    <MESSAGE value="star jumps with half mario jump speed" />
+    <MESSAGE value="items move with half mario move speed" />
+    <MESSAGE value="remove prints" />
+    <MESSAGE value="mario jump speed variation" />
+    <MESSAGE value="go to next section" />
+    <MESSAGE value="info overlay updated" />
+    <MESSAGE value="fix bugs" />
+    <MESSAGE value="make *Handlers transient" />
+    <option name="LAST_COMMIT_MESSAGE" value="make *Handlers transient" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/supermario/models/Mario.java</url>
+          <line>77</line>
+          <properties class="supermario.models.Mario" method="getHit">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
