@@ -1,6 +1,7 @@
 package supermario.models;
 
 import supermario.logic.GravityItem;
+import supermario.logic.MarioGravityHandler;
 
 import java.awt.Rectangle;
 
@@ -9,6 +10,15 @@ public class Mario implements GravityItem {
     private int state = 0; // mini -> 0, mega -> 1, fire -> 2
     private int invincible = 0;
     private boolean sitting = false;
+    private transient MarioGravityHandler gravityHandler;
+
+    public Mario() {
+    }
+
+    public Mario(boolean notGson) {
+        gravityHandler = new MarioGravityHandler(this);
+        gravityHandler.start();
+    }
 
     public int getX() {
         return x;
@@ -56,4 +66,9 @@ public class Mario implements GravityItem {
         else
             return new Rectangle(x, y - 32, 32, 64);
     }
+
+    public boolean isOnSomewhere() {
+        return gravityHandler.isOnSomewhere();
+    }
+
 }

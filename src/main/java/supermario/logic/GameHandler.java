@@ -41,7 +41,6 @@ public class GameHandler {
         State.getCurrentGame().setLives(MapHandler.fileObject.hearts);
         State.getCurrentGame().setStarted();
         State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
-        new MarioGravityHandler(State.getCurrentGame().getPlayer()).start();
         State.getCurrentGame().setRunning(true);
     }
 
@@ -63,7 +62,6 @@ public class GameHandler {
         currentGame.setPlayerY(0);
         currentGame.setScreenX(0);
         currentGame.setFramesElapsed(0);
-        new MarioGravityHandler(currentGame.getPlayer()).start();
         State.getCurrentGame().setRunning(true);
     }
 
@@ -89,7 +87,6 @@ public class GameHandler {
             currentGame.setSecondsForScore(0);
             currentGame.setFramesElapsed(0);
             currentGame.setPowerups(0);
-            new MarioGravityHandler(currentGame.getPlayer()).start();
             MapHandler.forceReload();
             State.getCurrentGame().setRunning(true);
         }

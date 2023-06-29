@@ -21,9 +21,8 @@ public class MarioGravityHandler extends Loop {
     public MarioGravityHandler(GravityItem target) {
         super(60.0);
         for (MarioGravityHandler instance: instances)
-            if (instance.target == target)
-                instance.stop();
-        instances.removeIf(i -> i.target == target);
+            instance.stop();
+        instances.clear();
         this.target = target;
         instances.add(this);
     }
@@ -73,5 +72,9 @@ public class MarioGravityHandler extends Loop {
                     vy = -6.12; // 5 * sqrt(1.5)
             }
         }
+    }
+
+    public boolean isOnSomewhere() {
+        return Math.abs(vy) < 0.01;
     }
 }

@@ -8,7 +8,7 @@ public class GameState { // section
     private int lastLevel = 1;
     private int lastSection = 1;
     private int lives = 3;
-    private Mario player = new Mario();
+    private Mario player = new Mario(true);
     private int screenX = 0;
     private int coins = 0;
     private int currentScore = 0;
