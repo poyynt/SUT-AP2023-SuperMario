@@ -23,10 +23,15 @@ public class AudioController {
     }
 
     public static void playWavAudioOnChannel(String channelName, String audioName, int loopCount) {
-        if (playingClips.get(channelName) != null) {
-            playingClips.get(channelName).stop();
-            playingClips.get(channelName).close();
-            playingClips.remove(channelName);
+        try {
+            if (playingClips.get(channelName) != null) {
+                playingClips.get(channelName).stop();
+                playingClips.get(channelName).close();
+                playingClips.remove(channelName);
+            }
+        }
+        catch (Exception ignored) {
+
         }
         try {
             Clip clip = AudioSystem.getClip();
