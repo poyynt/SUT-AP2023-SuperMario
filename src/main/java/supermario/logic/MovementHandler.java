@@ -54,11 +54,11 @@ public class MovementHandler {
     }
 
     private static boolean canMoveRight() {
-        int playerX = State.getCurrentGame().getPlayerX();
-        int playerY = State.getCurrentGame().getPlayerY();
+        int playerX = State.getCurrentGame().getPlayer().getX();
+        int playerY = State.getCurrentGame().getPlayer().getY();
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 32);
+        Rectangle player = State.getCurrentGame().getPlayer().getHitBox();
         for (int dx = -2; dx <= 2; dx++) {
             for (int dy = -2; dy <= 2; dy++) {
                 BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
@@ -76,13 +76,13 @@ public class MovementHandler {
     }
 
     private static boolean canMoveLeft() {
-        int playerX = State.getCurrentGame().getPlayerX();
-        int playerY = State.getCurrentGame().getPlayerY();
+        int playerX = State.getCurrentGame().getPlayer().getX();
+        int playerY = State.getCurrentGame().getPlayer().getY();
         if (playerX <= 0)
             return false;
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
-        Rectangle player = new Rectangle(playerX - 8, playerY, 48, 32);
+        Rectangle player = State.getCurrentGame().getPlayer().getHitBox();
         for (int dx = -2; dx <= 2; dx++) {
             for (int dy = -2; dy <= 2; dy++) {
                 BlockObject t = MapHandler.getBlockAt(playerGridX + dx, playerGridY + dy);
