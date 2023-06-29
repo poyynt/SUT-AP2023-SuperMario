@@ -68,6 +68,11 @@ public class GameHandler {
     public static void die() {
         GameState currentGame = State.getCurrentGame();
         currentGame.decreaseLives();
+        State.getCurrentGame().addScore(-20);
+        int Dn = currentGame.getCoins();
+        Dn += State.getCurrentGame().getPlayer().getX() / (MapHandler.sectionObject.length * 32);
+        Dn /= 4;
+        State.getCurrentGame().addCoins(-Dn);
         AudioController.playWavAudioOnChannel("foreground", "Dead", 0);
         if (currentGame.getLives() == 0) {
             State.getCurrentUser().setHighScore(
