@@ -23,11 +23,9 @@ public class KoopaCollisionHandler extends EnemyCollisionHandler {
         if (headHitBox.intersects(marioHitBox)) {
             if (target.getPhase() == 1) {
                 target.setPhase(2);
-                System.out.println("P2");
                 new GameTimer(new TimerTask() {
                     @Override
                     public void run() {
-                        System.out.println("P1");
                         target.setPhase(1);
                     }
                 }, 3).start();
