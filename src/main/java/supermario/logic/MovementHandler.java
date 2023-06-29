@@ -51,7 +51,18 @@ public class MovementHandler {
                     MapHandler.sectionObject.bullets.add(bulletObject);
                 }
             }
+        }
 
+        if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_N, false)) {
+            if (State.getCurrentGame().getPlayer().getX() + 32 >= MapHandler.sectionObject.length * 32) {
+                int section = State.getCurrentGame().getSection();
+                int level = State.getCurrentGame().getLevel();
+                if (section < MapHandler.lastSectionForLevel(level)) {
+                    GameHandler.loadSection(level, section + 1);
+                } else if (level < MapHandler.lastLevel()) {
+                    GameHandler.loadSection(level + 1, 1);
+                } else GameHandler.loadSection(-1, -1);
+            }
         }
 
         gameState.getPlayer().setX(playerX);

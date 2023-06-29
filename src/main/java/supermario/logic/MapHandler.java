@@ -60,6 +60,14 @@ public class MapHandler {
         sectionObject = fileObject.levels.get(level - 1).sections.get(section - 1);
     }
 
+    public static int lastSectionForLevel(int level) {
+        return fileObject.levels.get(level - 1).sections.size();
+    }
+
+    public static int lastLevel() {
+        return fileObject.levels.size();
+    }
+
     public static BlockObject getBlockAt(int gridX, int gridY) {
         if (sectionObject == null)
             return null;
