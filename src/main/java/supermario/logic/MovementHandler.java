@@ -98,33 +98,4 @@ public class MovementHandler {
         }
         return true;
     }
-
-    private static BlockObject getDoor() {
-        int playerX = State.getCurrentGame().getPlayerX();
-        int playerY = State.getCurrentGame().getPlayerY();
-        int playerGridX = playerX / 32;
-        int playerGridY = playerY / 32;
-        if (playerY < 0)
-            playerGridY = -1;
-        if (playerX < 0)
-            playerGridX = -1;
-        if ((playerY + 128) % 32 > 8)
-            return null;
-
-        BlockObject[] toCheck = new BlockObject[3];
-
-        toCheck[1] = MapHandler.getBlockAt(playerGridX, playerGridY);
-        toCheck[2] = MapHandler.getBlockAt(playerGridX + 1, playerGridY);
-        if (toCheck[2] != null)
-            if (playerGridX * 32 + 32 - playerX < 0 || playerGridX * 32 - playerX > 2)
-                toCheck[2] = null;
-        if ((playerX + 128) % 32 < 2)
-            toCheck[2] = null;
-        for (BlockObject t : toCheck) {
-            if (t == null)
-                continue;
-            return t;
-        }
-        return null;
-    }
 }
