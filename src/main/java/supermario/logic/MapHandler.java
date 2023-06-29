@@ -140,6 +140,13 @@ public class MapHandler {
                     null
             );
         }
+
+        for (BulletObject b : sectionObject.bullets) {
+            Color prevColor = graphics2D.getColor();
+            graphics2D.setColor(Color.RED);
+            graphics2D.fillOval(b.getX() - 4 - state.getScreenX(), b.getY() - 4, 8, 8);
+            graphics2D.setColor(prevColor);
+        }
     }
 
     public static void forceReload() {
