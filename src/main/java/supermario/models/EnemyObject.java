@@ -1,8 +1,6 @@
 package supermario.models;
 
-import supermario.logic.EnemyGravityHandler;
-import supermario.logic.GravityItem;
-import supermario.logic.MapHandler;
+import supermario.logic.*;
 
 import java.awt.*;
 
@@ -10,6 +8,7 @@ public class EnemyObject implements GravityItem {
     public int x, y;
     public final EnemyType type;
     private EnemyGravityHandler gravityHandler;
+    private EnemyMovementHandler movementHandler;
 
     public EnemyObject(int x, int y, EnemyType type) {
         this.x = x;
@@ -17,6 +16,10 @@ public class EnemyObject implements GravityItem {
         this.type = type;
         this.gravityHandler = new EnemyGravityHandler(this);
         this.gravityHandler.start();
+        if (type == EnemyType.GOOMBA || type == EnemyType.KOOPA) {
+            this.movementHandler = new GoombaMovementHandler(this);
+            this.movementHandler.start();
+        }
     }
 
     public int getX() {
@@ -53,6 +56,8 @@ public class EnemyObject implements GravityItem {
             case GOOMBA, KOOPA, SPINY -> State.getCurrentGame().addCoins(3);
         }
         MapHandler.sectionObject.enemies.remove(this);
+        if (this.movementHandler != null)
+            this.movementHandler.stop();
         this.gravityHandler.stop();
     }
 }
