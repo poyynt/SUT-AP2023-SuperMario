@@ -36,6 +36,9 @@ public class GameHandler {
     }
 
     public static void startNewGame() {
+        MapHandler.loadMap();
+        State.getCurrentGame().getPlayer().setState(MapHandler.fileObject.marioState);
+        State.getCurrentGame().setLives(MapHandler.fileObject.hearts);
         State.getCurrentGame().setStarted();
         State.getCurrentGame().setCharacter(State.getCurrentUser().getCurrentCharacter());
         new MarioGravityHandler(State.getCurrentGame().getPlayer()).start();

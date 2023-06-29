@@ -164,6 +164,10 @@ public class GameState { // section
         return player;
     }
 
+    public void setLives(int lives) {
+        this.lives = lives;
+    }
+
     public boolean isRunning() {
         return running;
     }
