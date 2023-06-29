@@ -1,9 +1,13 @@
 package supermario.models;
 
+import supermario.controllers.AudioController;
+import supermario.controllers.GameTimer;
+import supermario.logic.GameHandler;
 import supermario.logic.GravityItem;
 import supermario.logic.MarioGravityHandler;
 
 import java.awt.Rectangle;
+import java.util.TimerTask;
 
 public class Mario implements GravityItem {
     private int x = 0, y = 0;
@@ -69,6 +73,23 @@ public class Mario implements GravityItem {
 
     public boolean isOnSomewhere() {
         return gravityHandler.isOnSomewhere();
+    }
+
+    public void getHit() {
+        if (invincible <= 0) {
+            AudioController.playWavAudioOnChannel("lifeLost", "LifeLost", 0);
+            if (state > 0)
+                state--;
+            else
+                GameHandler.die();
+            invincible++;
+            new GameTimer(new TimerTask() {
+                @Override
+                public void run() {
+                    invincible--;
+                }
+            }, 1.5).start();
+        }
     }
 
 }
