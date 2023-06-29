@@ -11,10 +11,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class ItemMovementHandler extends Loop {
     private List<ItemMovementHandler> instances = new CopyOnWriteArrayList<>();
     private ItemObject target;
-    private double vx = 1.25;
+    private double vx = State.getCurrentGame().getPlayer().getMoveSpeed() / 2.;
 
     public ItemMovementHandler(ItemObject target) {
-        super(60.0);
+        super(30.0);
         for (ItemMovementHandler instance: instances)
             if (instance.target == target)
                 instance.stop();
