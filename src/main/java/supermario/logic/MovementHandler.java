@@ -53,6 +53,10 @@ public class MovementHandler {
             }
         }
 
+        gameState.getPlayer().setX(playerX);
+        gameState.getPlayer().setY(playerY);
+        gameState.setScreenX(screenX);
+
         if (KeyboardState.pressedKeys.getOrDefault(KeyEvent.VK_N, false)) {
             if (State.getCurrentGame().getPlayer().getX() + 32 >= MapHandler.sectionObject.length * 32) {
                 int section = State.getCurrentGame().getSection();
@@ -65,9 +69,6 @@ public class MovementHandler {
             }
         }
 
-        gameState.getPlayer().setX(playerX);
-        gameState.getPlayer().setY(playerY);
-        gameState.setScreenX(screenX);
     }
 
     public static boolean isPlayerFacingRight() {
@@ -79,6 +80,8 @@ public class MovementHandler {
         int playerY = State.getCurrentGame().getPlayer().getY();
         int playerGridX = playerX / 32;
         int playerGridY = playerY / 32;
+        if (playerX >= MapHandler.sectionObject.length * 32)
+            return false;
         Rectangle player = State.getCurrentGame().getPlayer().getHitBox();
         for (int dx = -2; dx <= 2; dx++) {
             for (int dy = -2; dy <= 2; dy++) {
