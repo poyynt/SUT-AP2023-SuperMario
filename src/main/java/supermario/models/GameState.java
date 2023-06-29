@@ -1,5 +1,6 @@
 package supermario.models;
 
+import supermario.controllers.AudioController;
 import supermario.logic.TimeHandler;
 
 public class GameState { // section
@@ -177,6 +178,7 @@ public class GameState { // section
     }
 
     public void handleSectionEnd() {
+        AudioController.playWavAudioOnChannel("foreground", "CourseClear", 0);
         totalCoins += coins;
         State.getCurrentUser().addCoins(coins);
         coins = 0;
