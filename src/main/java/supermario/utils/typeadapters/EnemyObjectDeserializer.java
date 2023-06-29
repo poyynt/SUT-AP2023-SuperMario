@@ -12,6 +12,8 @@ public class EnemyObjectDeserializer implements JsonDeserializer<EnemyObject> {
         JsonObject jsonObject = json.getAsJsonObject();
         int x = jsonObject.get("x").getAsInt();
         int y = 20 - (jsonObject.get("y").getAsInt());
+        x = x * 32;
+        y = y * 32;
         EnemyType type = EnemyType.valueOf(jsonObject.get("type").getAsString());
         return new EnemyObject(x, y, type);
     }
